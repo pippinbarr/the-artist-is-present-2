@@ -11,12 +11,12 @@ let Preloader = new Phaser.Class({
   },
 
   create: function () {
-    this.createAnimation('idle-h','walkcycle',23,23,10,0);
-    this.createAnimation('walking-h','walkcycle',1,8,10,-1);
-    this.createAnimation('idle-u','walkcycle',22,22,10,0);
-    this.createAnimation('walking-u','walkcycle',16,21,10,-1);
-    this.createAnimation('idle-d','walkcycle',15,15,10,0);
-    this.createAnimation('walking-d','walkcycle',9,14,10,-1);
+    this.createAnimation('idle-h','walkcycle/walkcycle',23,23,10,0);
+    this.createAnimation('walking-h','walkcycle/walkcycle',1,8,10,-1);
+    this.createAnimation('idle-u','walkcycle/walkcycle',22,22,10,0);
+    this.createAnimation('walking-u','walkcycle/walkcycle',16,21,10,-1);
+    this.createAnimation('idle-d','walkcycle/walkcycle',15,15,10,0);
+    this.createAnimation('walking-d','walkcycle/walkcycle',9,14,10,-1);
 
     this.scene.start('prototyping');
   },

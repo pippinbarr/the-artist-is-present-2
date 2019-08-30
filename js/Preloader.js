@@ -8,7 +8,7 @@ let Preloader = new Phaser.Class({
 
   preload: function () {
     this.load.multiatlas('atlas', 'assets/atlas/atlas.json', 'assets/atlas');
-    this.load.spritesheet('marina', 'assets/spritesheets/marina-spritesheet.png', { frameWidth: 14, frameHeight: 35, endFrame: 25 });
+    this.load.spritesheet('marina', 'assets/spritesheets/marina-dress-spritesheet.png', { frameWidth: 14, frameHeight: 35, endFrame: 25 });
   },
 
   create: function () {

@@ -17,7 +17,7 @@ let Prototyping = new Phaser.Class({
     this.tableAndChairs.body.setSize(this.tableAndChairs.width-4,6,false);
     this.tableAndChairs.body.immovable = true;
 
-    this.avatar = this.physics.add.sprite(this.game.canvas.width/2,this.game.canvas.height/2,'atlas','walkcycle/walkcycle-01.png').setScale(4);
+    this.avatar = this.physics.add.sprite(this.game.canvas.width/2,this.game.canvas.height/2,'marina').setScale(4);
     this.avatar.setCollideWorldBounds(true);
     this.avatar.body.onWorldBounds = true;
     this.avatar.body.setOffset(1,this.avatar.height-4);

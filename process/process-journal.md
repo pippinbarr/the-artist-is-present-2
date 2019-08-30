@@ -68,3 +68,19 @@ The key factor here is the question of what the game is "about", and I think it'
 The key is for the player to at some level build some identification with Marina as a brave/determined/lonely/independent figure (this being achieved through the sequence of arrival, which is probably why the apartment is so important). And then to identify with the act of endurance as almost secondary somehow, a matter of course, something you just do? Unsure what I mean by that, but it seems to me right now that the most important thing is settling into her role and then carrying it out to the best of your abilities?
 
 More thought as it develops I suppose.
+
+---
+
+# The dress, queue chat, fatigue and the semester (Friday, 30 August 2019, 14:38PM)
+
+## The dress
+
+I've made some light progress on actually putting the game together. I now have a Marina-in-a-dress walking around in the atrium and it looks surprisingly good (if I may say so myself). The moment where I had her walking and it _felt_ like the dress was a good moment, it was one of those "maybe this whole game will work" things, so that was nice.
+
+## Queue chat?
+
+I'm realising as I type this that I've decided she's going to enter the museum the "normal" way? In which case she'll pass the queue as she goes down the hall. This gives an opportunity for them to turn and look at her and say things. And perhaps if you bump into them they can say generated fandom things to you, so there's a kind of actual feeling of the crowd there waiting to see you. That will add a bit of liveliness to the experience?
+
+## Fatigue and the semester
+
+I'm pretty aware I haven't been all that devoted to this project given that the new semester is starting and my time will start to seem smaller and bitsy for a while. Which is fine! But I'm signaling to myself not to freak out about productivity. I'll get stuff done on it over time and we'll get there. Ebbs and flows, my friend.

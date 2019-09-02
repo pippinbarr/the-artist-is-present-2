@@ -12,13 +12,6 @@ let Preloader = new Phaser.Class({
   },
 
   create: function () {
-    // this.createAnimation('idle-h','walkcycle/walkcycle',23,23,10,0);
-    // this.createAnimation('walking-h','walkcycle/walkcycle',1,8,10,-1);
-    // this.createAnimation('idle-u','walkcycle/walkcycle',22,22,10,0);
-    // this.createAnimation('walking-u','walkcycle/walkcycle',16,21,10,-1);
-    // this.createAnimation('idle-d','walkcycle/walkcycle',15,15,10,0);
-    // this.createAnimation('walking-d','walkcycle/walkcycle',9,14,10,-1);
-
     this.createSpritesheetAnimation('idle-h',23,23,10,0);
     this.createSpritesheetAnimation('walking-h',1,8,10,-1);
     this.createSpritesheetAnimation('idle-u',22,22,10,0);
@@ -26,8 +19,7 @@ let Preloader = new Phaser.Class({
     this.createSpritesheetAnimation('idle-d',15,15,10,0);
     this.createSpritesheetAnimation('walking-d',9,14,10,-1);
 
-
-    this.scene.start('prototyping');
+    this.scene.start('tickets');
   },
 
   createAtlasAnimation: function (name,path,start,end,framerate,repeat) {

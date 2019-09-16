@@ -153,3 +153,11 @@ So maybe there's some mileage in this? It's a remediation of Marina's body (as i
 And what is the advantage to talking in these kinds of (scholarly) terms? Perhaps just that it allows me to explore the meanings of the game and its process in a kind of depth or from a particular perspective.
 
 (That said, the book itself hasn't been all that helpful in suggesting actual strategies or tactics of analysis, not what the point of such analyses is, so who knows.)
+
+---
+
+# Notebook sketches of spaces (Monday, 16 September 2019, 17:35PM)
+
+![](images/notebook/notebook1.jpg)
+
+![](images/notebook/notebook2.jpg)

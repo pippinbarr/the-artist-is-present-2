@@ -104,3 +104,52 @@ Let's plan this thing scene by scene...
 - __MoMA__. From this point you're into the previous game's scenes, being dropped off in front of MoMA. So you go in, could say hi to ticket perhaps, to security guard. Then walk the halls, see the queue. The people talk about you or to you if you approach. You go all the way to the front (you can trangress the lines I suppose?). Security guard tells you some information about sitting down to start the day. You go near your chair and automatically sit, and then there are announcements from the guard, and people start coming to sit with you. For this I'll need to remember the queue of people or at least their spritesheets to generate the correct queue order for when you sit, but that could be as simple as generating the correct sprite keys into an array and rebuilding them in subsequent scenes as needed. Or maintaining the idea of the first game where MoMA is a single scene, that's fine too. Will still need at least some queue management stuff so that everyone moves up properly and so on, could be hell. Could be fine. I can do it.
 
 - __Gazing__. You have your head down when the person sits (automatic or chosen?) and then once they sit you can choose the moment to look up (maybe with the up arrow, and the down to look down, which could signal you're ready). On looking up we fill the screen with just their (very zoomed in) pixel face. No blinking. You look they look, eventually they leave (raise the sprite a bit then cut to the room). Same process of looking down (maybe you choose), next person comes, you look up. On we go. Until the day is done, and then.... what? Should there be a reversal where you go home to bed? Funny? Or stupid? Maybe stupid. Maybe the museum closes and the game fades to black.
+
+---
+
+# Service, Inversion, Remediation (Monday, 16 September 2019, 16:36PM)
+
+I wanted to take a moment to splat down a few thoughts about what this game is actually about, how it's meant to feel, etc. I've made some notes earlier, but it's always good to repeat yourself over and over again, right? People enjoy that.
+
+## Service
+
+One understanding I've come to of the game in my visualizations of how it would feel is that it's a game about "being in service" to the NPCs. You're Marina and to some extent it's your job to show up for them, to sit in your chair, to wait for them to sit, to look into their eyes, to pay attention to them, to care about them, to connect with them.
+
+I think there are interesting tensions here in conversation with the original work: is the real performance about presence as service or is it also about a kind of ego, an emphasis of the importance of the artist, a flexing of fame and charisma, etc.?
+
+To the extent there's that less "service-y" element to the real performance, something I think I like about the digital take is that the ego is doomed. You aren't sitting in front of real people, they don't _really_ care or admire you or think you're famous. And for that matter you (the player) _are not Marina Abramovic_ in the first place, so any actual sense of admiration would be not for you but for who you're pretending to be (since it's also based on history rather than present actions).
+
+So in a way your actions need to be really selfless? That's what the game asks of you? Given that a) there's nobody (real) there to acknowledge your selfless actions (thereby ruining their selflessness?) and b) your actual self is not represented in the game, it's replaced by Marina. (This is making me wonder about character creation and the chance for it actually to be you? Like sports games but to feel like a super famous artist? Not unlike Art Game but perhaps with real correspondence to reality? See also: Donald Trump Alone in the Forest?)
+
+It's kind of a more beautiful act because you're "ministering" to these digital characters who do want your attention (by definition and behaviour) but also can't really appreciate it (in a human sense)?
+
+This angle emphasizes the importance of settling into the character, of taking some time to get there as it becomes a kind of pilgrimage? You need to be alone for a while, to become Marina in order to give yourself away to these figures.
+
+The selfless angle makes me wonder a bit about the whole thing of having the NPCs express excitement about your arrival from the queue, but this I think must play into the experience because it's how the real people really felt (it's why they were there) and even if it perhaps emphasizes ego and self-hood, it perhaps create a nice contrast to the actual act, where all the vocal admiration would be gone and you're the only one "doing work" in the situation of looking at them?
+
+## Inversion
+
+Much less developed in my head, but it's obvious that this game is at least in part an exploration of inversion as a way of making a game - a specific kind of inversion obviously. I suppose it suggests the requirement of at least some kind of asymmetry in the roles available (and I suppose of there being two major roles). So you couldn't apply this logic to absolutely anything (though there's a parallel with something like Ball Pong in which you're the ball instead of the paddle).
+
+It's a kind of a design tactic? It has a formal quality to it that could be reused (like hybrid game design with Jonathan).
+
+## Remediation
+
+I'm rereading Remediation (the book) at the moment for the first time in, well, probably more than ten years (so we might as well say I'm reading it for the first time). In essence as I'm taking it we can talk about
+
+- Transparency (the idea of media trying to erase their presence)
+- Hypermediacy (the idea of media that revel in their own presence and even exaggerate it)
+- Remediation (the idea of one medium incorporating/redoing another medium)
+
+I think you could probably talk about more traditional kinds of remediation in this game, most notably
+
+- Remediation of the media/press coverage of the original show (after all I did a ton of research into it, relied on iconic imagery) - so a kind of remediation of the articles written about it, the photography taken (this makes me think in particular of the creation of the full-face image we'll have during the actual gazing and its reference point in the often-weeping faces of people who sat with her for real)
+- Remediation of the documentary of the performance. Notably the perceived isolation of Marina in her task, surrounded by people, none of whom can really help her? But also the journey from the apartment to the sitting itself, particularly the austere/blank domesticity of the apartment she's in, which seems so uninviting and depressing at least in the small shots you get, and I suppose reemphasizes loneliness and isolation?
+
+But really what I'd kind of like to be able to talk about is a more central idea of "remediation" which would be the remediation of the performance itself. I'm just not sure if I can say that, because is performance art a "medium"? I don't think it would be terrible to say so? Or that the body is a medium put more directly?
+
+So maybe there's some mileage in this? It's a remediation of Marina's body (as in her medium of expression) and maybe the spaces around it (similarly) into the form of a digital game. And as such the remediation becomes an exploration of the possibilities, implications, negativities, advantages, connotations, denotations, and on and on around that basic premise. What does it mean and so on?
+
+And what is the advantage to talking in these kinds of (scholarly) terms? Perhaps just that it allows me to explore the meanings of the game and its process in a kind of depth or from a particular perspective.
+
+(That said, the book itself hasn't been all that helpful in suggesting actual strategies or tactics of analysis, not what the point of such analyses is, so who knows.)

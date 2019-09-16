@@ -161,3 +161,13 @@ And what is the advantage to talking in these kinds of (scholarly) terms? Perhap
 ![](images/notebook/notebook1.jpg)
 
 ![](images/notebook/notebook2.jpg)
+
+Some quick notes on what these sketches brought up (mostly just translating the text in them so it's more legible?):
+
+- There's the continuing tension in terms of spatial layout, particularly a pure left to right idea (mirroring EDTSD as well as traditions from platformers, but also potentially more evocative of a pilgrimage?) versus a more authentic attempt to have a layout related to the actual apartment as depicted in the documentary. I think the compromise here is to sacrifice the layout but to maintain reference visually (furniture, windows, etc.) of the actual place. This means having doors in places they aren't, such as in the rightward wall of the bedroom, but that's fine....
+- How to deal with the kitchen? It's a space that can be seen from the main living space, and isn't a through space? It absolutely has to be in the sequence if only because it's striking (very green) and also because EDTSD has a kitchen element. Maybe the answer is to only have the back wall of the kitchen featured so you just never deal with this? Maybe it can be the background to the dining table? That's another option.
+- The "front door" will need to be the rightmost thing, and irritatingly I guess it just has to be open - it's not like we type "open door" or anything. Why is it open? Unclear.
+- So many chairs, which is very fun and related to the work. Might be hard to render in this resolution
+- Are there too many rooms? How many is too many? I want it to feel like something, so having a few is good.
+- The big question of the exit - maybe just cut straight to exterior when she goes out the front door? Or maybe an elevator. Let's go with an elevator? A decision.
+- And then the car is just a fun interstitial with nothing to do. You just wait. In fact it kiiiind of mirrors the sitting?

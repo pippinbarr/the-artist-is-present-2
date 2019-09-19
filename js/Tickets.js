@@ -33,15 +33,9 @@ let Tickets = new Phaser.Class({
   update: function (time,delta) {
     this.marina.update(time,delta);
     this.physics.collide(this.marina,this.colliders,() => {
-      this.stopAvatar();
+      marina.stop();
     });
     this.marina.depth = this.marina.body.y;
   },
 
-  stopAvatar() {
-    let key = this.marina.anims.currentAnim.key;
-    key = key.replace('walking','idle');
-    this.marina.anims.play(key);
-    this.marina.setVelocity(0,0);
-  }
 });

@@ -1,3 +1,5 @@
+const START_SCENE = 'bedroom';
+
 let Preloader = new Phaser.Class({
 
   Extends: Phaser.Scene,
@@ -19,7 +21,7 @@ let Preloader = new Phaser.Class({
     this.createSpritesheetAnimation('idle-d',15,15,10,0);
     this.createSpritesheetAnimation('walking-d',9,14,10,-1);
 
-    this.scene.start('tickets');
+    this.scene.start(START_SCENE);
   },
 
   createAtlasAnimation: function (name,path,start,end,framerate,repeat) {

@@ -10,11 +10,10 @@ class Marina extends Phaser.Physics.Arcade.Sprite {
   }
 
   create () {
-    console.log("Here?")
+
   }
 
   update () {
-    console.log("update")
     this.handleInput();
   }
 
@@ -65,5 +64,12 @@ class Marina extends Phaser.Physics.Arcade.Sprite {
         this.anims.play('walking-d');
       }
     }
+  }
+
+  stop() {
+    let key = this.anims.currentAnim.key;
+    key = key.replace('walking','idle');
+    this.anims.play(key);
+    this.setVelocity(0,0);
   }
 }

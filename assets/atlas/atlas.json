@@ -346,7 +346,7 @@
 					}
 				},
 				{
-					"filename": "bedroom/bedroom_bg.png",
+					"filename": "bedroom/bedroom-bg.png",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -729,6 +729,6 @@
 	"meta": {
 		"app": "https://www.codeandweb.com/texturepacker",
 		"version": "3.0",
-		"smartupdate": "$TexturePacker:SmartUpdate:5aeed3217f303aedfbbd04058442bbc8:b8ad955cc8de29f57cf404458adbf0c0:cbce6b53f0f49e0bf15173c25c41f876$"
+		"smartupdate": "$TexturePacker:SmartUpdate:40854a044d26c8bcb0b3f988cf54bfe9:5c89f9cc73aabf5a3a4fd4b7dd235bea:cbce6b53f0f49e0bf15173c25c41f876$"
 	}
 }

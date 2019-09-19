@@ -2,7 +2,7 @@ let config = {
   type: Phaser.AUTO,
   width: 800,
   height: 400,
-  scene: [Boot, Preloader, Tickets, Prototyping],
+  scene: [Boot, Preloader, Bedroom, Tickets, Prototyping],
   pixelArt: true,
   antialias: false,
   physics: {

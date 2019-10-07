@@ -24,7 +24,7 @@ let Bedroom = new Phaser.Class({
     createColliderLine(this, 57 * 4, 57 * 4, 35 * 4, 35 * 4, -5, 5, this.colliders);
 
     // Bed
-    this.bed = this.physics.add.sprite(67 * 4, 62 * 4, 'atlas', 'bedroom/bed.png').setScale(4);
+    this.bed = this.physics.add.sprite(67 * 4, 62 * 4, 'atlas', 'bedroom/bedroom-bed.png').setScale(4);
     this.bed.body.setOffset(0, this.bed.body.height - 16);
     this.bed.body.setSize(this.bed.width, 16, false);
     this.bed.body.immovable = true;
@@ -34,16 +34,7 @@ let Bedroom = new Phaser.Class({
     createColliderLine(this, 102 * 4, 69 * 4, 16 * 4, 16 * 4, -5, 5, this.colliders);
 
     // Bedside table
-    this.sideTable = this.physics.add.sprite(40 * 4, 84 * 4, 'atlas', 'bedroom/side-table.png').setScale(4);
-    this.sideTable.body.setOffset(0, this.sideTable.body.height - 16);
-    this.sideTable.body.setSize(this.sideTable.width, 16, false);
-    this.sideTable.body.immovable = true;
-    this.sideTable.depth = this.sideTable.body.y;
-    // Bedside table collider
-    createColliderRect(this, this.sideTable.x - this.sideTable.width * 4 / 2, this.sideTable.y - this.sideTable.height * 4 / 2, this.sideTable.width * 4, this.sideTable.height * 4, this.colliders);
-
-    // Bedside table
-    this.sideTable = this.physics.add.sprite(40 * 4, 84 * 4, 'atlas', 'bedroom/side-table.png').setScale(4);
+    this.sideTable = this.physics.add.sprite(40 * 4, 84 * 4, 'atlas', 'bedroom/bedroom-side-table.png').setScale(4);
     this.sideTable.body.setOffset(0, this.sideTable.body.height - 16);
     this.sideTable.body.setSize(this.sideTable.width, 16, false);
     this.sideTable.body.immovable = true;
@@ -52,7 +43,7 @@ let Bedroom = new Phaser.Class({
     createColliderRect(this, this.sideTable.x - this.sideTable.width * 4 / 2, this.sideTable.y - this.sideTable.height * 4 / 2, this.sideTable.width * 4, this.sideTable.height * 4, this.colliders);
 
     // Dresser
-    this.dresser = this.physics.add.sprite(132.5 * 4, 46 * 4, 'atlas', 'bedroom/dresser.png').setScale(4);
+    this.dresser = this.physics.add.sprite(132.5 * 4, 46 * 4, 'atlas', 'bedroom/bedroom-dresser.png').setScale(4);
     this.dresser.body.setOffset(0, this.dresser.body.height - 16);
     this.dresser.body.setSize(this.dresser.width, 16, false);
     this.dresser.body.immovable = true;
@@ -65,7 +56,7 @@ let Bedroom = new Phaser.Class({
     this.marina.anims.play('idle-d');
 
 
-    this.colliders.toggleVisible();
+    // this.colliders.toggleVisible();
 
     this.cursors = this.input.keyboard.createCursorKeys();
 

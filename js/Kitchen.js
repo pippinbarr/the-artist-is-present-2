@@ -22,23 +22,17 @@ let Kitchen = new Phaser.Class({
     createColliderRect(this, 0 * 4, 60 * 4, 58 * 4, 1 * 4, this.colliders);
     createColliderRect(this, 0 * 4, 76 * 4, 44 * 4, 1 * 4, this.colliders);
     createColliderRect(this, 0 * 4, 99 * 4, 200 * 4, 1 * 4, this.colliders);
-    createColliderRect(this, 164 * 4, 56 * 4, 1 * 4, 27 * 4, this.colliders);
-
-
-    // createColliderRect(this, 0 * 4, 92 * 4, 200 * 4, 5, this.colliders);
-    // createColliderRect(this, 151 * 4, 66 * 4, 200 * 4, 5, this.colliders);
-    // createColliderLine(this, 164 * 4, 82 * 4, 10 * 4, 11 * 4, 5, 5, this.colliders);
-    // createColliderLine(this, 57 * 4, 57 * 4, 35 * 4, 35 * 4, -5, 5, this.colliders);
+    // createColliderRect(this, 164 * 4, 56 * 4, 1 * 4, 27 * 4, this.colliders);
 
     // Kitchen Unit BG
-    this.unitBG = this.physics.add.sprite(this.game.canvas.width / 2, this.game.canvas.height / 2, 'atlas', 'kitchen/unit-bg.png').setScale(4);
+    this.unitBG = this.physics.add.sprite(this.game.canvas.width / 2, this.game.canvas.height / 2, 'atlas', 'kitchen/kitchen-unit-bg.png').setScale(4);
     this.unitBG.body.setOffset(76, 54);
     this.unitBG.body.setSize(106, 6, false);
     this.unitBG.body.immovable = true;
     this.colliders.add(this.unitBG)
 
     // Kitchen Unit FG
-    this.unitFG = this.physics.add.sprite(this.game.canvas.width / 2, this.game.canvas.height / 2, 'atlas', 'kitchen/unit-fg.png').setScale(4);
+    this.unitFG = this.physics.add.sprite(this.game.canvas.width / 2, this.game.canvas.height / 2, 'atlas', 'kitchen/kitchen-unit-fg.png').setScale(4);
     this.unitFG.body.setOffset(76, 76);
     this.unitFG.body.setSize(106, 6, false);
     this.unitFG.body.immovable = true;

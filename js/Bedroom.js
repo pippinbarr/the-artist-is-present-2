@@ -51,17 +51,19 @@ let Bedroom = new Phaser.Class({
     // Marina Abramovic horizontal
     this.marinaBed = this.add.sprite(this.game.canvas.width / 2, this.game.canvas.height / 2, 'atlas', 'bedroom/bedroom-marina.png').setScale(4);
 
+    this.setupMarks();
+
     if (last.scene === 'kitchen') {
       this.marina.setVisible(true);
       this.marinaBed.setVisible(false);
       this.marina.inputEnabled = false;
-      this.marina.x = 182 * 4;
-      this.marina.y = 54 * 4;
+      this.marina.x = this.exitMark.x;
+      this.marina.y = this.enterMark.y - this.marina.height * 4 / 2;
       this.marina.left();
       let marinaTweenIn = this.tweens.add({
         targets: this.marina,
-        x: 148 * 4,
-        y: 54 * 4,
+        x: this.enterMark.x,
+        y: this.enterMark.y - this.marina.height * 4 / 2,
         duration: (182 * 4 - 148 * 4) / this.marina.speed * 1000,
         repeat: 0,
         onComplete: () => {
@@ -88,33 +90,48 @@ let Bedroom = new Phaser.Class({
     });
     this.marina.depth = this.marina.body.y;
 
-    this.handleInput();
+    this.handleWakeup();
     this.checkExits();
   },
 
-  handleInput: function() {
+  handleWakeup: function() {
+    if (last.scene === 'kitchen') return;
+
     if (Phaser.Input.Keyboard.JustDown(this.marina.cursors.left) ||
       Phaser.Input.Keyboard.JustDown(this.marina.cursors.right) ||
       Phaser.Input.Keyboard.JustDown(this.marina.cursors.up) ||
       Phaser.Input.Keyboard.JustDown(this.marina.cursors.down)) {
 
       this.marinaBed.setVisible(false);
-
       this.marina.setVisible(true);
       this.marina.inputEnabled = true;
     }
   },
 
   checkExits: function() {
-    if (this.marina.x > 164 * 4) {
+    if (this.marina.x > this.controlMark.x) {
       this.marina.inputEnabled = false;
     }
 
-    if (this.marina.x > 200 * 4) {
+    if (this.marina.x > this.exitMark.x) {
       last.scene = `bedroom`;
       last.y = this.marina.y;
       this.scene.start('kitchen');
     }
+  },
+
+  setupMarks: function() {
+    this.marks = this.add.group();
+    this.enterMark = this.add.sprite(143 * 4, 74 * 4, 'atlas', 'red-pixel.png').setScale(4);
+    this.enterMark.depth = 100000;
+    this.marks.add(this.enterMark);
+    this.exitMark = this.add.sprite(176 * 4, 74 * 4, 'atlas', 'red-pixel.png').setScale(4);
+    this.exitMark.depth = 100000;
+    this.marks.add(this.exitMark);
+    this.controlMark = this.add.sprite(160 * 4, 74 * 4, 'atlas', 'red-pixel.png').setScale(4);
+    this.controlMark.depth = 100000;
+    this.marks.add(this.controlMark);
+    // this.marks.toggleVisible();
   },
 
 });

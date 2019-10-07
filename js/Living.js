@@ -67,6 +67,9 @@ let Living = new Phaser.Class({
 
   checkExits: function() {
     if (this.marina.x < 0 * 4) {
+      last.scene = `living`;
+      last.x = this.marina.x;
+      last.y = this.marina.y;
       this.scene.start('kitchen');
     }
     else if (this.marina.x > 200 * 4) {

@@ -171,3 +171,19 @@ Some quick notes on what these sketches brought up (mostly just translating the 
 - Are there too many rooms? How many is too many? I want it to feel like something, so having a few is good.
 - The big question of the exit - maybe just cut straight to exterior when she goes out the front door? Or maybe an elevator. Let's go with an elevator? A decision.
 - And then the car is just a fun interstitial with nothing to do. You just wait. In fact it kiiiind of mirrors the sitting?
+
+---
+
+# Spaces spaces (Monday, 7 October 2019, 16:32PM)
+
+I've built a bunch of stuff now. Drawn in Pixen, translated to Phaser, and including transitions between spaces, which is what I'm working on right at the moment.
+
+For the moment, other than the audience and a couple of small things I think I have the full gamut of art assets which is a relief.
+
+The kitchen still doesn't look as great as I'd like. Might need to rethink its representation? It's just not very convincing and its spatially confusing because you can't tell how it's organized in terms of where you can and can't walk. Might be better to have her just walk through the middle of it instead? Something where it's a bit lighter on options? It mostly needs to symbolize kitchen more than anything right? Hard to say.
+
+Other than that I think the spaces looking pretty accurate and are a nice tribute to the apartment she really stayed in, as captured int he documentary at least.
+
+I avoided all the elevator/stairs stuff for now by just going directly from the door out of the apartment to Marina walking out of the building down the stairs. It pretty much works fine I think.
+
+Not a whole ton of process writing for all this because I've been working in fits and starts and it's really mostly assembly right now with very little interesting design stuff going on.

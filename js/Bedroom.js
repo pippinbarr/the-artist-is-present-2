@@ -36,17 +36,46 @@ let Bedroom = new Phaser.Class({
     this.sideTable.body.setSize(17, 13, false);
     this.sideTable.body.immovable = true;
     this.sideTable.depth = 76 * 4;
+    this.colliders.add(this.sideTable);
 
     // Dresser
-    this.dresser = this.physics.add.sprite(this.game.canvas.width / 2, this.game.canvas.height / 2, 'atlas', 'bedroom/bedroom-dresser.png').setScale(4);
+    this.dresser = this.add.sprite(this.game.canvas.width / 2, this.game.canvas.height / 2, 'atlas', 'bedroom/bedroom-dresser.png').setScale(4);
     createColliderRect(this, 122 * 4, 56 * 4, 23 * 4, 5 * 4, this.colliders);
     this.dresser.depth = 31 * 4;
 
     // Marina Abramovic
-    this.marina = new Marina(this, 280, 290, 'marina');
+    this.marina = new Marina(this, 0, 0, 'marina');
     this.marina.anims.play('idle-d');
+    this.marina.inputEnabled = false;
 
-    this.cursors = this.input.keyboard.createCursorKeys();
+    // Marina Abramovic horizontal
+    this.marinaBed = this.add.sprite(this.game.canvas.width / 2, this.game.canvas.height / 2, 'atlas', 'bedroom/bedroom-marina.png').setScale(4);
+
+    if (last.scene === 'kitchen') {
+      this.marina.setVisible(true);
+      this.marinaBed.setVisible(false);
+      this.marina.inputEnabled = false;
+      this.marina.x = 182 * 4;
+      this.marina.y = 54 * 4;
+      this.marina.left();
+      let marinaTweenIn = this.tweens.add({
+        targets: this.marina,
+        x: 148 * 4,
+        y: 54 * 4,
+        duration: (182 * 4 - 148 * 4) / this.marina.speed * 1000,
+        repeat: 0,
+        onComplete: () => {
+          this.marina.inputEnabled = true;
+          this.marina.stop();
+        },
+      });
+    }
+    else {
+      this.marina.x = 220;
+      this.marina.y = 284;
+      this.marina.setVisible(false);
+      this.marinaBed.setVisible(true);
+    }
 
     let bedroomFG = this.add.sprite(this.game.canvas.width / 2, this.game.canvas.height / 2, 'atlas', 'bedroom/bedroom-fg.png').setScale(4);
     bedroomFG.depth = bedroomFG.y + bedroomFG.height + 4 * 4;
@@ -59,11 +88,31 @@ let Bedroom = new Phaser.Class({
     });
     this.marina.depth = this.marina.body.y;
 
+    this.handleInput();
     this.checkExits();
+  },
+
+  handleInput: function() {
+    if (Phaser.Input.Keyboard.JustDown(this.marina.cursors.left) ||
+      Phaser.Input.Keyboard.JustDown(this.marina.cursors.right) ||
+      Phaser.Input.Keyboard.JustDown(this.marina.cursors.up) ||
+      Phaser.Input.Keyboard.JustDown(this.marina.cursors.down)) {
+
+      this.marinaBed.setVisible(false);
+
+      this.marina.setVisible(true);
+      this.marina.inputEnabled = true;
+    }
   },
 
   checkExits: function() {
     if (this.marina.x > 164 * 4) {
+      this.marina.inputEnabled = false;
+    }
+
+    if (this.marina.x > 200 * 4) {
+      last.scene = `bedroom`;
+      last.y = this.marina.y;
       this.scene.start('kitchen');
     }
   },

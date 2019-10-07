@@ -4,72 +4,88 @@ class Marina extends Phaser.Physics.Arcade.Sprite {
     scene.add.existing(this)
     scene.physics.add.existing(this)
     this.setScale(4);
-    this.body.setOffset(1,this.height-4);
-    this.body.setSize(this.width-2,4,false);
+    this.body.setOffset(1, this.height - 4);
+    this.body.setSize(this.width - 2, 4, false);
     this.cursors = scene.input.keyboard.createCursorKeys();
+    this.inputEnabled = true;
+    this.speed = 100;
   }
 
-  create () {
+  create() {
 
   }
 
-  update () {
+  update() {
     this.handleInput();
   }
 
-  handleInput () {
+  handleInput() {
+    if (!this.inputEnabled) return;
+
     if (Phaser.Input.Keyboard.JustDown(this.cursors.left)) {
       if (this.body.velocity.x < 0) {
-        this.setVelocityX(0);
-        this.anims.play('idle-h');
+        this.stop();
       }
       else {
-        this.flipX = true;
-        this.setVelocityX(-100);
-        this.setVelocityY(0);
-        this.anims.play('walking-h');
+        this.left();
       }
     }
     if (Phaser.Input.Keyboard.JustDown(this.cursors.right)) {
       if (this.body.velocity.x > 0) {
-        this.setVelocityX(0);
-        this.anims.play('idle-h');
+        this.stop();
       }
       else {
-        this.flipX = false;
-        this.setVelocityX(100);
-        this.setVelocityY(0);
-        this.anims.play('walking-h');
+        this.right();
       }
     }
     if (Phaser.Input.Keyboard.JustDown(this.cursors.up)) {
       if (this.body.velocity.y < 0) {
-        this.setVelocityY(0);
-        this.anims.play('idle-u');
+        this.stop();
       }
       else {
-        this.setVelocityX(0);
-        this.setVelocityY(-100);
-        this.anims.play('walking-u');
+        this.up();
       }
     }
     if (Phaser.Input.Keyboard.JustDown(this.cursors.down)) {
       if (this.body.velocity.y > 0) {
-        this.setVelocityY(0);
-        this.anims.play('idle-d');
+        this.stop();
       }
       else {
-        this.setVelocityX(0);
-        this.setVelocityY(100);
-        this.anims.play('walking-d');
+        this.down();
       }
     }
   }
 
+  right() {
+    this.flipX = false;
+    this.setVelocityX(this.speed);
+    this.setVelocityY(0);
+    this.anims.play('walking-h');
+  }
+
+  left() {
+    this.flipX = true;
+    this.setVelocityX(-this.speed);
+    this.setVelocityY(0);
+    this.anims.play('walking-h');
+  }
+
+  up() {
+    this.setVelocityX(0);
+    this.setVelocityY(-this.speed);
+    this.anims.play('walking-u');
+  }
+
+  down() {
+    this.setVelocityX(0);
+    this.setVelocityY(this.speed);
+    this.anims.play('walking-d');
+  }
+
   stop() {
     let key = this.anims.currentAnim.key;
-    key = key.replace('walking','idle');
+    key = key.replace('walking', 'idle');
     this.anims.play(key);
-    this.setVelocity(0,0);
+    this.setVelocity(0, 0);
   }
 }

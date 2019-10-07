@@ -661,7 +661,7 @@
 					}
 				},
 				{
-					"filename": "bedroom/Marina.png",
+					"filename": "bedroom/bedroom-marina.png",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -1296,6 +1296,6 @@
 	"meta": {
 		"app": "https://www.codeandweb.com/texturepacker",
 		"version": "3.0",
-		"smartupdate": "$TexturePacker:SmartUpdate:44befc96a4ddf64c2ae30847446784d7:570c6a50257e55a85d8d24f798d28f88:cbce6b53f0f49e0bf15173c25c41f876$"
+		"smartupdate": "$TexturePacker:SmartUpdate:444d601816c13877ab374820c1a78b24:c38979a2461a63fdbc7057d7aa72e10e:cbce6b53f0f49e0bf15173c25c41f876$"
 	}
 }

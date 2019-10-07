@@ -1,5 +1,3 @@
-const START_SCENE = 'bedroom';
-
 let Preloader = new Phaser.Class({
 
   Extends: Phaser.Scene,

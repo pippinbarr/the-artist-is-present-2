@@ -1,3 +1,11 @@
+const START_SCENE = 'bedroom';
+let lastScene = undefined;
+let last = {
+  scene: undefined,
+  x: undefined,
+  y: undefined
+}
+
 let config = {
   type: Phaser.AUTO,
   width: 800,

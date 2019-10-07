@@ -43,6 +43,24 @@ let Kitchen = new Phaser.Class({
     this.marina = new Marina(this, 280, 290, 'marina');
     this.marina.anims.play('idle-d');
 
+    if (last.scene === 'bedroom') {
+      this.marina.inputEnabled = false;
+      this.marina.x = 31 * 4;
+      this.marina.y = 52 * 4;
+      this.marina.right();
+      let marinaTweenIn = this.tweens.add({
+        targets: this.marina,
+        x: 57 * 4,
+        y: 52 * 4,
+        duration: (57 * 4 - 31 * 4) / this.marina.speed * 1000,
+        repeat: 0,
+        onComplete: () => {
+          this.marina.inputEnabled = true;
+          this.marina.stop();
+        },
+      });
+    }
+
     // this.colliders.toggleVisible();
 
     this.cursors = this.input.keyboard.createCursorKeys();
@@ -58,14 +76,32 @@ let Kitchen = new Phaser.Class({
     });
     this.marina.depth = this.marina.body.y;
 
+    this.checkEntrances();
     this.checkExits();
+  },
+
+  checkEntrances: function() {
+
   },
 
   checkExits: function() {
     if (this.marina.x < 43 * 4) {
-      this.scene.start('bedroom');
+      this.marina.inputEnabled = false;
     }
     else if (this.marina.x > 182 * 4) {
+      this.marina.inputEnabled = false;
+    }
+
+    if (this.marina.x < 0) {
+      last.scene = 'kitchen';
+      last.x = this.marina.x;
+      last.y = this.marina.y;
+      this.scene.start('bedroom');
+    }
+    else if (this.marina.x > 200 * 4) {
+      last.scene = 'kitchen';
+      last.x = this.marina.x;
+      last.y = this.marina.y;
       this.scene.start('living');
     }
   },

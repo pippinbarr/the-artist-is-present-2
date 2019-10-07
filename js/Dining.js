@@ -72,6 +72,17 @@ let Dining = new Phaser.Class({
       this.marina.stop();
     });
     this.marina.depth = this.marina.body.y;
+
+    this.checkExits();
+  },
+
+  checkExits: function() {
+    if (this.marina.x < 0) {
+      this.scene.start('living');
+    }
+    else if (this.marina.x > 185 * 4) {
+      this.scene.start('exterior');
+    }
   },
 
 });

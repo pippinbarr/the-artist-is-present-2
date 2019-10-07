@@ -57,6 +57,17 @@ let Kitchen = new Phaser.Class({
       this.marina.stop();
     });
     this.marina.depth = this.marina.body.y;
+
+    this.checkExits();
+  },
+
+  checkExits: function() {
+    if (this.marina.x < 43 * 4) {
+      this.scene.start('bedroom');
+    }
+    else if (this.marina.x > 182 * 4) {
+      this.scene.start('living');
+    }
   },
 
 });

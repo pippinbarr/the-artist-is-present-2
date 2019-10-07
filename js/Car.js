@@ -11,6 +11,7 @@ let Car = new Phaser.Class({
   create: function() {
     this.cameras.main.setBackgroundColor('#fff');
 
+    // How many pixels per frame the buildings move
     this.SCROLL_SPEED = 4;
 
     // Buildings
@@ -28,9 +29,11 @@ let Car = new Phaser.Class({
   },
 
   update: function(time, delta) {
+    // Move the buildings so they scroll
     this.buildings.x -= this.SCROLL_SPEED;
     this.buildings2.x -= this.SCROLL_SPEED;
 
+    // Wrap the buildings as they go off screen
     if (this.buildings.x + this.buildings.width * 4 * 4 / 2 < 0) {
       this.buildings.x = this.buildings2.x + this.buildings2.width * 4 * 4;
     }

@@ -4,8 +4,8 @@
 			"image": "atlas.png",
 			"format": "RGBA8888",
 			"size": {
-				"w": 861,
-				"h": 256
+				"w": 249,
+				"h": 957
 			},
 			"scale": 1,
 			"frames": [
@@ -31,7 +31,7 @@
 					}
 				},
 				{
-					"filename": "dining/dining-bg.png",
+					"filename": "bedroom/bedroom-fg.png",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
@@ -47,6 +47,27 @@
 					"frame": {
 						"x": 1,
 						"y": 103,
+						"w": 200,
+						"h": 100
+					}
+				},
+				{
+					"filename": "dining/dining-bg.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 200,
+						"h": 100
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 200,
+						"h": 100
+					},
+					"frame": {
+						"x": 1,
+						"y": 205,
 						"w": 200,
 						"h": 100
 					}
@@ -66,8 +87,8 @@
 						"h": 100
 					},
 					"frame": {
-						"x": 203,
-						"y": 1,
+						"x": 1,
+						"y": 307,
 						"w": 200,
 						"h": 100
 					}
@@ -87,8 +108,8 @@
 						"h": 100
 					},
 					"frame": {
-						"x": 203,
-						"y": 103,
+						"x": 1,
+						"y": 409,
 						"w": 200,
 						"h": 100
 					}
@@ -108,8 +129,8 @@
 						"h": 100
 					},
 					"frame": {
-						"x": 405,
-						"y": 1,
+						"x": 1,
+						"y": 511,
 						"w": 200,
 						"h": 100
 					}
@@ -129,31 +150,10 @@
 						"h": 100
 					},
 					"frame": {
-						"x": 405,
-						"y": 103,
+						"x": 1,
+						"y": 613,
 						"w": 168,
 						"h": 100
-					}
-				},
-				{
-					"filename": "car/car-buildings.png",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 240,
-						"h": 20
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 240,
-						"h": 20
-					},
-					"frame": {
-						"x": 1,
-						"y": 205,
-						"w": 240,
-						"h": 20
 					}
 				},
 				{
@@ -171,8 +171,8 @@
 						"h": 83
 					},
 					"frame": {
-						"x": 607,
-						"y": 1,
+						"x": 1,
+						"y": 715,
 						"w": 167,
 						"h": 83
 					}
@@ -192,31 +192,31 @@
 						"h": 90
 					},
 					"frame": {
-						"x": 607,
-						"y": 86,
+						"x": 1,
+						"y": 800,
 						"w": 157,
 						"h": 90
 					}
 				},
 				{
-					"filename": "kitchen/kitchen-unit-bg.png",
+					"filename": "car/car-buildings.png",
 					"rotated": false,
-					"trimmed": true,
+					"trimmed": false,
 					"sourceSize": {
-						"w": 200,
-						"h": 100
+						"w": 240,
+						"h": 20
 					},
 					"spriteSourceSize": {
-						"x": 95,
+						"x": 0,
 						"y": 0,
-						"w": 68,
-						"h": 68
+						"w": 240,
+						"h": 20
 					},
 					"frame": {
-						"x": 776,
-						"y": 1,
-						"w": 68,
-						"h": 68
+						"x": 1,
+						"y": 892,
+						"w": 240,
+						"h": 20
 					}
 				},
 				{
@@ -234,94 +234,10 @@
 						"h": 42
 					},
 					"frame": {
-						"x": 243,
-						"y": 205,
+						"x": 1,
+						"y": 914,
 						"w": 110,
 						"h": 42
-					}
-				},
-				{
-					"filename": "dining/dining-side-chairs.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 200,
-						"h": 100
-					},
-					"spriteSourceSize": {
-						"x": 32,
-						"y": 56,
-						"w": 91,
-						"h": 25
-					},
-					"frame": {
-						"x": 1,
-						"y": 227,
-						"w": 91,
-						"h": 25
-					}
-				},
-				{
-					"filename": "bedroom/bedroom-bed.png",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 70,
-						"h": 44
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 70,
-						"h": 44
-					},
-					"frame": {
-						"x": 355,
-						"y": 205,
-						"w": 70,
-						"h": 44
-					}
-				},
-				{
-					"filename": "dining/dining-table.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 200,
-						"h": 100
-					},
-					"spriteSourceSize": {
-						"x": 40,
-						"y": 58,
-						"w": 74,
-						"h": 26
-					},
-					"frame": {
-						"x": 427,
-						"y": 205,
-						"w": 74,
-						"h": 26
-					}
-				},
-				{
-					"filename": "bedroom/bedroom-fg.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 200,
-						"h": 100
-					},
-					"spriteSourceSize": {
-						"x": 148,
-						"y": 5,
-						"w": 31,
-						"h": 90
-					},
-					"frame": {
-						"x": 766,
-						"y": 86,
-						"w": 31,
-						"h": 90
 					}
 				},
 				{
@@ -339,14 +255,14 @@
 						"h": 100
 					},
 					"frame": {
-						"x": 799,
-						"y": 71,
+						"x": 203,
+						"y": 1,
 						"w": 31,
 						"h": 100
 					}
 				},
 				{
-					"filename": "living/living-beige-sofa.png",
+					"filename": "dining/dining-side-chairs.png",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -354,16 +270,16 @@
 						"h": 100
 					},
 					"spriteSourceSize": {
-						"x": 108,
-						"y": 49,
-						"w": 71,
-						"h": 21
+						"x": 32,
+						"y": 56,
+						"w": 91,
+						"h": 25
 					},
 					"frame": {
-						"x": 94,
-						"y": 227,
-						"w": 71,
-						"h": 21
+						"x": 113,
+						"y": 914,
+						"w": 91,
+						"h": 25
 					}
 				},
 				{
@@ -381,77 +297,14 @@
 						"h": 15
 					},
 					"frame": {
-						"x": 167,
-						"y": 227,
+						"x": 113,
+						"y": 941,
 						"w": 74,
 						"h": 15
 					}
 				},
 				{
-					"filename": "walkcycle/walkcycle-03.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 14,
-						"h": 35
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 2,
-						"w": 14,
-						"h": 33
-					},
-					"frame": {
-						"x": 846,
-						"y": 1,
-						"w": 14,
-						"h": 33
-					}
-				},
-				{
-					"filename": "walkcycle/walkcycle-07.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 14,
-						"h": 35
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 2,
-						"w": 14,
-						"h": 33
-					},
-					"frame": {
-						"x": 846,
-						"y": 36,
-						"w": 14,
-						"h": 33
-					}
-				},
-				{
-					"filename": "atrium/atrium-table-and-chairs.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 60,
-						"h": 30
-					},
-					"spriteSourceSize": {
-						"x": 2,
-						"y": 5,
-						"w": 56,
-						"h": 23
-					},
-					"frame": {
-						"x": 503,
-						"y": 205,
-						"w": 56,
-						"h": 23
-					}
-				},
-				{
-					"filename": "dining/dining-back-chairs.png",
+					"filename": "kitchen/kitchen-unit-bg.png",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -459,62 +312,20 @@
 						"h": 100
 					},
 					"spriteSourceSize": {
-						"x": 55,
-						"y": 48,
-						"w": 46,
-						"h": 25
-					},
-					"frame": {
-						"x": 503,
-						"y": 230,
-						"w": 46,
-						"h": 25
-					}
-				},
-				{
-					"filename": "car/car-bg.png",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 40,
-						"h": 20
-					},
-					"spriteSourceSize": {
-						"x": 0,
+						"x": 95,
 						"y": 0,
-						"w": 40,
-						"h": 20
+						"w": 68,
+						"h": 68
 					},
 					"frame": {
-						"x": 427,
-						"y": 233,
-						"w": 40,
-						"h": 20
+						"x": 171,
+						"y": 613,
+						"w": 68,
+						"h": 68
 					}
 				},
 				{
-					"filename": "bedroom/bedroom-dresser.png",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 23,
-						"h": 30
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 23,
-						"h": 30
-					},
-					"frame": {
-						"x": 575,
-						"y": 103,
-						"w": 23,
-						"h": 30
-					}
-				},
-				{
-					"filename": "exterior/exterior-box.png",
+					"filename": "bedroom/bedroom-bed.png",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -522,20 +333,20 @@
 						"h": 100
 					},
 					"spriteSourceSize": {
-						"x": 69,
-						"y": 42,
-						"w": 21,
-						"h": 29
+						"x": 30,
+						"y": 38,
+						"w": 72,
+						"h": 47
 					},
 					"frame": {
-						"x": 832,
-						"y": 71,
-						"w": 21,
-						"h": 29
+						"x": 171,
+						"y": 683,
+						"w": 72,
+						"h": 47
 					}
 				},
 				{
-					"filename": "dining/Marina.png",
+					"filename": "dining/dining-table.png",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -543,121 +354,16 @@
 						"h": 100
 					},
 					"spriteSourceSize": {
-						"x": 2,
-						"y": 45,
-						"w": 15,
-						"h": 34
+						"x": 40,
+						"y": 58,
+						"w": 74,
+						"h": 26
 					},
 					"frame": {
-						"x": 575,
-						"y": 135,
-						"w": 15,
-						"h": 34
-					}
-				},
-				{
-					"filename": "walkcycle/walkcycle-02.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 14,
-						"h": 35
-					},
-					"spriteSourceSize": {
-						"x": 1,
-						"y": 1,
-						"w": 13,
-						"h": 34
-					},
-					"frame": {
-						"x": 592,
-						"y": 135,
-						"w": 13,
-						"h": 34
-					}
-				},
-				{
-					"filename": "walkcycle/walkcycle-01.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 14,
-						"h": 35
-					},
-					"spriteSourceSize": {
-						"x": 2,
-						"y": 1,
-						"w": 12,
-						"h": 34
-					},
-					"frame": {
-						"x": 832,
-						"y": 102,
-						"w": 12,
-						"h": 34
-					}
-				},
-				{
-					"filename": "walkcycle/walkcycle-24.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 14,
-						"h": 35
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 5,
-						"w": 14,
-						"h": 30
-					},
-					"frame": {
-						"x": 846,
-						"y": 102,
-						"w": 14,
-						"h": 30
-					}
-				},
-				{
-					"filename": "walkcycle/walkcycle-04.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 14,
-						"h": 35
-					},
-					"spriteSourceSize": {
-						"x": 1,
-						"y": 2,
-						"w": 13,
-						"h": 33
-					},
-					"frame": {
-						"x": 575,
-						"y": 171,
-						"w": 13,
-						"h": 33
-					}
-				},
-				{
-					"filename": "dining/dining-front-chairs.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 200,
-						"h": 100
-					},
-					"spriteSourceSize": {
-						"x": 54,
-						"y": 63,
-						"w": 46,
-						"h": 24
-					},
-					"frame": {
-						"x": 590,
-						"y": 178,
-						"w": 46,
-						"h": 24
+						"x": 170,
+						"y": 732,
+						"w": 74,
+						"h": 26
 					}
 				},
 				{
@@ -675,8 +381,8 @@
 						"h": 61
 					},
 					"frame": {
-						"x": 638,
-						"y": 178,
+						"x": 203,
+						"y": 103,
 						"w": 38,
 						"h": 61
 					}
@@ -696,10 +402,31 @@
 						"h": 60
 					},
 					"frame": {
-						"x": 678,
-						"y": 178,
+						"x": 203,
+						"y": 166,
 						"w": 33,
 						"h": 60
+					}
+				},
+				{
+					"filename": "living/living-beige-sofa.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 200,
+						"h": 100
+					},
+					"spriteSourceSize": {
+						"x": 108,
+						"y": 49,
+						"w": 71,
+						"h": 21
+					},
+					"frame": {
+						"x": 170,
+						"y": 760,
+						"w": 71,
+						"h": 21
 					}
 				},
 				{
@@ -717,10 +444,52 @@
 						"h": 56
 					},
 					"frame": {
-						"x": 713,
-						"y": 178,
+						"x": 203,
+						"y": 228,
 						"w": 32,
 						"h": 56
+					}
+				},
+				{
+					"filename": "walkcycle/walkcycle-01.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 14,
+						"h": 35
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 1,
+						"w": 12,
+						"h": 34
+					},
+					"frame": {
+						"x": 236,
+						"y": 1,
+						"w": 12,
+						"h": 34
+					}
+				},
+				{
+					"filename": "walkcycle/walkcycle-05.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 14,
+						"h": 35
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 1,
+						"w": 12,
+						"h": 34
+					},
+					"frame": {
+						"x": 236,
+						"y": 37,
+						"w": 12,
+						"h": 34
 					}
 				},
 				{
@@ -738,8 +507,8 @@
 						"h": 41
 					},
 					"frame": {
-						"x": 747,
-						"y": 178,
+						"x": 203,
+						"y": 286,
 						"w": 33,
 						"h": 41
 					}
@@ -759,14 +528,35 @@
 						"h": 41
 					},
 					"frame": {
-						"x": 782,
-						"y": 178,
+						"x": 203,
+						"y": 329,
 						"w": 32,
 						"h": 41
 					}
 				},
 				{
-					"filename": "walkcycle/walkcycle-05.png",
+					"filename": "atrium/atrium-table-and-chairs.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 60,
+						"h": 30
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 5,
+						"w": 56,
+						"h": 23
+					},
+					"frame": {
+						"x": 170,
+						"y": 783,
+						"w": 56,
+						"h": 23
+					}
+				},
+				{
+					"filename": "walkcycle/walkcycle-23.png",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -775,15 +565,267 @@
 					},
 					"spriteSourceSize": {
 						"x": 2,
-						"y": 1,
-						"w": 12,
+						"y": 2,
+						"w": 11,
+						"h": 33
+					},
+					"frame": {
+						"x": 237,
+						"y": 228,
+						"w": 11,
+						"h": 33
+					}
+				},
+				{
+					"filename": "dining/dining-back-chairs.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 200,
+						"h": 100
+					},
+					"spriteSourceSize": {
+						"x": 55,
+						"y": 48,
+						"w": 46,
+						"h": 25
+					},
+					"frame": {
+						"x": 160,
+						"y": 808,
+						"w": 46,
+						"h": 25
+					}
+				},
+				{
+					"filename": "dining/dining-front-chairs.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 200,
+						"h": 100
+					},
+					"spriteSourceSize": {
+						"x": 54,
+						"y": 63,
+						"w": 46,
+						"h": 24
+					},
+					"frame": {
+						"x": 160,
+						"y": 835,
+						"w": 46,
+						"h": 24
+					}
+				},
+				{
+					"filename": "exterior/exterior-box.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 200,
+						"h": 100
+					},
+					"spriteSourceSize": {
+						"x": 69,
+						"y": 42,
+						"w": 21,
+						"h": 29
+					},
+					"frame": {
+						"x": 160,
+						"y": 861,
+						"w": 21,
+						"h": 29
+					}
+				},
+				{
+					"filename": "car/car-bg.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 40,
+						"h": 20
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 40,
+						"h": 20
+					},
+					"frame": {
+						"x": 208,
+						"y": 808,
+						"w": 40,
+						"h": 20
+					}
+				},
+				{
+					"filename": "bedroom/Marina.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 200,
+						"h": 100
+					},
+					"spriteSourceSize": {
+						"x": 38,
+						"y": 57,
+						"w": 40,
+						"h": 12
+					},
+					"frame": {
+						"x": 208,
+						"y": 830,
+						"w": 40,
+						"h": 12
+					}
+				},
+				{
+					"filename": "bedroom/bedroom-dresser.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 200,
+						"h": 100
+					},
+					"spriteSourceSize": {
+						"x": 119,
+						"y": 30,
+						"w": 25,
+						"h": 32
+					},
+					"frame": {
+						"x": 203,
+						"y": 372,
+						"w": 25,
+						"h": 32
+					}
+				},
+				{
+					"filename": "exterior/exterior-cone.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 200,
+						"h": 100
+					},
+					"spriteSourceSize": {
+						"x": 156,
+						"y": 63,
+						"w": 11,
+						"h": 21
+					},
+					"frame": {
+						"x": 237,
+						"y": 263,
+						"w": 11,
+						"h": 21
+					}
+				},
+				{
+					"filename": "dining/Marina.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 200,
+						"h": 100
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 45,
+						"w": 15,
 						"h": 34
 					},
 					"frame": {
-						"x": 832,
-						"y": 138,
-						"w": 12,
+						"x": 203,
+						"y": 406,
+						"w": 15,
 						"h": 34
+					}
+				},
+				{
+					"filename": "walkcycle/walkcycle-02.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 14,
+						"h": 35
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 1,
+						"w": 13,
+						"h": 34
+					},
+					"frame": {
+						"x": 203,
+						"y": 442,
+						"w": 13,
+						"h": 34
+					}
+				},
+				{
+					"filename": "walkcycle/walkcycle-03.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 14,
+						"h": 35
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 2,
+						"w": 14,
+						"h": 33
+					},
+					"frame": {
+						"x": 203,
+						"y": 478,
+						"w": 14,
+						"h": 33
+					}
+				},
+				{
+					"filename": "walkcycle/walkcycle-07.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 14,
+						"h": 35
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 2,
+						"w": 14,
+						"h": 33
+					},
+					"frame": {
+						"x": 203,
+						"y": 513,
+						"w": 14,
+						"h": 33
+					}
+				},
+				{
+					"filename": "walkcycle/walkcycle-04.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 14,
+						"h": 35
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 2,
+						"w": 13,
+						"h": 33
+					},
+					"frame": {
+						"x": 203,
+						"y": 548,
+						"w": 13,
+						"h": 33
 					}
 				},
 				{
@@ -801,8 +843,8 @@
 						"h": 34
 					},
 					"frame": {
-						"x": 846,
-						"y": 134,
+						"x": 220,
+						"y": 406,
 						"w": 12,
 						"h": 34
 					}
@@ -822,8 +864,8 @@
 						"h": 33
 					},
 					"frame": {
-						"x": 816,
-						"y": 173,
+						"x": 218,
+						"y": 442,
 						"w": 12,
 						"h": 33
 					}
@@ -843,8 +885,8 @@
 						"h": 33
 					},
 					"frame": {
-						"x": 830,
-						"y": 174,
+						"x": 219,
+						"y": 477,
 						"w": 12,
 						"h": 33
 					}
@@ -864,10 +906,94 @@
 						"h": 33
 					},
 					"frame": {
-						"x": 561,
-						"y": 205,
+						"x": 219,
+						"y": 512,
 						"w": 12,
 						"h": 33
+					}
+				},
+				{
+					"filename": "walkcycle/walkcycle-18.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 14,
+						"h": 35
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 2,
+						"w": 12,
+						"h": 32
+					},
+					"frame": {
+						"x": 230,
+						"y": 372,
+						"w": 12,
+						"h": 32
+					}
+				},
+				{
+					"filename": "walkcycle/walkcycle-24.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 14,
+						"h": 35
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 5,
+						"w": 14,
+						"h": 30
+					},
+					"frame": {
+						"x": 234,
+						"y": 406,
+						"w": 14,
+						"h": 30
+					}
+				},
+				{
+					"filename": "exterior/exterior-hydrant.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 200,
+						"h": 100
+					},
+					"spriteSourceSize": {
+						"x": 7,
+						"y": 68,
+						"w": 11,
+						"h": 18
+					},
+					"frame": {
+						"x": 237,
+						"y": 329,
+						"w": 11,
+						"h": 18
+					}
+				},
+				{
+					"filename": "car/car-marina.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 40,
+						"h": 20
+					},
+					"spriteSourceSize": {
+						"x": 12,
+						"y": 4,
+						"w": 11,
+						"h": 16
+					},
+					"frame": {
+						"x": 237,
+						"y": 349,
+						"w": 11,
+						"h": 16
 					}
 				},
 				{
@@ -885,31 +1011,10 @@
 						"h": 33
 					},
 					"frame": {
-						"x": 575,
-						"y": 206,
+						"x": 206,
+						"y": 914,
 						"w": 12,
 						"h": 33
-					}
-				},
-				{
-					"filename": "bedroom/bedroom-side-table.png",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 17,
-						"h": 15
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 17,
-						"h": 15
-					},
-					"frame": {
-						"x": 551,
-						"y": 240,
-						"w": 17,
-						"h": 15
 					}
 				},
 				{
@@ -927,8 +1032,8 @@
 						"h": 33
 					},
 					"frame": {
-						"x": 844,
-						"y": 174,
+						"x": 220,
+						"y": 914,
 						"w": 12,
 						"h": 33
 					}
@@ -948,10 +1053,31 @@
 						"h": 33
 					},
 					"frame": {
-						"x": 589,
-						"y": 206,
+						"x": 234,
+						"y": 914,
 						"w": 12,
 						"h": 33
+					}
+				},
+				{
+					"filename": "bedroom/bedroom-side-table.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 200,
+						"h": 100
+					},
+					"spriteSourceSize": {
+						"x": 30,
+						"y": 74,
+						"w": 19,
+						"h": 16
+					},
+					"frame": {
+						"x": 183,
+						"y": 861,
+						"w": 19,
+						"h": 16
 					}
 				},
 				{
@@ -969,8 +1095,8 @@
 						"h": 33
 					},
 					"frame": {
-						"x": 603,
-						"y": 204,
+						"x": 232,
+						"y": 442,
 						"w": 12,
 						"h": 33
 					}
@@ -990,52 +1116,10 @@
 						"h": 33
 					},
 					"frame": {
-						"x": 617,
-						"y": 204,
+						"x": 233,
+						"y": 477,
 						"w": 12,
 						"h": 33
-					}
-				},
-				{
-					"filename": "exterior/exterior-cone.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 200,
-						"h": 100
-					},
-					"spriteSourceSize": {
-						"x": 156,
-						"y": 63,
-						"w": 11,
-						"h": 21
-					},
-					"frame": {
-						"x": 469,
-						"y": 233,
-						"w": 11,
-						"h": 21
-					}
-				},
-				{
-					"filename": "exterior/exterior-hydrant.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 200,
-						"h": 100
-					},
-					"spriteSourceSize": {
-						"x": 7,
-						"y": 68,
-						"w": 11,
-						"h": 18
-					},
-					"frame": {
-						"x": 482,
-						"y": 233,
-						"w": 11,
-						"h": 18
 					}
 				},
 				{
@@ -1053,8 +1137,8 @@
 						"h": 33
 					},
 					"frame": {
-						"x": 747,
-						"y": 221,
+						"x": 233,
+						"y": 512,
 						"w": 12,
 						"h": 33
 					}
@@ -1074,8 +1158,8 @@
 						"h": 33
 					},
 					"frame": {
-						"x": 761,
-						"y": 221,
+						"x": 218,
+						"y": 548,
 						"w": 12,
 						"h": 33
 					}
@@ -1095,8 +1179,8 @@
 						"h": 33
 					},
 					"frame": {
-						"x": 775,
-						"y": 221,
+						"x": 232,
+						"y": 547,
 						"w": 12,
 						"h": 33
 					}
@@ -1116,8 +1200,8 @@
 						"h": 33
 					},
 					"frame": {
-						"x": 789,
-						"y": 221,
+						"x": 208,
+						"y": 844,
 						"w": 12,
 						"h": 33
 					}
@@ -1137,52 +1221,10 @@
 						"h": 33
 					},
 					"frame": {
-						"x": 803,
-						"y": 221,
+						"x": 222,
+						"y": 844,
 						"w": 12,
 						"h": 33
-					}
-				},
-				{
-					"filename": "walkcycle/walkcycle-23.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 14,
-						"h": 35
-					},
-					"spriteSourceSize": {
-						"x": 2,
-						"y": 2,
-						"w": 11,
-						"h": 33
-					},
-					"frame": {
-						"x": 817,
-						"y": 208,
-						"w": 11,
-						"h": 33
-					}
-				},
-				{
-					"filename": "walkcycle/walkcycle-18.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 14,
-						"h": 35
-					},
-					"spriteSourceSize": {
-						"x": 1,
-						"y": 2,
-						"w": 12,
-						"h": 32
-					},
-					"frame": {
-						"x": 830,
-						"y": 209,
-						"w": 12,
-						"h": 32
 					}
 				},
 				{
@@ -1200,31 +1242,10 @@
 						"h": 32
 					},
 					"frame": {
-						"x": 844,
-						"y": 209,
+						"x": 236,
+						"y": 844,
 						"w": 12,
 						"h": 32
-					}
-				},
-				{
-					"filename": "car/car-marina.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 40,
-						"h": 20
-					},
-					"spriteSourceSize": {
-						"x": 12,
-						"y": 4,
-						"w": 11,
-						"h": 16
-					},
-					"frame": {
-						"x": 603,
-						"y": 239,
-						"w": 11,
-						"h": 16
 					}
 				},
 				{
@@ -1242,8 +1263,8 @@
 						"h": 17
 					},
 					"frame": {
-						"x": 713,
-						"y": 236,
+						"x": 236,
+						"y": 73,
 						"w": 9,
 						"h": 17
 					}
@@ -1263,8 +1284,8 @@
 						"h": 1
 					},
 					"frame": {
-						"x": 1,
-						"y": 254,
+						"x": 247,
+						"y": 73,
 						"w": 1,
 						"h": 1
 					}
@@ -1275,6 +1296,6 @@
 	"meta": {
 		"app": "https://www.codeandweb.com/texturepacker",
 		"version": "3.0",
-		"smartupdate": "$TexturePacker:SmartUpdate:6bc24d751c6e8b29d2df4aeec359a49f:dc8ce4e5110d09ca399e4fbe78307ee6:cbce6b53f0f49e0bf15173c25c41f876$"
+		"smartupdate": "$TexturePacker:SmartUpdate:44befc96a4ddf64c2ae30847446784d7:570c6a50257e55a85d8d24f798d28f88:cbce6b53f0f49e0bf15173c25c41f876$"
 	}
 }

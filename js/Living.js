@@ -61,6 +61,17 @@ let Living = new Phaser.Class({
       this.marina.stop();
     });
     this.marina.depth = this.marina.body.y;
+
+    this.checkExits();
+  },
+
+  checkExits: function() {
+    if (this.marina.x < 0 * 4) {
+      this.scene.start('kitchen');
+    }
+    else if (this.marina.x > 200 * 4) {
+      this.scene.start('dining');
+    }
   },
 
 });

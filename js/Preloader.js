@@ -1,4 +1,4 @@
-const START_SCENE = 'car';
+const START_SCENE = 'bedroom';
 
 let Preloader = new Phaser.Class({
 

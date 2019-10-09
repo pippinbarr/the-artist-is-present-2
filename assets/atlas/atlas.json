@@ -4,8 +4,8 @@
 			"image": "atlas.png",
 			"format": "RGBA8888",
 			"size": {
-				"w": 249,
-				"h": 957
+				"w": 1037,
+				"h": 253
 			},
 			"scale": 1,
 			"frames": [
@@ -52,6 +52,132 @@
 					}
 				},
 				{
+					"filename": "car/car-buildings.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 240,
+						"h": 20
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 240,
+						"h": 20
+					},
+					"frame": {
+						"x": 1,
+						"y": 205,
+						"w": 240,
+						"h": 20
+					}
+				},
+				{
+					"filename": "dining/dining-side-chairs.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 200,
+						"h": 100
+					},
+					"spriteSourceSize": {
+						"x": 32,
+						"y": 56,
+						"w": 91,
+						"h": 25
+					},
+					"frame": {
+						"x": 1,
+						"y": 227,
+						"w": 91,
+						"h": 25
+					}
+				},
+				{
+					"filename": "living/living-beige-sofa.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 200,
+						"h": 100
+					},
+					"spriteSourceSize": {
+						"x": 108,
+						"y": 49,
+						"w": 71,
+						"h": 21
+					},
+					"frame": {
+						"x": 94,
+						"y": 227,
+						"w": 71,
+						"h": 21
+					}
+				},
+				{
+					"filename": "red-pixel.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 1,
+						"h": 1
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 1,
+						"h": 1
+					},
+					"frame": {
+						"x": 94,
+						"y": 250,
+						"w": 1,
+						"h": 1
+					}
+				},
+				{
+					"filename": "atrium/atrium-table-and-chairs.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 60,
+						"h": 30
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 5,
+						"w": 56,
+						"h": 23
+					},
+					"frame": {
+						"x": 167,
+						"y": 227,
+						"w": 56,
+						"h": 23
+					}
+				},
+				{
+					"filename": "dining/dining-back-chairs.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 200,
+						"h": 100
+					},
+					"spriteSourceSize": {
+						"x": 55,
+						"y": 48,
+						"w": 46,
+						"h": 25
+					},
+					"frame": {
+						"x": 225,
+						"y": 227,
+						"w": 46,
+						"h": 25
+					}
+				},
+				{
 					"filename": "dining/dining-bg.png",
 					"rotated": false,
 					"trimmed": false,
@@ -66,8 +192,8 @@
 						"h": 100
 					},
 					"frame": {
-						"x": 1,
-						"y": 205,
+						"x": 203,
+						"y": 1,
 						"w": 200,
 						"h": 100
 					}
@@ -87,8 +213,134 @@
 						"h": 100
 					},
 					"frame": {
-						"x": 1,
-						"y": 307,
+						"x": 203,
+						"y": 103,
+						"w": 200,
+						"h": 100
+					}
+				},
+				{
+					"filename": "living/living-coffee-table.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 200,
+						"h": 100
+					},
+					"spriteSourceSize": {
+						"x": 106,
+						"y": 70,
+						"w": 74,
+						"h": 15
+					},
+					"frame": {
+						"x": 243,
+						"y": 205,
+						"w": 74,
+						"h": 15
+					}
+				},
+				{
+					"filename": "dining/dining-table.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 200,
+						"h": 100
+					},
+					"spriteSourceSize": {
+						"x": 40,
+						"y": 58,
+						"w": 74,
+						"h": 26
+					},
+					"frame": {
+						"x": 273,
+						"y": 222,
+						"w": 74,
+						"h": 26
+					}
+				},
+				{
+					"filename": "bedroom/bedroom-marina.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 200,
+						"h": 100
+					},
+					"spriteSourceSize": {
+						"x": 38,
+						"y": 57,
+						"w": 40,
+						"h": 12
+					},
+					"frame": {
+						"x": 319,
+						"y": 205,
+						"w": 40,
+						"h": 12
+					}
+				},
+				{
+					"filename": "dining/dining-front-chairs.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 200,
+						"h": 100
+					},
+					"spriteSourceSize": {
+						"x": 54,
+						"y": 63,
+						"w": 46,
+						"h": 24
+					},
+					"frame": {
+						"x": 349,
+						"y": 219,
+						"w": 46,
+						"h": 24
+					}
+				},
+				{
+					"filename": "exterior/car.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 200,
+						"h": 100
+					},
+					"spriteSourceSize": {
+						"x": 25,
+						"y": 58,
+						"w": 110,
+						"h": 42
+					},
+					"frame": {
+						"x": 397,
+						"y": 205,
+						"w": 110,
+						"h": 42
+					}
+				},
+				{
+					"filename": "kitchen/kitchen-fg.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 200,
+						"h": 100
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 200,
+						"h": 100
+					},
+					"frame": {
+						"x": 405,
+						"y": 1,
 						"w": 200,
 						"h": 100
 					}
@@ -108,220 +360,10 @@
 						"h": 100
 					},
 					"frame": {
-						"x": 1,
-						"y": 409,
+						"x": 405,
+						"y": 103,
 						"w": 200,
 						"h": 100
-					}
-				},
-				{
-					"filename": "tickets/tickets-bg.png",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 200,
-						"h": 100
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 200,
-						"h": 100
-					},
-					"frame": {
-						"x": 1,
-						"y": 511,
-						"w": 200,
-						"h": 100
-					}
-				},
-				{
-					"filename": "kitchen/kitchen-bg.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 200,
-						"h": 100
-					},
-					"spriteSourceSize": {
-						"x": 16,
-						"y": 0,
-						"w": 168,
-						"h": 100
-					},
-					"frame": {
-						"x": 1,
-						"y": 613,
-						"w": 168,
-						"h": 100
-					}
-				},
-				{
-					"filename": "kitchen/kitchen-unit-fg.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 200,
-						"h": 100
-					},
-					"spriteSourceSize": {
-						"x": 17,
-						"y": 0,
-						"w": 167,
-						"h": 83
-					},
-					"frame": {
-						"x": 1,
-						"y": 715,
-						"w": 167,
-						"h": 83
-					}
-				},
-				{
-					"filename": "bedroom/bedroom-bg.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 200,
-						"h": 100
-					},
-					"spriteSourceSize": {
-						"x": 22,
-						"y": 5,
-						"w": 157,
-						"h": 90
-					},
-					"frame": {
-						"x": 1,
-						"y": 800,
-						"w": 157,
-						"h": 90
-					}
-				},
-				{
-					"filename": "car/car-buildings.png",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 240,
-						"h": 20
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 240,
-						"h": 20
-					},
-					"frame": {
-						"x": 1,
-						"y": 892,
-						"w": 240,
-						"h": 20
-					}
-				},
-				{
-					"filename": "exterior/car.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 200,
-						"h": 100
-					},
-					"spriteSourceSize": {
-						"x": 25,
-						"y": 58,
-						"w": 110,
-						"h": 42
-					},
-					"frame": {
-						"x": 1,
-						"y": 914,
-						"w": 110,
-						"h": 42
-					}
-				},
-				{
-					"filename": "dining/dining-fg.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 200,
-						"h": 100
-					},
-					"spriteSourceSize": {
-						"x": 169,
-						"y": 0,
-						"w": 31,
-						"h": 100
-					},
-					"frame": {
-						"x": 203,
-						"y": 1,
-						"w": 31,
-						"h": 100
-					}
-				},
-				{
-					"filename": "dining/dining-side-chairs.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 200,
-						"h": 100
-					},
-					"spriteSourceSize": {
-						"x": 32,
-						"y": 56,
-						"w": 91,
-						"h": 25
-					},
-					"frame": {
-						"x": 113,
-						"y": 914,
-						"w": 91,
-						"h": 25
-					}
-				},
-				{
-					"filename": "living/living-coffee-table.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 200,
-						"h": 100
-					},
-					"spriteSourceSize": {
-						"x": 106,
-						"y": 70,
-						"w": 74,
-						"h": 15
-					},
-					"frame": {
-						"x": 113,
-						"y": 941,
-						"w": 74,
-						"h": 15
-					}
-				},
-				{
-					"filename": "kitchen/kitchen-unit-bg.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 200,
-						"h": 100
-					},
-					"spriteSourceSize": {
-						"x": 95,
-						"y": 0,
-						"w": 68,
-						"h": 68
-					},
-					"frame": {
-						"x": 171,
-						"y": 613,
-						"w": 68,
-						"h": 68
 					}
 				},
 				{
@@ -339,14 +381,14 @@
 						"h": 47
 					},
 					"frame": {
-						"x": 171,
-						"y": 683,
+						"x": 509,
+						"y": 205,
 						"w": 72,
 						"h": 47
 					}
 				},
 				{
-					"filename": "dining/dining-table.png",
+					"filename": "living/living-bed-thing.png",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -354,62 +396,41 @@
 						"h": 100
 					},
 					"spriteSourceSize": {
-						"x": 40,
-						"y": 58,
-						"w": 74,
-						"h": 26
+						"x": 10,
+						"y": 44,
+						"w": 33,
+						"h": 41
 					},
 					"frame": {
-						"x": 170,
-						"y": 732,
-						"w": 74,
-						"h": 26
+						"x": 583,
+						"y": 205,
+						"w": 33,
+						"h": 41
 					}
 				},
 				{
-					"filename": "kitchen/kitchen-fg.png",
+					"filename": "tickets/tickets-bg.png",
 					"rotated": false,
-					"trimmed": true,
+					"trimmed": false,
 					"sourceSize": {
 						"w": 200,
 						"h": 100
 					},
 					"spriteSourceSize": {
-						"x": 16,
-						"y": 17,
-						"w": 38,
-						"h": 61
-					},
-					"frame": {
-						"x": 203,
-						"y": 103,
-						"w": 38,
-						"h": 61
-					}
-				},
-				{
-					"filename": "exterior/exterior-fg.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 200,
-						"h": 100
-					},
-					"spriteSourceSize": {
-						"x": 28,
+						"x": 0,
 						"y": 0,
-						"w": 33,
-						"h": 60
+						"w": 200,
+						"h": 100
 					},
 					"frame": {
-						"x": 203,
-						"y": 166,
-						"w": 33,
-						"h": 60
+						"x": 607,
+						"y": 1,
+						"w": 200,
+						"h": 100
 					}
 				},
 				{
-					"filename": "living/living-beige-sofa.png",
+					"filename": "bedroom/bedroom-bg.png",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -417,16 +438,16 @@
 						"h": 100
 					},
 					"spriteSourceSize": {
-						"x": 108,
-						"y": 49,
-						"w": 71,
-						"h": 21
+						"x": 22,
+						"y": 5,
+						"w": 157,
+						"h": 90
 					},
 					"frame": {
-						"x": 170,
-						"y": 760,
-						"w": 71,
-						"h": 21
+						"x": 607,
+						"y": 103,
+						"w": 157,
+						"h": 90
 					}
 				},
 				{
@@ -444,10 +465,325 @@
 						"h": 56
 					},
 					"frame": {
-						"x": 203,
-						"y": 228,
+						"x": 618,
+						"y": 195,
 						"w": 32,
 						"h": 56
+					}
+				},
+				{
+					"filename": "living/living-purple-sofa.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 200,
+						"h": 100
+					},
+					"spriteSourceSize": {
+						"x": 70,
+						"y": 49,
+						"w": 32,
+						"h": 41
+					},
+					"frame": {
+						"x": 652,
+						"y": 195,
+						"w": 32,
+						"h": 41
+					}
+				},
+				{
+					"filename": "car/car-bg.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 40,
+						"h": 20
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 40,
+						"h": 20
+					},
+					"frame": {
+						"x": 686,
+						"y": 195,
+						"w": 40,
+						"h": 20
+					}
+				},
+				{
+					"filename": "bedroom/bedroom-dresser.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 200,
+						"h": 100
+					},
+					"spriteSourceSize": {
+						"x": 119,
+						"y": 30,
+						"w": 25,
+						"h": 32
+					},
+					"frame": {
+						"x": 686,
+						"y": 217,
+						"w": 25,
+						"h": 32
+					}
+				},
+				{
+					"filename": "exterior/exterior-box.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 200,
+						"h": 100
+					},
+					"spriteSourceSize": {
+						"x": 69,
+						"y": 42,
+						"w": 21,
+						"h": 29
+					},
+					"frame": {
+						"x": 713,
+						"y": 217,
+						"w": 21,
+						"h": 29
+					}
+				},
+				{
+					"filename": "bedroom/bedroom-side-table.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 200,
+						"h": 100
+					},
+					"spriteSourceSize": {
+						"x": 30,
+						"y": 74,
+						"w": 19,
+						"h": 16
+					},
+					"frame": {
+						"x": 728,
+						"y": 195,
+						"w": 19,
+						"h": 16
+					}
+				},
+				{
+					"filename": "dining/Marina.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 200,
+						"h": 100
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 45,
+						"w": 15,
+						"h": 34
+					},
+					"frame": {
+						"x": 736,
+						"y": 213,
+						"w": 15,
+						"h": 34
+					}
+				},
+				{
+					"filename": "kitchen/Marina.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 200,
+						"h": 100
+					},
+					"spriteSourceSize": {
+						"x": 55,
+						"y": 47,
+						"w": 15,
+						"h": 34
+					},
+					"frame": {
+						"x": 736,
+						"y": 213,
+						"w": 15,
+						"h": 34
+					}
+				},
+				{
+					"filename": "car/car-marina.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 40,
+						"h": 20
+					},
+					"spriteSourceSize": {
+						"x": 12,
+						"y": 4,
+						"w": 11,
+						"h": 16
+					},
+					"frame": {
+						"x": 749,
+						"y": 195,
+						"w": 11,
+						"h": 16
+					}
+				},
+				{
+					"filename": "walkcycle/walkcycle-03.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 14,
+						"h": 35
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 2,
+						"w": 14,
+						"h": 33
+					},
+					"frame": {
+						"x": 753,
+						"y": 213,
+						"w": 14,
+						"h": 33
+					}
+				},
+				{
+					"filename": "kitchen/kitchen-bg.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 200,
+						"h": 100
+					},
+					"spriteSourceSize": {
+						"x": 44,
+						"y": 0,
+						"w": 108,
+						"h": 100
+					},
+					"frame": {
+						"x": 766,
+						"y": 103,
+						"w": 108,
+						"h": 100
+					}
+				},
+				{
+					"filename": "kitchen/kitchen-unit-fg.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 200,
+						"h": 100
+					},
+					"spriteSourceSize": {
+						"x": 44,
+						"y": 0,
+						"w": 108,
+						"h": 100
+					},
+					"frame": {
+						"x": 809,
+						"y": 1,
+						"w": 108,
+						"h": 100
+					}
+				},
+				{
+					"filename": "walkcycle/walkcycle-07.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 14,
+						"h": 35
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 2,
+						"w": 14,
+						"h": 33
+					},
+					"frame": {
+						"x": 769,
+						"y": 205,
+						"w": 14,
+						"h": 33
+					}
+				},
+				{
+					"filename": "walkcycle/walkcycle-02.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 14,
+						"h": 35
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 1,
+						"w": 13,
+						"h": 34
+					},
+					"frame": {
+						"x": 785,
+						"y": 205,
+						"w": 13,
+						"h": 34
+					}
+				},
+				{
+					"filename": "walkcycle/walkcycle-04.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 14,
+						"h": 35
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 2,
+						"w": 13,
+						"h": 33
+					},
+					"frame": {
+						"x": 800,
+						"y": 205,
+						"w": 13,
+						"h": 33
+					}
+				},
+				{
+					"filename": "walkcycle/walkcycle-24.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 14,
+						"h": 35
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 5,
+						"w": 14,
+						"h": 30
+					},
+					"frame": {
+						"x": 815,
+						"y": 205,
+						"w": 14,
+						"h": 30
 					}
 				},
 				{
@@ -465,8 +801,8 @@
 						"h": 34
 					},
 					"frame": {
-						"x": 236,
-						"y": 1,
+						"x": 831,
+						"y": 205,
 						"w": 12,
 						"h": 34
 					}
@@ -486,346 +822,10 @@
 						"h": 34
 					},
 					"frame": {
-						"x": 236,
-						"y": 37,
+						"x": 845,
+						"y": 205,
 						"w": 12,
 						"h": 34
-					}
-				},
-				{
-					"filename": "living/living-bed-thing.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 200,
-						"h": 100
-					},
-					"spriteSourceSize": {
-						"x": 10,
-						"y": 44,
-						"w": 33,
-						"h": 41
-					},
-					"frame": {
-						"x": 203,
-						"y": 286,
-						"w": 33,
-						"h": 41
-					}
-				},
-				{
-					"filename": "living/living-purple-sofa.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 200,
-						"h": 100
-					},
-					"spriteSourceSize": {
-						"x": 70,
-						"y": 49,
-						"w": 32,
-						"h": 41
-					},
-					"frame": {
-						"x": 203,
-						"y": 329,
-						"w": 32,
-						"h": 41
-					}
-				},
-				{
-					"filename": "atrium/atrium-table-and-chairs.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 60,
-						"h": 30
-					},
-					"spriteSourceSize": {
-						"x": 2,
-						"y": 5,
-						"w": 56,
-						"h": 23
-					},
-					"frame": {
-						"x": 170,
-						"y": 783,
-						"w": 56,
-						"h": 23
-					}
-				},
-				{
-					"filename": "walkcycle/walkcycle-23.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 14,
-						"h": 35
-					},
-					"spriteSourceSize": {
-						"x": 2,
-						"y": 2,
-						"w": 11,
-						"h": 33
-					},
-					"frame": {
-						"x": 237,
-						"y": 228,
-						"w": 11,
-						"h": 33
-					}
-				},
-				{
-					"filename": "dining/dining-back-chairs.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 200,
-						"h": 100
-					},
-					"spriteSourceSize": {
-						"x": 55,
-						"y": 48,
-						"w": 46,
-						"h": 25
-					},
-					"frame": {
-						"x": 160,
-						"y": 808,
-						"w": 46,
-						"h": 25
-					}
-				},
-				{
-					"filename": "dining/dining-front-chairs.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 200,
-						"h": 100
-					},
-					"spriteSourceSize": {
-						"x": 54,
-						"y": 63,
-						"w": 46,
-						"h": 24
-					},
-					"frame": {
-						"x": 160,
-						"y": 835,
-						"w": 46,
-						"h": 24
-					}
-				},
-				{
-					"filename": "exterior/exterior-box.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 200,
-						"h": 100
-					},
-					"spriteSourceSize": {
-						"x": 69,
-						"y": 42,
-						"w": 21,
-						"h": 29
-					},
-					"frame": {
-						"x": 160,
-						"y": 861,
-						"w": 21,
-						"h": 29
-					}
-				},
-				{
-					"filename": "car/car-bg.png",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 40,
-						"h": 20
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 40,
-						"h": 20
-					},
-					"frame": {
-						"x": 208,
-						"y": 808,
-						"w": 40,
-						"h": 20
-					}
-				},
-				{
-					"filename": "bedroom/bedroom-marina.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 200,
-						"h": 100
-					},
-					"spriteSourceSize": {
-						"x": 38,
-						"y": 57,
-						"w": 40,
-						"h": 12
-					},
-					"frame": {
-						"x": 208,
-						"y": 830,
-						"w": 40,
-						"h": 12
-					}
-				},
-				{
-					"filename": "bedroom/bedroom-dresser.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 200,
-						"h": 100
-					},
-					"spriteSourceSize": {
-						"x": 119,
-						"y": 30,
-						"w": 25,
-						"h": 32
-					},
-					"frame": {
-						"x": 203,
-						"y": 372,
-						"w": 25,
-						"h": 32
-					}
-				},
-				{
-					"filename": "exterior/exterior-cone.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 200,
-						"h": 100
-					},
-					"spriteSourceSize": {
-						"x": 156,
-						"y": 63,
-						"w": 11,
-						"h": 21
-					},
-					"frame": {
-						"x": 237,
-						"y": 263,
-						"w": 11,
-						"h": 21
-					}
-				},
-				{
-					"filename": "dining/Marina.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 200,
-						"h": 100
-					},
-					"spriteSourceSize": {
-						"x": 2,
-						"y": 45,
-						"w": 15,
-						"h": 34
-					},
-					"frame": {
-						"x": 203,
-						"y": 406,
-						"w": 15,
-						"h": 34
-					}
-				},
-				{
-					"filename": "walkcycle/walkcycle-02.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 14,
-						"h": 35
-					},
-					"spriteSourceSize": {
-						"x": 1,
-						"y": 1,
-						"w": 13,
-						"h": 34
-					},
-					"frame": {
-						"x": 203,
-						"y": 442,
-						"w": 13,
-						"h": 34
-					}
-				},
-				{
-					"filename": "walkcycle/walkcycle-03.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 14,
-						"h": 35
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 2,
-						"w": 14,
-						"h": 33
-					},
-					"frame": {
-						"x": 203,
-						"y": 478,
-						"w": 14,
-						"h": 33
-					}
-				},
-				{
-					"filename": "walkcycle/walkcycle-07.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 14,
-						"h": 35
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 2,
-						"w": 14,
-						"h": 33
-					},
-					"frame": {
-						"x": 203,
-						"y": 513,
-						"w": 14,
-						"h": 33
-					}
-				},
-				{
-					"filename": "walkcycle/walkcycle-04.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 14,
-						"h": 35
-					},
-					"spriteSourceSize": {
-						"x": 1,
-						"y": 2,
-						"w": 13,
-						"h": 33
-					},
-					"frame": {
-						"x": 203,
-						"y": 548,
-						"w": 13,
-						"h": 33
 					}
 				},
 				{
@@ -843,8 +843,8 @@
 						"h": 34
 					},
 					"frame": {
-						"x": 220,
-						"y": 406,
+						"x": 859,
+						"y": 205,
 						"w": 12,
 						"h": 34
 					}
@@ -864,10 +864,220 @@
 						"h": 33
 					},
 					"frame": {
-						"x": 218,
-						"y": 442,
+						"x": 873,
+						"y": 205,
 						"w": 12,
 						"h": 33
+					}
+				},
+				{
+					"filename": "kitchen/kitchen-doors.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 200,
+						"h": 100
+					},
+					"spriteSourceSize": {
+						"x": 44,
+						"y": 8,
+						"w": 108,
+						"h": 92
+					},
+					"frame": {
+						"x": 876,
+						"y": 103,
+						"w": 108,
+						"h": 92
+					}
+				},
+				{
+					"filename": "kitchen/kitchen-unit-bg.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 200,
+						"h": 100
+					},
+					"spriteSourceSize": {
+						"x": 46,
+						"y": 1,
+						"w": 104,
+						"h": 66
+					},
+					"frame": {
+						"x": 919,
+						"y": 1,
+						"w": 104,
+						"h": 66
+					}
+				},
+				{
+					"filename": "walkcycle/walkcycle-23.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 14,
+						"h": 35
+					},
+					"spriteSourceSize": {
+						"x": 2,
+						"y": 2,
+						"w": 11,
+						"h": 33
+					},
+					"frame": {
+						"x": 1025,
+						"y": 1,
+						"w": 11,
+						"h": 33
+					}
+				},
+				{
+					"filename": "exterior/exterior-cone.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 200,
+						"h": 100
+					},
+					"spriteSourceSize": {
+						"x": 156,
+						"y": 63,
+						"w": 11,
+						"h": 21
+					},
+					"frame": {
+						"x": 1025,
+						"y": 36,
+						"w": 11,
+						"h": 21
+					}
+				},
+				{
+					"filename": "exterior/exterior-hydrant.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 200,
+						"h": 100
+					},
+					"spriteSourceSize": {
+						"x": 7,
+						"y": 68,
+						"w": 11,
+						"h": 18
+					},
+					"frame": {
+						"x": 1025,
+						"y": 59,
+						"w": 11,
+						"h": 18
+					}
+				},
+				{
+					"filename": "car/car-driver.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 40,
+						"h": 20
+					},
+					"spriteSourceSize": {
+						"x": 31,
+						"y": 3,
+						"w": 9,
+						"h": 17
+					},
+					"frame": {
+						"x": 919,
+						"y": 79,
+						"w": 9,
+						"h": 17
+					}
+				},
+				{
+					"filename": "walkcycle/walkcycle-18.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 14,
+						"h": 35
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 2,
+						"w": 12,
+						"h": 32
+					},
+					"frame": {
+						"x": 930,
+						"y": 69,
+						"w": 12,
+						"h": 32
+					}
+				},
+				{
+					"filename": "walkcycle/walkcycle-21.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 14,
+						"h": 35
+					},
+					"spriteSourceSize": {
+						"x": 1,
+						"y": 2,
+						"w": 12,
+						"h": 32
+					},
+					"frame": {
+						"x": 944,
+						"y": 69,
+						"w": 12,
+						"h": 32
+					}
+				},
+				{
+					"filename": "dining/dining-fg.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 200,
+						"h": 100
+					},
+					"spriteSourceSize": {
+						"x": 169,
+						"y": 0,
+						"w": 31,
+						"h": 100
+					},
+					"frame": {
+						"x": 986,
+						"y": 69,
+						"w": 31,
+						"h": 100
+					}
+				},
+				{
+					"filename": "exterior/exterior-fg.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 200,
+						"h": 100
+					},
+					"spriteSourceSize": {
+						"x": 28,
+						"y": 0,
+						"w": 33,
+						"h": 60
+					},
+					"frame": {
+						"x": 986,
+						"y": 171,
+						"w": 33,
+						"h": 60
 					}
 				},
 				{
@@ -885,8 +1095,8 @@
 						"h": 33
 					},
 					"frame": {
-						"x": 219,
-						"y": 477,
+						"x": 1019,
+						"y": 79,
 						"w": 12,
 						"h": 33
 					}
@@ -906,94 +1116,10 @@
 						"h": 33
 					},
 					"frame": {
-						"x": 219,
-						"y": 512,
+						"x": 1019,
+						"y": 114,
 						"w": 12,
 						"h": 33
-					}
-				},
-				{
-					"filename": "walkcycle/walkcycle-18.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 14,
-						"h": 35
-					},
-					"spriteSourceSize": {
-						"x": 1,
-						"y": 2,
-						"w": 12,
-						"h": 32
-					},
-					"frame": {
-						"x": 230,
-						"y": 372,
-						"w": 12,
-						"h": 32
-					}
-				},
-				{
-					"filename": "walkcycle/walkcycle-24.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 14,
-						"h": 35
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 5,
-						"w": 14,
-						"h": 30
-					},
-					"frame": {
-						"x": 234,
-						"y": 406,
-						"w": 14,
-						"h": 30
-					}
-				},
-				{
-					"filename": "exterior/exterior-hydrant.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 200,
-						"h": 100
-					},
-					"spriteSourceSize": {
-						"x": 7,
-						"y": 68,
-						"w": 11,
-						"h": 18
-					},
-					"frame": {
-						"x": 237,
-						"y": 329,
-						"w": 11,
-						"h": 18
-					}
-				},
-				{
-					"filename": "car/car-marina.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 40,
-						"h": 20
-					},
-					"spriteSourceSize": {
-						"x": 12,
-						"y": 4,
-						"w": 11,
-						"h": 16
-					},
-					"frame": {
-						"x": 237,
-						"y": 349,
-						"w": 11,
-						"h": 16
 					}
 				},
 				{
@@ -1011,8 +1137,8 @@
 						"h": 33
 					},
 					"frame": {
-						"x": 206,
-						"y": 914,
+						"x": 1021,
+						"y": 149,
 						"w": 12,
 						"h": 33
 					}
@@ -1032,8 +1158,8 @@
 						"h": 33
 					},
 					"frame": {
-						"x": 220,
-						"y": 914,
+						"x": 1021,
+						"y": 184,
 						"w": 12,
 						"h": 33
 					}
@@ -1053,31 +1179,10 @@
 						"h": 33
 					},
 					"frame": {
-						"x": 234,
-						"y": 914,
+						"x": 1021,
+						"y": 219,
 						"w": 12,
 						"h": 33
-					}
-				},
-				{
-					"filename": "bedroom/bedroom-side-table.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 200,
-						"h": 100
-					},
-					"spriteSourceSize": {
-						"x": 30,
-						"y": 74,
-						"w": 19,
-						"h": 16
-					},
-					"frame": {
-						"x": 183,
-						"y": 861,
-						"w": 19,
-						"h": 16
 					}
 				},
 				{
@@ -1095,8 +1200,8 @@
 						"h": 33
 					},
 					"frame": {
-						"x": 232,
-						"y": 442,
+						"x": 887,
+						"y": 197,
 						"w": 12,
 						"h": 33
 					}
@@ -1116,8 +1221,8 @@
 						"h": 33
 					},
 					"frame": {
-						"x": 233,
-						"y": 477,
+						"x": 901,
+						"y": 197,
 						"w": 12,
 						"h": 33
 					}
@@ -1137,8 +1242,8 @@
 						"h": 33
 					},
 					"frame": {
-						"x": 233,
-						"y": 512,
+						"x": 915,
+						"y": 197,
 						"w": 12,
 						"h": 33
 					}
@@ -1158,8 +1263,8 @@
 						"h": 33
 					},
 					"frame": {
-						"x": 218,
-						"y": 548,
+						"x": 929,
+						"y": 197,
 						"w": 12,
 						"h": 33
 					}
@@ -1179,8 +1284,8 @@
 						"h": 33
 					},
 					"frame": {
-						"x": 232,
-						"y": 547,
+						"x": 943,
+						"y": 197,
 						"w": 12,
 						"h": 33
 					}
@@ -1200,8 +1305,8 @@
 						"h": 33
 					},
 					"frame": {
-						"x": 208,
-						"y": 844,
+						"x": 957,
+						"y": 197,
 						"w": 12,
 						"h": 33
 					}
@@ -1221,73 +1326,10 @@
 						"h": 33
 					},
 					"frame": {
-						"x": 222,
-						"y": 844,
+						"x": 971,
+						"y": 197,
 						"w": 12,
 						"h": 33
-					}
-				},
-				{
-					"filename": "walkcycle/walkcycle-21.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 14,
-						"h": 35
-					},
-					"spriteSourceSize": {
-						"x": 1,
-						"y": 2,
-						"w": 12,
-						"h": 32
-					},
-					"frame": {
-						"x": 236,
-						"y": 844,
-						"w": 12,
-						"h": 32
-					}
-				},
-				{
-					"filename": "car/car-driver.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 40,
-						"h": 20
-					},
-					"spriteSourceSize": {
-						"x": 31,
-						"y": 3,
-						"w": 9,
-						"h": 17
-					},
-					"frame": {
-						"x": 236,
-						"y": 73,
-						"w": 9,
-						"h": 17
-					}
-				},
-				{
-					"filename": "red-pixel.png",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 1,
-						"h": 1
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 1,
-						"h": 1
-					},
-					"frame": {
-						"x": 247,
-						"y": 73,
-						"w": 1,
-						"h": 1
 					}
 				}
 			]
@@ -1296,6 +1338,6 @@
 	"meta": {
 		"app": "https://www.codeandweb.com/texturepacker",
 		"version": "3.0",
-		"smartupdate": "$TexturePacker:SmartUpdate:444d601816c13877ab374820c1a78b24:c38979a2461a63fdbc7057d7aa72e10e:cbce6b53f0f49e0bf15173c25c41f876$"
+		"smartupdate": "$TexturePacker:SmartUpdate:51888c9f3407eb3b26c523a33cb377cd:73f4b8057af388dd63b56ef23823f1b1:cbce6b53f0f49e0bf15173c25c41f876$"
 	}
 }

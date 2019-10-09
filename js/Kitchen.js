@@ -16,36 +16,28 @@ let Kitchen = new Phaser.Class({
     // Room
     this.add.sprite(this.game.canvas.width / 2, this.game.canvas.height / 2, 'atlas', 'kitchen/kitchen-bg.png').setScale(4);
     // Wall colliders
-    createColliderLine(this, 43 * 4, 76 * 4, 22 * 4, 22 * 4, -5, 5, this.colliders);
-    createColliderLine(this, 57 * 4, 60 * 4, 4 * 4, 4 * 4, 5, -5, this.colliders);
-    createColliderRect(this, 61 * 4, 56 * 4, 122 * 4, 1 * 4, this.colliders);
-    createColliderRect(this, 0 * 4, 60 * 4, 58 * 4, 1 * 4, this.colliders);
-    createColliderRect(this, 0 * 4, 76 * 4, 44 * 4, 1 * 4, this.colliders);
-    createColliderRect(this, 0 * 4, 99 * 4, 200 * 4, 1 * 4, this.colliders);
-    // createColliderRect(this, 164 * 4, 56 * 4, 1 * 4, 27 * 4, this.colliders);
+    createColliderRect(this, 0 * 4, 92 * 4, 200 * 4, 1 * 4, this.colliders);
+    createColliderRect(this, 0 * 4, 63 * 4, 200 * 4, 1 * 4, this.colliders);
 
     // Kitchen Unit BG
-    this.unitBG = this.physics.add.sprite(this.game.canvas.width / 2, this.game.canvas.height / 2, 'atlas', 'kitchen/kitchen-unit-bg.png').setScale(4);
-    this.unitBG.body.setOffset(76, 54);
-    this.unitBG.body.setSize(106, 6, false);
-    this.unitBG.body.immovable = true;
-    this.colliders.add(this.unitBG)
+    this.unitBG = this.add.sprite(this.game.canvas.width / 2, this.game.canvas.height / 2, 'atlas', 'kitchen/kitchen-unit-bg.png').setScale(4);
 
     // Kitchen Unit FG
-    this.unitFG = this.physics.add.sprite(this.game.canvas.width / 2, this.game.canvas.height / 2, 'atlas', 'kitchen/kitchen-unit-fg.png').setScale(4);
-    this.unitFG.body.setOffset(76, 76);
-    this.unitFG.body.setSize(106, 6, false);
-    this.unitFG.body.immovable = true;
-    this.unitFG.depth = 76 * 4;
-    this.colliders.add(this.unitFG);
+    let unitFG = this.add.sprite(this.game.canvas.width / 2, this.game.canvas.height / 2, 'atlas', 'kitchen/kitchen-unit-fg.png').setScale(4);
+    unitFG.depth = 100000;
+
+    let doors = this.physics.add.sprite(this.game.canvas.width / 2, this.game.canvas.height / 2, 'atlas', 'kitchen/kitchen-doors.png').setScale(4);
+    doors.depth = 100000;
 
     // Marina Abramovic
-    this.marina = new Marina(this, 280, 290, 'marina');
+    this.marina = new Marina(this, 280, 250, 'marina');
     this.marina.anims.play('idle-d');
+
+    this.add.sprite(this.game.canvas.width / 2, this.game.canvas.height / 2, 'atlas', 'kitchen/kitchen-fg.png').setScale(4);
 
     this.setupMarks();
 
-    this.marina.inputEnabled = false;
+    // this.marina.inputEnabled = false;
 
     if (last.scene === 'bedroom') {
       this.marina.x = this.leftExitMark.x;
@@ -80,11 +72,10 @@ let Kitchen = new Phaser.Class({
 
     // this.colliders.toggleVisible();
 
-
     this.cursors = this.input.keyboard.createCursorKeys();
 
     let kitchenFG = this.add.sprite(this.game.canvas.width / 2, this.game.canvas.height / 2, 'atlas', 'kitchen/kitchen-fg.png').setScale(4);
-    kitchenFG.depth = 72 * 4;
+    kitchenFG.depth = 10000;
   },
 
   update: function(time, delta) {
@@ -136,13 +127,13 @@ let Kitchen = new Phaser.Class({
     this.leftControlMark.depth = 100000;
     this.marks.add(this.leftControlMark);
 
-    this.rightEnterMark = this.add.sprite(170 * 4, 74 * 4, 'atlas', 'red-pixel.png').setScale(4);
+    this.rightEnterMark = this.add.sprite(140 * 4, 74 * 4, 'atlas', 'red-pixel.png').setScale(4);
     this.rightEnterMark.depth = 100000;
     this.marks.add(this.rightEnterMark);
-    this.rightExitMark = this.add.sprite(200 * 4, 74 * 4, 'atlas', 'red-pixel.png').setScale(4);
+    this.rightExitMark = this.add.sprite(160 * 4, 74 * 4, 'atlas', 'red-pixel.png').setScale(4);
     this.rightExitMark.depth = 100000;
     this.marks.add(this.rightExitMark);
-    this.rightControlMark = this.add.sprite(179 * 4, 74 * 4, 'atlas', 'red-pixel.png').setScale(4);
+    this.rightControlMark = this.add.sprite(150 * 4, 74 * 4, 'atlas', 'red-pixel.png').setScale(4);
     this.rightControlMark.depth = 100000;
     this.marks.add(this.rightControlMark);
 

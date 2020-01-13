@@ -187,3 +187,11 @@ Other than that I think the spaces looking pretty accurate and are a nice tribut
 I avoided all the elevator/stairs stuff for now by just going directly from the door out of the apartment to Marina walking out of the building down the stairs. It pretty much works fine I think.
 
 Not a whole ton of process writing for all this because I've been working in fits and starts and it's really mostly assembly right now with very little interesting design stuff going on.
+
+---
+
+# Return of the sub-artist (Monday, 13 January 2020, 15:00PM)
+
+It has __been a while__. Essentially at a certain point the Fall semester got all the way on top of me and it didn't feel possible to work on this game. Then I went to New Zealand for six weeks during which it was decidedly not reasonable to work on a game. Now I'm back in Montreal, a week into "bachelor" life, and thinking it would be good to recommit to and finish this project.
+
+Let's be honest: I feel uninspired and uninterested in it right now. But it also seems like a project that is well-defined enough that I don't think I need inspiration. I just need work. And I'm prepared to do it. So bring it on.

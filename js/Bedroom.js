@@ -1,17 +1,13 @@
-let Bedroom = new Phaser.Class({
+class Bedroom extends TAIPScene {
 
-  Extends: Phaser.Scene,
-
-  initialize: function Bedroom() {
-    Phaser.Scene.call(this, {
+  constructor(config) {
+    super({
       key: 'bedroom'
     });
-  },
+  }
 
-  create: function() {
-    this.cameras.main.setBackgroundColor('#000');
-
-    this.colliders = this.add.group();
+  create() {
+    super.create();
 
     // Room
     this.add.sprite(this.game.canvas.width / 2, this.game.canvas.height / 2, 'atlas', 'bedroom/bedroom-bg.png').setScale(4);
@@ -51,39 +47,35 @@ let Bedroom = new Phaser.Class({
     // Marina Abramovic horizontal
     this.marinaBed = this.add.sprite(this.game.canvas.width / 2, this.game.canvas.height / 2, 'atlas', 'bedroom/bedroom-marina.png').setScale(4);
 
-    this.setupMarks();
+    let transitionData = [{
+      key: 'kitchen',
+      type: 'right',
+      x: 160 * 4,
+      y: 74 * 4,
+    }];
+    this.addTransitions(transitionData);
 
-    if (last.scene === 'kitchen') {
-      this.marina.setVisible(true);
-      this.marinaBed.setVisible(false);
-      this.marina.inputEnabled = false;
-      this.marina.x = this.exitMark.x;
-      this.marina.y = this.enterMark.y - this.marina.height * 4 / 2;
-      this.marina.left();
-      let marinaTweenIn = this.tweens.add({
-        targets: this.marina,
-        x: this.enterMark.x,
-        y: this.enterMark.y - this.marina.height * 4 / 2,
-        duration: (182 * 4 - 148 * 4) / this.marina.speed * 1000,
-        repeat: 0,
-        onComplete: () => {
-          this.marina.inputEnabled = true;
-          this.marina.stop();
-        },
-      });
-    }
-    else {
+    this.handleEntrances();
+
+    // Handle the special case of Bed Marina!
+    if (last.scene !== 'kitchen') {
       this.marina.x = 220;
       this.marina.y = 284;
       this.marina.setVisible(false);
       this.marinaBed.setVisible(true);
     }
+    else {
+      this.marina.setVisible(true);
+      this.marinaBed.setVisible(false);
+    }
 
     let bedroomFG = this.add.sprite(this.game.canvas.width / 2, this.game.canvas.height / 2, 'atlas', 'bedroom/bedroom-fg.png').setScale(4);
     bedroomFG.depth = bedroomFG.y + bedroomFG.height + 4 * 4;
-  },
+  }
 
-  update: function(time, delta) {
+  update(time, delta) {
+    super.update(time, delta);
+
     this.marina.update(time, delta);
     this.physics.collide(this.marina, this.colliders, () => {
       this.marina.stop();
@@ -91,10 +83,9 @@ let Bedroom = new Phaser.Class({
     this.marina.depth = this.marina.body.y;
 
     this.handleWakeup();
-    this.checkExits();
-  },
+  }
 
-  handleWakeup: function() {
+  handleWakeup() {
     if (last.scene === 'kitchen') return;
 
     if (Phaser.Input.Keyboard.JustDown(this.marina.cursors.left) ||
@@ -106,32 +97,5 @@ let Bedroom = new Phaser.Class({
       this.marina.setVisible(true);
       this.marina.inputEnabled = true;
     }
-  },
-
-  checkExits: function() {
-    if (this.marina.x > this.controlMark.x) {
-      this.marina.inputEnabled = false;
-    }
-
-    if (this.marina.x > this.exitMark.x) {
-      last.scene = `bedroom`;
-      last.y = this.marina.y;
-      this.scene.start('kitchen');
-    }
-  },
-
-  setupMarks: function() {
-    this.marks = this.add.group();
-    this.enterMark = this.add.sprite(143 * 4, 74 * 4, 'atlas', 'red-pixel.png').setScale(4);
-    this.enterMark.depth = 100000;
-    this.marks.add(this.enterMark);
-    this.exitMark = this.add.sprite(176 * 4, 74 * 4, 'atlas', 'red-pixel.png').setScale(4);
-    this.exitMark.depth = 100000;
-    this.marks.add(this.exitMark);
-    this.controlMark = this.add.sprite(160 * 4, 74 * 4, 'atlas', 'red-pixel.png').setScale(4);
-    this.controlMark.depth = 100000;
-    this.marks.add(this.controlMark);
-    // this.marks.toggleVisible();
-  },
-
-});
+  }
+}

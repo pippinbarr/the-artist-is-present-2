@@ -51,7 +51,7 @@ class Bedroom extends TAIPScene {
       key: 'kitchen',
       type: 'right',
       x: 160 * 4,
-      y: 74 * 4,
+      y: 56 * 4,
     }];
     this.addTransitions(transitionData);
 

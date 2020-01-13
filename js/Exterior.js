@@ -1,23 +1,18 @@
-let Exterior = new Phaser.Class({
-
-  Extends: Phaser.Scene,
-
-  initialize: function Exterior() {
-    Phaser.Scene.call(this, {
+class Exterior extends TAIPScene {
+  constructor(config) {
+    super({
       key: 'exterior'
     });
-  },
+  }
 
-  create: function() {
-    this.cameras.main.setBackgroundColor('#fff');
-
-    this.colliders = this.add.group();
+  create() {
+    super.create();
 
     // BG
     this.add.sprite(this.game.canvas.width / 2, this.game.canvas.height / 2, 'atlas', 'exterior/exterior-bg.png').setScale(4);
 
     // FG
-    fg = this.add.sprite(this.game.canvas.width / 2, this.game.canvas.height / 2, 'atlas', 'exterior/exterior-fg.png').setScale(4);
+    let fg = this.add.sprite(this.game.canvas.width / 2, this.game.canvas.height / 2, 'atlas', 'exterior/exterior-fg.png').setScale(4);
     fg.depth = 50 * 4;
 
     // Main wall colliders
@@ -54,14 +49,26 @@ let Exterior = new Phaser.Class({
     // Marina Abramovic
     this.marina = new Marina(this, 280, 320, 'marina');
     this.marina.anims.play('idle-d');
-  },
 
-  update: function(time, delta) {
+    let transitionData = [{
+      key: 'dining',
+      type: 'up',
+      x: 46 * 4,
+      y: 20 * 4,
+    }];
+    this.addTransitions(transitionData);
+
+    this.handleEntrances();
+
+  }
+
+  update(time, delta) {
+    super.update(time, delta);
+
     this.marina.update(time, delta);
     this.physics.collide(this.marina, this.colliders, () => {
       this.marina.stop();
     });
     this.marina.depth = this.marina.body.y;
-  },
-
-});
+  }
+}

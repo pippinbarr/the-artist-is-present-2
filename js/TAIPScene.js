@@ -18,10 +18,6 @@ class TAIPScene extends Phaser.Scene {
     this.checkExits();
   }
 
-  checkEntrances() {
-
-  }
-
   handleEntrances() {
     if (this.leftTransition && this.leftTransition.key === last.scene) {
       this.handleEntrance(this.leftTransition, 1, 0);
@@ -29,17 +25,26 @@ class TAIPScene extends Phaser.Scene {
     else if (this.rightTransition && this.rightTransition.key === last.scene) {
       this.handleEntrance(this.rightTransition, -1, 0);
     }
+    else if (this.upTransition && this.upTransition.key === last.scene) {
+      this.handleEntrance(this.upTransition, 0, 1);
+    }
+    else if (this.downTransition && this.downTransition.key === last.scene) {
+      this.handleEntrance(this.downTransition, 0, -1);
+    }
   }
 
   handleEntrance(transition, xDir, yDir) {
     this.marina.x = transition.x - xDir * TRANSITION_OFFSET;
-    this.marina.y = transition.y - yDir * TRANSITION_OFFSET - this.marina.height / 2 * 4;
+    this.marina.y = transition.y - yDir * TRANSITION_OFFSET;
     if (xDir > 0) this.marina.right();
     if (xDir < 0) this.marina.left();
+    if (yDir > 0) this.marina.down();
+    if (yDir < 0) this.marina.up();
+
     let marinaTweenIn = this.tweens.add({
       targets: this.marina,
       x: transition.x + xDir * TRANSITION_OFFSET,
-      y: transition.y + yDir * TRANSITION_OFFSET - this.marina.height / 2 * 4,
+      y: transition.y + yDir * TRANSITION_OFFSET,
       duration: TRANSITION_OFFSET / this.marina.speed * 1000 * 2,
       repeat: 0,
       onComplete: () => {
@@ -76,13 +81,13 @@ class TAIPScene extends Phaser.Scene {
       last.y = this.marina.y;
       this.scene.start(this.rightTransition.key);
     }
-    else if (this.upTransition && this.marina.y < this.upTransition.x - TRANSITION_OFFSET) {
+    else if (this.upTransition && this.marina.y < this.upTransition.y - TRANSITION_OFFSET) {
       last.scene = this.scene.key;
       last.x = this.marina.x;
       last.y = this.marina.y;
       this.scene.start(this.upTransition.key);
     }
-    else if (this.downTransition && this.marina.y > this.downTransition.x + TRANSITION_OFFSET) {
+    else if (this.downTransition && this.marina.y > this.downTransition.y + TRANSITION_OFFSET) {
       last.scene = this.scene.key;
       last.x = this.marina.x;
       last.y = this.marina.y;

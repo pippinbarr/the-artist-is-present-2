@@ -38,13 +38,13 @@ class Kitchen extends TAIPScene {
         key: 'bedroom',
         type: 'left',
         x: 46 * 4,
-        y: 74 * 4,
+        y: 56 * 4,
       },
       {
         key: 'living',
         type: 'right',
         x: 140 * 4,
-        y: 74 * 4,
+        y: 56 * 4,
       }
     ];
     this.addTransitions(transitionData);
@@ -64,7 +64,6 @@ class Kitchen extends TAIPScene {
     });
     this.marina.depth = this.marina.body.y;
 
-    this.checkEntrances();
     this.checkExits();
   }
 }

@@ -65,13 +65,13 @@ class Dining extends TAIPScene {
         key: 'living',
         type: 'left',
         x: 10 * 4,
-        y: 90 * 4,
+        y: 75 * 4,
       },
       {
         key: 'exterior',
         type: 'right',
         x: 180 * 4,
-        y: 74 * 4,
+        y: 62 * 4,
       }
     ];
     this.addTransitions(transitionData);

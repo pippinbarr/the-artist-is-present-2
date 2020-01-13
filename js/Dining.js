@@ -1,17 +1,13 @@
-let Dining = new Phaser.Class({
+class Dining extends TAIPScene {
 
-  Extends: Phaser.Scene,
-
-  initialize: function Dining() {
-    Phaser.Scene.call(this, {
+  constructor(config) {
+    super({
       key: 'dining'
     });
-  },
+  }
 
-  create: function() {
-    this.cameras.main.setBackgroundColor('#fff');
-
-    this.colliders = this.add.group();
+  create() {
+    super.create();
 
     // BG
     this.add.sprite(this.game.canvas.width / 2, this.game.canvas.height / 2, 'atlas', 'dining/dining-bg.png').setScale(4);
@@ -26,7 +22,7 @@ let Dining = new Phaser.Class({
     createColliderLine(this, 185 * 4, 87 * 4, 16 * 4, 16 * 4, 5, 5, this.colliders);
 
     // FG
-    fg = this.add.sprite(this.game.canvas.width / 2, this.game.canvas.height / 2, 'atlas', 'dining/dining-fg.png').setScale(4);
+    let fg = this.add.sprite(this.game.canvas.width / 2, this.game.canvas.height / 2, 'atlas', 'dining/dining-fg.png').setScale(4);
     fg.depth = 87 * 4;
 
     // Table
@@ -64,9 +60,27 @@ let Dining = new Phaser.Class({
     // Marina Abramovic
     this.marina = new Marina(this, 280, 320, 'marina');
     this.marina.anims.play('idle-d');
-  },
 
-  update: function(time, delta) {
+    let transitionData = [{
+        key: 'living',
+        type: 'left',
+        x: 10 * 4,
+        y: 90 * 4,
+      },
+      {
+        key: 'exterior',
+        type: 'right',
+        x: 180 * 4,
+        y: 74 * 4,
+      }
+    ];
+    this.addTransitions(transitionData);
+    this.handleEntrances();
+  }
+
+  update(time, delta) {
+    super.update(time, delta);
+
     this.marina.update(time, delta);
     this.physics.collide(this.marina, this.colliders, () => {
       this.marina.stop();
@@ -74,15 +88,5 @@ let Dining = new Phaser.Class({
     this.marina.depth = this.marina.body.y;
 
     this.checkExits();
-  },
-
-  checkExits: function() {
-    if (this.marina.x < 0) {
-      this.scene.start('living');
-    }
-    else if (this.marina.x > 185 * 4) {
-      this.scene.start('exterior');
-    }
-  },
-
-});
+  }
+}

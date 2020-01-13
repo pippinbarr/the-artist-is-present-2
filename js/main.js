@@ -1,4 +1,4 @@
-const START_SCENE = 'bedroom';
+const START_SCENE = 'dining';
 let lastScene = undefined;
 let last = {
   scene: undefined,

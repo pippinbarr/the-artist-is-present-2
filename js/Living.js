@@ -1,17 +1,13 @@
-let Living = new Phaser.Class({
+class Living extends TAIPScene {
 
-  Extends: Phaser.Scene,
-
-  initialize: function Living() {
-    Phaser.Scene.call(this, {
+  constructor(config) {
+    super({
       key: 'living'
     });
-  },
+  }
 
-  create: function() {
-    this.cameras.main.setBackgroundColor('#fff');
-
-    this.colliders = this.add.group();
+  create() {
+    super.create();
 
     // Room
     this.add.sprite(this.game.canvas.width / 2, this.game.canvas.height / 2, 'atlas', 'living/living-bg.png').setScale(4);
@@ -53,28 +49,32 @@ let Living = new Phaser.Class({
     // Marina Abramovic
     this.marina = new Marina(this, 280, 320, 'marina');
     this.marina.anims.play('idle-d');
-  },
 
-  update: function(time, delta) {
+    let transitionData = [{
+        key: 'kitchen',
+        type: 'left',
+        x: 10 * 4,
+        y: 90 * 4,
+      },
+      {
+        key: 'dining',
+        type: 'right',
+        x: 190 * 4,
+        y: 90 * 4,
+      }
+    ];
+    this.addTransitions(transitionData);
+    this.handleEntrances();
+  }
+
+  update(time, delta) {
+    super.update(time, delta);
+
     this.marina.update(time, delta);
     this.physics.collide(this.marina, this.colliders, () => {
       this.marina.stop();
     });
     this.marina.depth = this.marina.body.y;
+  }
 
-    this.checkExits();
-  },
-
-  checkExits: function() {
-    if (this.marina.x < 0 * 4) {
-      last.scene = `living`;
-      last.x = this.marina.x;
-      last.y = this.marina.y;
-      this.scene.start('kitchen');
-    }
-    else if (this.marina.x > 200 * 4) {
-      this.scene.start('dining');
-    }
-  },
-
-});
+}

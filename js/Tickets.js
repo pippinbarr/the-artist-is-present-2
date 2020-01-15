@@ -1,8 +1,7 @@
 class Tickets extends TAIPScene {
-
   constructor(config) {
     super({
-      key: 'tickets'
+      key: "tickets"
     });
   }
 
@@ -10,12 +9,29 @@ class Tickets extends TAIPScene {
     super.create();
 
     // Ticket area BG
-    this.add.sprite(this.game.canvas.width / 2, this.game.canvas.height / 2, 'atlas', 'tickets/tickets-bg.png').setScale(4);
-
-    this.marina = new Marina(this, 100, this.game.canvas.height / 2, 'marina');
-    this.marina.anims.play('idle-d');
+    this.add
+      .sprite(
+        this.game.canvas.width / 2,
+        this.game.canvas.height / 2,
+        "atlas",
+        "tickets/tickets-bg.png"
+      )
+      .setScale(4);
 
     this.colliders = this.add.group();
+
+    this.barrier = this.physics.add
+      .sprite(80 * 4, 49 * 4, "atlas", "tickets/tickets-barrier.png")
+      .setScale(4);
+    this.barrier.body.setOffset(6, 34);
+    this.barrier.body.setSize(90, 3, false);
+    this.barrier.body.immovable = true;
+    this.barrier.depth = 60 * 4;
+    this.colliders.add(this.barrier);
+
+    this.marina = new Marina(this, 100, this.game.canvas.height / 2, "marina");
+    this.marina.anims.play("idle-d");
+
     createColliderRect(this, 0, 200, 600, 5, this.colliders);
     createColliderRect(this, 0, 392, 320, 8, this.colliders);
     createColliderRect(this, 480, 392, 320, 8, this.colliders);
@@ -24,16 +40,22 @@ class Tickets extends TAIPScene {
     createColliderRect(this, 1, 200, 1, 200, this.colliders);
     createColliderLine(this, 600, 200, 75, 80, 5, 5, this.colliders);
     createColliderLine(this, 730, 330, 75, 80, 5, 5, this.colliders);
-    this.colliders.toggleVisible();
 
-    let ticketFG = this.add.sprite(this.game.canvas.width / 2, this.game.canvas.height / 2, 'atlas', 'tickets/tickets-fg.png').setScale(4);
+    let ticketFG = this.add
+      .sprite(
+        this.game.canvas.width / 2,
+        this.game.canvas.height / 2,
+        "atlas",
+        "tickets/tickets-fg.png"
+      )
+      .setScale(4);
     ticketFG.depth = 100000;
 
     const transitionData = [{
-      key: 'moma-exterior',
-      type: 'down',
+      key: "moma-exterior",
+      type: "down",
       x: 100 * 4,
-      y: 90 * 4,
+      y: 90 * 4
     }];
     this.addTransitions(transitionData);
 
@@ -49,5 +71,4 @@ class Tickets extends TAIPScene {
     });
     this.marina.depth = this.marina.body.y;
   }
-
 }

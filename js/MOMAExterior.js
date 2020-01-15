@@ -126,4 +126,15 @@ class MOMAExterior extends TAIPScene {
       });
     }
   }
+
+  handleEntrances() {
+    super.handleEntrances();
+
+    if (last.scene === 'tickets') {
+      this.leftDoor.x -= this.DOOR_OPEN_AMOUNT;
+      this.rightDoor.x += this.DOOR_OPEN_AMOUNT;
+      this.doorsOpen = true;
+    }
+  }
+
 }

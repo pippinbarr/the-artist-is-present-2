@@ -1,4 +1,4 @@
-const START_SCENE = 'moma-exterior';
+const START_SCENE = 'tickets';
 let lastScene = undefined;
 let last = {
   scene: undefined,

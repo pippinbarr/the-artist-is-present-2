@@ -131,7 +131,7 @@ class TAIPScene extends Phaser.Scene {
     });
 
 
-    // this.marks.toggleVisible();
+    this.marks.toggleVisible();
 
   }
 

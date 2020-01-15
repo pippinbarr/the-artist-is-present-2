@@ -52,11 +52,18 @@ class Tickets extends TAIPScene {
     ticketFG.depth = 100000;
 
     const transitionData = [{
-      key: "moma-exterior",
-      type: "down",
-      x: 100 * 4,
-      y: 90 * 4
-    }];
+        key: "moma-exterior",
+        type: "down",
+        x: 100 * 4,
+        y: 90 * 4
+      },
+      {
+        key: "hallway1",
+        type: "right",
+        x: 190 * 4,
+        y: 60 * 4
+      }
+    ];
     this.addTransitions(transitionData);
 
     this.handleEntrances();

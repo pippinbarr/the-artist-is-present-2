@@ -10,7 +10,7 @@
 			"scale": 1,
 			"frames": [
 				{
-					"filename": "atrium/atrium.png",
+					"filename": "atrium/atrium-bg.png",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
@@ -1506,6 +1506,6 @@
 	"meta": {
 		"app": "https://www.codeandweb.com/texturepacker",
 		"version": "3.0",
-		"smartupdate": "$TexturePacker:SmartUpdate:1376b15c8c0a5f011929d794685c5054:a25afe4fb6edea816562789bd8c6970b:cbce6b53f0f49e0bf15173c25c41f876$"
+		"smartupdate": "$TexturePacker:SmartUpdate:fe27b91fa3ef7424d49443dd222a7769:aee4961a77ecfe1a2035893708f4cb12:cbce6b53f0f49e0bf15173c25c41f876$"
 	}
 }

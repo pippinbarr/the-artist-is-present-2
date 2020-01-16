@@ -9,6 +9,7 @@ class Marina extends Phaser.Physics.Arcade.Sprite {
     this.cursors = scene.input.keyboard.createCursorKeys();
     this.inputEnabled = true;
     this.speed = 500;
+    this.sitting = false;
   }
 
   create() {
@@ -87,5 +88,13 @@ class Marina extends Phaser.Physics.Arcade.Sprite {
     key = key.replace('walking', 'idle');
     this.anims.play(key);
     this.setVelocity(0, 0);
+  }
+
+  sit() {
+    this.anims.play('sitting');
+    this.setVelocity(0, 0);
+    this.inputEnabled = false;
+    this.sitting = true;
+    this.flipX = false;
   }
 }

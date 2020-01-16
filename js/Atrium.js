@@ -31,6 +31,9 @@ class Atrium extends TAIPScene {
     this.tableAndChairs.setDepth(240);
     this.colliders.add(this.tableAndChairs);
 
+    this.marinaChairSensor = this.physics.add.sprite(730, 250, 'atlas', 'red-pixel.png').setScale(50, 60);
+    this.marinaChairSensor.visible = false;
+
     // Back wall left
     createColliderRect(this, 0, 0, 312, 202, this.colliders);
     // Back wall right
@@ -59,6 +62,13 @@ class Atrium extends TAIPScene {
     this.physics.collide(this.marina, this.colliders, () => {
       this.marina.stop();
     });
+    if (!this.marina.sitting) {
+      this.physics.overlap(this.marina, this.marinaChairSensor, () => {
+        this.marina.sit();
+        this.marina.x = 696;
+        this.marina.y = 212;
+      });
+    }
     this.marina.depth = this.marina.body.y;
   }
 }

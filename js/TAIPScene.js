@@ -49,7 +49,7 @@ class TAIPScene extends Phaser.Scene {
       repeat: 0,
       onComplete: () => {
         this.marina.inputEnabled = true;
-        this.marina.stop();
+        // this.marina.stop();
       },
     });
   }

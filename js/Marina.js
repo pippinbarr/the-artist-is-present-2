@@ -8,7 +8,7 @@ class Marina extends Phaser.Physics.Arcade.Sprite {
     this.body.setSize(this.width - 2, 4, false);
     this.cursors = scene.input.keyboard.createCursorKeys();
     this.inputEnabled = true;
-    this.speed = 100;
+    this.speed = 500;
   }
 
   create() {

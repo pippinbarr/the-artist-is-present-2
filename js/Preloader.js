@@ -30,7 +30,9 @@ let Preloader = new Phaser.Class({
     this.createSpritesheetAnimation('marina', 'idle-d', 15, 15, 10, 0);
     this.createSpritesheetAnimation('marina', 'walking-d', 9, 14, 10, -1);
 
-    this.createSpritesheetAnimation('marina-sitting', 'sitting', 1, 4, 10, -1);
+    this.createSpritesheetAnimation('marina-sitting', 'sitting', 1, 1, 3, -1);
+    this.createSpritesheetAnimation('marina-sitting', 'look-down', 1, 4, 3, 0);
+    this.createSpritesheetAnimation('marina-sitting', 'look-up', 4, 1, 3, 0);
 
     this.scene.start(START_SCENE);
   },

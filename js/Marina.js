@@ -10,6 +10,7 @@ class Marina extends Phaser.Physics.Arcade.Sprite {
     this.inputEnabled = true;
     this.speed = 500;
     this.sitting = false;
+    this.lookingUp = true;
   }
 
   create() {
@@ -96,5 +97,18 @@ class Marina extends Phaser.Physics.Arcade.Sprite {
     this.inputEnabled = false;
     this.sitting = true;
     this.flipX = false;
+  }
+
+  lookDown() {
+    console.log("b")
+    if (!this.lookingUp) return;
+    this.lookingUp = false;
+    this.anims.play('look-down');
+  }
+
+  lookUp() {
+    if (this.lookingUp) return;
+    this.lookingUp = true;
+    this.anims.play('look-up');
   }
 }

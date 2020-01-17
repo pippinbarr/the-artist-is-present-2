@@ -53,6 +53,10 @@ class Atrium extends TAIPScene {
     this.addTransitions(transitionData);
 
     this.handleEntrances();
+
+    this.input.keyboard.on('keyup', (e) => {
+      this.handleGazeInput(e)
+    });
   }
 
   update(time, delta) {
@@ -70,5 +74,16 @@ class Atrium extends TAIPScene {
       });
     }
     this.marina.depth = this.marina.body.y;
+  }
+
+  handleGazeInput(e) {
+    if (!this.marina.sitting) return;
+
+    if (this.marina.lookingUp) {
+      this.marina.lookDown();
+    }
+    else if (!this.marina.lookingUp) {
+      this.marina.lookUp();
+    }
   }
 }

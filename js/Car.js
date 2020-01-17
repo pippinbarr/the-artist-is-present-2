@@ -26,6 +26,11 @@ let Car = new Phaser.Class({
 
     // Driver
     this.add.sprite(this.game.canvas.width / 2, this.game.canvas.height / 2, 'atlas', 'car/car-driver.png').setScale(5 * 4);
+
+    setTimeout(() => {
+      last.scene = 'car';
+      this.scene.start('moma-exterior');
+    }, 500);
   },
 
   update: function(time, delta) {

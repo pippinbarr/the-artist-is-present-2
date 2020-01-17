@@ -1,4 +1,5 @@
-const START_SCENE = 'atrium';
+const START_SCENE = 'car';
+
 let lastScene = undefined;
 let last = {
   scene: undefined,
@@ -16,7 +17,7 @@ let config = {
   physics: {
     default: 'arcade',
     arcade: {
-      debug: false
+      debug: true
     }
   },
 };

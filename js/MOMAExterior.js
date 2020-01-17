@@ -30,6 +30,15 @@ class MOMAExterior extends TAIPScene {
       .setScale(4)
       .setDepth(10000);
 
+    // Car
+    this.car = this.physics.add.sprite(-100 * 4, 70 * 4, 'atlas', 'exterior/car.png').setScale(4);
+    this.car.body.setOffset(28, 75);
+    this.car.body.setSize(102, 20, false);
+    this.car.body.immovable = true;
+    this.car.depth = 10000 * 4;
+    this.colliders.add(this.car);
+
+
     this.LEFT_DOOR_X = this.game.canvas.width / 2 - 10.5 * 4;
     this.RIGHT_DOOR_X = this.game.canvas.width / 2 + 10.5 * 4;
     this.DOOR_OPEN_AMOUNT = 15 * 4;
@@ -179,6 +188,24 @@ class MOMAExterior extends TAIPScene {
       this.leftDoor.x -= this.DOOR_OPEN_AMOUNT;
       this.rightDoor.x += this.DOOR_OPEN_AMOUNT;
       this.doorsOpen = true;
+    }
+    else if (last.scene === 'car') {
+      this.marina.visible = false;
+      this.inputEnabled = false;
+      const carTween = this.tweens.add({
+        targets: this.car,
+        x: 120 * 4,
+        duration: 5000,
+        repeat: 0,
+        onComplete: () => {
+          setTimeout(() => {
+            this.marina.x = 80 * 4;
+            this.marina.y = 77 * 4;
+            this.marina.visible = true;
+            this.marina.inputEnabled = true;
+          }, 3000);
+        }
+      });
     }
   }
 }

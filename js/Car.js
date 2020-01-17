@@ -1,3 +1,5 @@
+const CAR_JOURNEY_DURATION = 10000;
+
 let Car = new Phaser.Class({
 
   Extends: Phaser.Scene,
@@ -26,6 +28,11 @@ let Car = new Phaser.Class({
 
     // Driver
     this.add.sprite(this.game.canvas.width / 2, this.game.canvas.height / 2, 'atlas', 'car/car-driver.png').setScale(5 * 4);
+
+    setTimeout(() => {
+      last.scene = 'car';
+      this.scene.start('moma-exterior');
+    }, CAR_JOURNEY_DURATION);
   },
 
   update: function(time, delta) {

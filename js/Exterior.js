@@ -22,6 +22,7 @@ class Exterior extends TAIPScene {
     createColliderRect(this, 56 * 4, 0 * 4, 4 * 4, 59 * 4, this.colliders);
     createColliderRect(this, 28 * 4, 59 * 4, 1 * 4, 4 * 4, this.colliders);
     createColliderRect(this, 60 * 4, 59 * 4, 1 * 4, 4 * 4, this.colliders);
+    createColliderRect(this, 0 * 4, 99 * 4, 200 * 4, 2 * 4, this.colliders);
 
     // Box thing
     this.boxThing = this.physics.add.sprite(this.game.canvas.width / 2, this.game.canvas.height / 2, 'atlas', 'exterior/exterior-box.png').setScale(4);
@@ -46,8 +47,19 @@ class Exterior extends TAIPScene {
     this.cone.depth = 80 * 4;
     this.colliders.add(this.cone);
 
+    // Car
+    this.car = this.physics.add.sprite(140 * 4, 60 * 4, 'atlas', 'exterior/car.png').setScale(4);
+    this.car.body.setOffset(28, 75);
+    this.car.body.setSize(102, 20, false);
+    this.car.body.immovable = true;
+    this.car.depth = 10000 * 4;
+    this.colliders.add(this.car);
+
+    this.carSensor = this.physics.add.sprite(105 * 4, 85 * 4, 'atlas', 'red-pixel.png')
+      .setScale(40, 50).setVisible(false);
+
     // Marina Abramovic
-    this.marina = new Marina(this, 280, 320, 'marina');
+    this.marina = new Marina(this, 200, 220, 'marina');
     this.marina.anims.play('idle-d');
 
     let transitionData = [{
@@ -70,5 +82,21 @@ class Exterior extends TAIPScene {
       this.marina.stop();
     });
     this.marina.depth = this.marina.body.y;
+    this.physics.overlap(this.marina, this.carSensor, () => {
+      if (!this.marina.visible) return;
+      this.marina.visible = false;
+      this.marina.inputEnabled = false;
+      setTimeout(() => {
+        const carTween = this.tweens.add({
+          targets: this.car,
+          x: this.game.canvas.width * 2,
+          duration: 5000,
+          repeat: 0,
+          onComplete: () => {
+            this.scene.start('car');
+          }
+        });
+      }, 2000);
+    });
   }
 }

@@ -100,7 +100,6 @@ class Marina extends Phaser.Physics.Arcade.Sprite {
   }
 
   lookDown() {
-    console.log("b")
     if (!this.lookingUp) return;
     this.lookingUp = false;
     this.anims.play('look-down');

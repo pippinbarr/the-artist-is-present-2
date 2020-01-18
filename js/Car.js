@@ -32,11 +32,7 @@ let Car = new Phaser.Class({
     setTimeout(() => {
       last.scene = 'car';
       this.scene.start('moma-exterior');
-<<<<<<< HEAD
     }, CAR_JOURNEY_DURATION);
-=======
-    }, 500);
->>>>>>> e910d495e5d545fb59d188dccc7e11e4cfe5d5f8
   },
 
   update: function(time, delta) {

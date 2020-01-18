@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 const START_SCENE = 'bedroom';
+=======
+const START_SCENE = 'car';
+>>>>>>> e910d495e5d545fb59d188dccc7e11e4cfe5d5f8
 
 let lastScene = undefined;
 let last = {

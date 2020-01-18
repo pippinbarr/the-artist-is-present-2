@@ -1,4 +1,4 @@
-const START_SCENE = 'car';
+const START_SCENE = 'bedroom';
 
 let lastScene = undefined;
 let last = {

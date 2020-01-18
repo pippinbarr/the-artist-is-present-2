@@ -34,7 +34,22 @@ let Preloader = new Phaser.Class({
     this.createSpritesheetAnimation('marina-sitting', 'look-down', 1, 4, 3, 0);
     this.createSpritesheetAnimation('marina-sitting', 'look-up', 4, 1, 3, 0);
 
-    this.scene.start(START_SCENE);
+    // Absolutely hideous hack to avoid this font-loading problem: display invisible text in preloader for
+    // a tiny amount of time before going to the menu, which seems to fix it.
+    let titleStyle = {
+      fontFamily: 'Commodore',
+      fontSize: '38px',
+      fill: '#000',
+      wordWrap: true,
+      align: 'center'
+    };
+    let title = this.add.text(this.game.canvas.width / 2, 100, "LET'S PLAY:\nANCIENT GREEK PUNISHMENT:\nINVERSION EDITION", titleStyle);
+
+    this.add.sprite(this.game.canvas.width / 2, this.game.canvas.height / 2, 'clown_logo');
+
+    setTimeout(() => {
+      this.scene.start(START_SCENE);
+    }, 10);
   },
 
   createSpritesheetAnimation: function(parent, name, start, end, framerate, repeat) {

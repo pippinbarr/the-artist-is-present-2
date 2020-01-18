@@ -136,6 +136,27 @@
 					}
 				},
 				{
+					"filename": "white-pixel.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 1,
+						"h": 1
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 1,
+						"h": 1
+					},
+					"frame": {
+						"x": 98,
+						"y": 250,
+						"w": 1,
+						"h": 1
+					}
+				},
+				{
 					"filename": "atrium/atrium-table-and-chairs.png",
 					"rotated": false,
 					"trimmed": true,
@@ -1506,6 +1527,6 @@
 	"meta": {
 		"app": "https://www.codeandweb.com/texturepacker",
 		"version": "3.0",
-		"smartupdate": "$TexturePacker:SmartUpdate:fe27b91fa3ef7424d49443dd222a7769:aee4961a77ecfe1a2035893708f4cb12:cbce6b53f0f49e0bf15173c25c41f876$"
+		"smartupdate": "$TexturePacker:SmartUpdate:541c872930e726c824c7ca8388b9dcbf:bba3c390eed48e0a95ef8e5edd210faa:cbce6b53f0f49e0bf15173c25c41f876$"
 	}
 }

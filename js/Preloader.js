@@ -20,6 +20,12 @@ let Preloader = new Phaser.Class({
       frameHeight: 30,
       endFrame: 4
     });
+    this.load.spritesheet('person-spritesheet', 'assets/spritesheets/person-spritesheet.png', {
+      frameWidth: 14,
+      frameHeight: 35,
+      endFrame: 25
+    });
+    this.load.image('person-palette', '/assets/images/person-palette.png');
   },
 
   create: function() {

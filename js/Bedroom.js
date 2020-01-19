@@ -78,6 +78,18 @@ class Bedroom extends TAIPScene {
     this.dialog = new Dialog(this);
     this.dialog.showMessage("Juniper berries.");
 
+    let person = createPersonSprite(this);
+    this.add.existing(person);
+    person.x = 200;
+    person.y = 200;
+    person.setScale(4);
+
+    let person2 = createPersonSprite(this);
+    this.add.existing(person2);
+    person2.x = 400;
+    person2.y = 200;
+    person2.setScale(4);
+
   }
 
   update(time, delta) {

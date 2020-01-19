@@ -201,3 +201,19 @@ Let's be honest: I feel uninspired and uninterested in it right now. But it also
 # Feet wet (Tuesday, 14 January 2020, 13:11PM)
 
 Dropping by to say that yesterday I did that thing of just working. In the end I spent it all just reworking the scene transitions by refactoring to create a game-specific Scene class that could handle that kind of stuff. After a relatively long (and not very interesting, but quite satisfying) tussle, it works as it should. Freeing me up to continue to progress with knitting the different scenes together. I'm tempted, as I write that, to make a fake exit from Exterior to MoMA and work on the car sequences later, since the former will be easier to do and gets me the whole space now, letting me choose more easily between the car sequence and the queue and so on. (Actually from memory the car sequence is ludicrously easy.) Also need a dialog system still at some point. La la.
+
+---
+
+# One long sinuous line, forcing the issue? (Saturday, 18 January 2020, 20:33PM)
+
+Over course of the rest of the week I threaded together all the scenes needed for the game, made sitting down possible, and got a basic dialog box working. As such the whole thing is "connected" which has felt important.
+
+Important, too, was that I think the car sequence felt meaningful, and also that being able to sit down and lower Marina's head was also quite evocative for me. So there were moments in there that seem to feel the way I wanted them to feel.
+
+Big remaining things, quite obviously:
+- Dialogs everywhere dialogs are needed (waking up, getting into the car, arriving at the museum, talking to ticket person, talking to security guard, painting information, talking to the queue, talking to security guards, instructions on raising/lowering head and protocol)
+- The queue (needs to be there to begin with, needs to extend to second hall, someone needs to walk to the seat when head goes down, queue needs to move up, need to take on new (random) people each time it moves up to keep it constant)
+- The looking (needs to display the correct face for a random authentic amount of time)
+- Museum closing (I guess if anyone sat there for 8 hours we would have to end the game and ask them to come back tomorrow!)
+
+A question: What do I think about a person who gets to the chair and then just leaves it running without looking at the people? Should there be some kind of parallel to the original game's queuing requirement? Or will it make the whole things artificial? I guess it could demand you don't press keys or move the mouse, freezing the game if so to demand you really pay attention and do your job? Or is it just a portal out of your computer and the game rolls along even if you're not there? May require some more thought when I get there.

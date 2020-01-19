@@ -102,19 +102,24 @@ class MOMAExterior extends TAIPScene {
     // Bottom wall
     createColliderRect(this, 0 * 4, 98 * 4, 200 * 4, 2 * 4, this.colliders);
 
-    // Marina Abramovic
-    this.marina = new Marina(this, 280, 320, "marina");
-    this.marina.anims.play("idle-d");
-
     const transitionData = [{
-      key: "tickets",
-      type: "up",
-      x: 100 * 4,
-      y: 40 * 4
-    }];
+        key: "tickets",
+        type: "up",
+        x: 100 * 4,
+        y: 40 * 4
+      },
+      {
+        key: "car",
+        type: "down",
+        x: 80 * 4,
+        y: 77 * 4,
+        stop: true
+      }
+    ];
     this.addTransitions(transitionData);
 
     this.handleEntrances();
+
   }
 
   update(time, delta) {
@@ -188,6 +193,9 @@ class MOMAExterior extends TAIPScene {
       this.leftDoor.x -= this.DOOR_OPEN_AMOUNT;
       this.rightDoor.x += this.DOOR_OPEN_AMOUNT;
       this.doorsOpen = true;
+      setTimeout(() => {
+        this.dialog.showMessage(MOMA_MESSAGE_TWO, () => {});
+      }, 1000);
     }
     else if (last.scene === 'car') {
       this.marina.visible = false;
@@ -203,6 +211,7 @@ class MOMAExterior extends TAIPScene {
             this.marina.y = 77 * 4;
             this.marina.visible = true;
             this.marina.inputEnabled = true;
+            this.dialog.showMessage(MOMA_MESSAGE, () => {});
           }, 3000);
         }
       });

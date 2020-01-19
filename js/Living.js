@@ -46,10 +46,6 @@ class Living extends TAIPScene {
     this.table.depth = 76 * 4;
     this.colliders.add(this.table)
 
-    // Marina Abramovic
-    this.marina = new Marina(this, 280, 320, 'marina');
-    this.marina.anims.play('idle-d');
-
     let transitionData = [{
         key: 'kitchen',
         type: 'left',

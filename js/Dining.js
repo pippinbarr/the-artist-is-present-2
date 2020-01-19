@@ -57,10 +57,6 @@ class Dining extends TAIPScene {
     this.frontChairs.depth = 80 * 4;
     this.colliders.add(this.frontChairs);
 
-    // Marina Abramovic
-    this.marina = new Marina(this, 280, 320, 'marina');
-    this.marina.anims.play('idle-d');
-
     let transitionData = [{
         key: 'living',
         type: 'left',

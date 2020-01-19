@@ -1,8 +1,8 @@
-const START_SCENE = 'bedroom';
+const START_SCENE = 'moma-exterior';
 
 let lastScene = undefined;
 let last = {
-  scene: undefined,
+  scene: 'car',
   x: undefined,
   y: undefined
 }

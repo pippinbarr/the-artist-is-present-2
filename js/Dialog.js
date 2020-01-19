@@ -1,13 +1,15 @@
 const DIALOG_TEXT_WIDTH = 640;
 const DIALOG_PADDING = 16;
 const DIALOG_BORDER_WIDTH = 8;
+const DIALOG_FONT_SIZE = 20;
 
 class Dialog extends Phaser.GameObjects.Container {
 
-  constructor(scene) {
+  constructor(scene, marina) {
     super(scene);
 
     this.scene = scene;
+    this.marina = marina;
 
     this.whiteBorder = new Phaser.GameObjects.Sprite(
       this.scene,
@@ -42,7 +44,7 @@ class Dialog extends Phaser.GameObjects.Container {
       this.scene.game.canvas.height / 2,
       '<DIALOG TEXT>', {
         fontFamily: 'Commodore',
-        fontSize: '24px',
+        fontSize: `${DIALOG_FONT_SIZE}px`,
         fill: '#000000',
         wordWrap: true
       }
@@ -64,7 +66,10 @@ class Dialog extends Phaser.GameObjects.Container {
     super.update();
   }
 
-  showMessage(text) {
+  showMessage(text, callback) {
+    this.marina.stop();
+    this.marina.inputEnabled = false;
+
     this.text.text = text;
 
     this.whiteBorder.setScale(
@@ -85,15 +90,19 @@ class Dialog extends Phaser.GameObjects.Container {
 
     this.text.setOrigin(0, 0.5);
 
-    this.scene.input.keyboard.on('keydown', this.handleInput, this);
+    this.scene.input.keyboard.once('keydown', () => {
+      this.marina.inputEnabled = true;
+      this.setVisible(false);
+      callback();
+    });
 
     this.setVisible(true);
   }
 
-  handleInput() {
-    if (this.visible) {
-      this.setVisible(false);
-    }
-  }
+  // handleInput() {
+  //   if (this.visible) {
+  //     this.setVisible(false);
+  //   }
+  // }
 
 }

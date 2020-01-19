@@ -25,10 +25,6 @@ class Kitchen extends TAIPScene {
     let doors = this.physics.add.sprite(this.game.canvas.width / 2, this.game.canvas.height / 2, 'atlas', 'kitchen/kitchen-doors.png').setScale(4);
     doors.depth = 100000;
 
-    // Marina Abramovic
-    this.marina = new Marina(this, 280, 250, 'marina');
-    this.marina.anims.play('idle-d');
-
     this.add.sprite(this.game.canvas.width / 2, this.game.canvas.height / 2, 'atlas', 'kitchen/kitchen-fg.png').setScale(4);
 
     this.leftScene = 'bedroom';

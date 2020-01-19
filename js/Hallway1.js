@@ -18,11 +18,6 @@ class Hallway1 extends TAIPScene {
       )
       .setScale(4);
 
-    this.colliders = this.add.group();
-
-    this.marina = new Marina(this, 200, this.game.canvas.height / 2, "marina");
-    this.marina.anims.play("idle-d");
-
     // Back wall
     createColliderRect(this, 200, 200, 600, 5, this.colliders);
     // Bottom wall

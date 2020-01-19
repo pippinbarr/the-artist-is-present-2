@@ -12,6 +12,12 @@ class TAIPScene extends Phaser.Scene {
     this.colliders = this.add.group();
     this.cursors = this.input.keyboard.createCursorKeys();
     this.marks = this.add.group();
+
+    // Marina Abramovic
+    this.marina = new Marina(this, 0, 0, 'marina');
+    this.marina.anims.play('idle-d');
+
+    this.dialog = new Dialog(this, this.marina);
   }
 
   update(time, delta) {
@@ -40,6 +46,7 @@ class TAIPScene extends Phaser.Scene {
     if (xDir < 0) this.marina.left();
     if (yDir > 0) this.marina.down();
     if (yDir < 0) this.marina.up();
+    if (transition.stop === true) this.marina.stop();
 
     let marinaTweenIn = this.tweens.add({
       targets: this.marina,

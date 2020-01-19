@@ -18,11 +18,6 @@ class Atrium extends TAIPScene {
       )
       .setScale(4);
 
-    this.colliders = this.add.group();
-
-    this.marina = new Marina(this, 200, this.game.canvas.height / 2, "marina");
-    this.marina.anims.play("idle-d");
-
     // Table and chairs
     this.tableAndChairs = this.physics.add.sprite(130 * 4 + 30 * 4, 40 * 4 + 15 * 4, 'atlas', 'atrium/atrium-table-and-chairs.png').setScale(4);
     this.tableAndChairs.body.setOffset(2, this.tableAndChairs.body.height - 10);

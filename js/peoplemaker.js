@@ -35,7 +35,7 @@ const SHOE_COLORS = [0xFF000000, 0xff4b370c, 0xff474237];
 
 // This code is heavily, heavily drawing from the work by Colbydude, bless them:
 // https://github.com/Colbydude/phaser-3-palette-swapping-example
-function createPersonSprite(game) {
+function newPersonSprite(game, x, y) {
   personIndex++;
 
   let spritesheet = {
@@ -123,6 +123,9 @@ function createPersonSprite(game) {
 
   let sprite = new Phaser.GameObjects.Sprite(game, 0, 0, 'person-spritesheet-' + personIndex);
   sprite.id = personIndex;
+  sprite.setScale(4);
+  sprite.x = x;
+  sprite.y = y;
   return sprite;
 }
 

@@ -18,8 +18,6 @@ class Tickets extends TAIPScene {
       )
       .setScale(4);
 
-    this.colliders = this.add.group();
-
     this.barrier = this.physics.add
       .sprite(80 * 4, 49 * 4, "atlas", "tickets/tickets-barrier.png")
       .setScale(4);
@@ -28,9 +26,6 @@ class Tickets extends TAIPScene {
     this.barrier.body.immovable = true;
     this.barrier.depth = 60 * 4;
     this.colliders.add(this.barrier);
-
-    this.marina = new Marina(this, 100, this.game.canvas.height / 2, "marina");
-    this.marina.anims.play("idle-d");
 
     createColliderRect(this, 0, 200, 600, 5, this.colliders);
     createColliderRect(this, 0, 392, 320, 8, this.colliders);

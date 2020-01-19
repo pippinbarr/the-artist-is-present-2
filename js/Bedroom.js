@@ -39,9 +39,6 @@ class Bedroom extends TAIPScene {
     createColliderRect(this, 122 * 4, 56 * 4, 23 * 4, 5 * 4, this.colliders);
     this.dresser.depth = 31 * 4;
 
-    // Marina Abramovic
-    this.marina = new Marina(this, 0, 0, 'marina');
-    this.marina.anims.play('idle-d');
     this.marina.inputEnabled = false;
 
     // Marina Abramovic horizontal
@@ -72,21 +69,21 @@ class Bedroom extends TAIPScene {
     let bedroomFG = this.add.sprite(this.game.canvas.width / 2, this.game.canvas.height / 2, 'atlas', 'bedroom/bedroom-fg.png').setScale(4);
     bedroomFG.depth = bedroomFG.y + bedroomFG.height + 4 * 4;
 
-    this.dialog = new Dialog(this);
-    this.dialog.showMessage("Juniper berries.");
-
-    let person = createPersonSprite(this);
-    this.add.existing(person);
-    person.x = 200;
-    person.y = 200;
-    person.setScale(4);
-
-    let person2 = createPersonSprite(this);
-    this.add.existing(person2);
-    person2.x = 400;
-    person2.y = 200;
-    person2.setScale(4);
-    person2.anims.play('walking-u-' + person2.id);
+    if (last.scene !== 'kitchen') {
+      setTimeout(() => {
+        this.dialog.showMessage(WAKEUP_MESSAGE, () => {
+          this.marina.inputEnabled = false;
+          setTimeout(() => {
+            this.dialog.showMessage(CONTROLS_MESSAGE, () => {
+              this.marina.inputEnabled = false;
+              this.input.keyboard.once('keydown', () => {
+                this.handleWakeup();
+              });
+            });
+          }, 1000)
+        });
+      }, 3000);
+    }
   }
 
   update(time, delta) {
@@ -97,21 +94,12 @@ class Bedroom extends TAIPScene {
       this.marina.stop();
     });
     this.marina.depth = this.marina.body.y;
-
-    this.handleWakeup();
   }
 
   handleWakeup() {
-    if (last.scene === 'kitchen') return;
-
-    if (Phaser.Input.Keyboard.JustDown(this.marina.cursors.left) ||
-      Phaser.Input.Keyboard.JustDown(this.marina.cursors.right) ||
-      Phaser.Input.Keyboard.JustDown(this.marina.cursors.up) ||
-      Phaser.Input.Keyboard.JustDown(this.marina.cursors.down)) {
-
-      this.marinaBed.setVisible(false);
-      this.marina.setVisible(true);
-      this.marina.inputEnabled = true;
-    }
+    this.marinaBed.setVisible(false);
+    this.marina.setVisible(true);
+    this.marina.inputEnabled = true;
+    this.marina.stop();
   }
 }

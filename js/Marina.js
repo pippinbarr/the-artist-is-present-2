@@ -7,8 +7,9 @@ class Marina extends Phaser.Physics.Arcade.Sprite {
     this.body.setOffset(1, this.height - 4);
     this.body.setSize(this.width - 2, 4, false);
     this.cursors = scene.input.keyboard.createCursorKeys();
+    scene.input.keyboard.on('keydown', () => this.handleInput());
     this.inputEnabled = true;
-    this.speed = 500;
+    this.speed = 100;
     this.sitting = false;
     this.lookingUp = true;
   }
@@ -18,10 +19,10 @@ class Marina extends Phaser.Physics.Arcade.Sprite {
   }
 
   update() {
-    this.handleInput();
+
   }
 
-  handleInput() {
+  handleInput(e) {
     if (!this.inputEnabled) return;
 
     if (Phaser.Input.Keyboard.JustDown(this.cursors.left)) {

@@ -56,11 +56,7 @@ class Exterior extends TAIPScene {
     this.colliders.add(this.car);
 
     this.carSensor = this.physics.add.sprite(105 * 4, 85 * 4, 'atlas', 'red-pixel.png')
-      .setScale(40, 50).setVisible(false);
-
-    // Marina Abramovic
-    this.marina = new Marina(this, 200, 220, 'marina');
-    this.marina.anims.play('idle-d');
+      .setScale(20, 20).setVisible(false);
 
     let transitionData = [{
       key: 'dining',
@@ -72,6 +68,15 @@ class Exterior extends TAIPScene {
 
     this.handleEntrances();
 
+    setTimeout(() => {
+      if (!seenCarWaiting) {
+        this.dialog.showMessage(CAR_WAITING_MESSAGE, () => {});
+        seenCarWaiting = true;
+      }
+      else {
+        this.dialog.showMessage(CAR_WAITING_MESSAGE_TWO, () => {});
+      }
+    }, 1000);
   }
 
   update(time, delta) {

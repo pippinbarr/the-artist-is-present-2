@@ -63,8 +63,6 @@ function createPersonSprite(game) {
   // Construct our replacement palette
   const REPLACEMENTS = getReplacementPalette();
 
-  console.log(REPLACEMENTS);
-
   // Iterate through every pixel in the image.
   for (var p = 0; p < pixelArray.length / 4; p++) {
     var index = 4 * p;
@@ -105,22 +103,13 @@ function createPersonSprite(game) {
     frameHeight: spritesheet.frameHeight,
   });
 
-  // Iterate over each animation.
-  // for (var a = 0; a < config.animations.length; a++) {
-  //   anim = config.animations[a];
-  //   animKey = atlasKey + '-' + anim.key;
-  //
-  //   // Add the animation to the game.
-  //   game.anims.create({
-  //     key: animKey,
-  //     frames: game.anims.generateFrameNumbers(atlasKey, {
-  //       start: anim.startFrame,
-  //       end: anim.endFrame
-  //     }),
-  //     frameRate: anim.frameRate,
-  //     repeat: anim.repeat === undefined ? -1 : anim.repeat
-  //   });
-  // }
+  // Create animations
+  createPersonAnimation(game, atlasKey, 'idle-h', personIndex, 23, 23, 10, 0);
+  createPersonAnimation(game, atlasKey, 'walking-h', personIndex, 1, 8, 10, -1);
+  createPersonAnimation(game, atlasKey, 'idle-u', personIndex, 22, 22, 10, 0);
+  createPersonAnimation(game, atlasKey, 'walking-u', personIndex, 16, 21, 10, -1);
+  createPersonAnimation(game, atlasKey, 'idle-d', personIndex, 15, 15, 10, 0);
+  createPersonAnimation(game, atlasKey, 'walking-d', personIndex, 9, 14, 10, -1);
 
   // Destroy temp texture.
   game.textures.get('person-spritesheet-temp').destroy();
@@ -128,10 +117,11 @@ function createPersonSprite(game) {
   // Destroy textures that are not longer needed.
   // NOTE: This doesn't remove the textures from TextureManager.list.
   //       However, it does destroy source image data.
-  // game.textures.get(config.spriteSheet.key).destroy();
-  // game.textures.get(config.paletteKey).destroy();
+  // game.textures.get('person-spritesheet').destroy();
 
-  return new Phaser.GameObjects.Sprite(game, 0, 0, 'person-spritesheet-' + personIndex);
+  let sprite = new Phaser.GameObjects.Sprite(game, 0, 0, 'person-spritesheet-' + personIndex);
+  sprite.id = personIndex;
+  return sprite;
 }
 
 function getReplacementPalette() {
@@ -169,7 +159,7 @@ function getReplacementPalette() {
   const NEW_SHORT_HAIR_COLOR = MAIN_HAIR_COLOR;
   let NEW_MID_HAIR_COLOR = TRANSPARENT;
   let NEW_LONG_HAIR_COLOR = TRANSPARENT;
-  console.log(TRANSPARENT);
+  // console.log(TRANSPARENT);
   let NEW_SHIRT_HAIR_COLOR = NEW_BODY_COLOR;
   let NEW_NECK_COLOR = NEW_SKIN_COLOR;
 
@@ -232,4 +222,22 @@ function getReplacementPalette() {
 
 function getRandom(array) {
   return array[Math.floor(Math.random() * array.length)];
+}
+
+function createPersonAnimation(game, spritesheet, name, index, start, end, framerate, repeat) {
+  if (game.anims.get(name + '-' + index) !== undefined) return;
+
+  let frames = game.anims.generateFrameNames(spritesheet, {
+    start: start - 1,
+    end: end - 1,
+  });
+
+  let config = {
+    key: name + '-' + index,
+    frames: frames,
+    frameRate: framerate,
+    repeat: repeat,
+  };
+
+  game.anims.create(config);
 }

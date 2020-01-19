@@ -25,7 +25,6 @@ let Preloader = new Phaser.Class({
       frameHeight: 35,
       endFrame: 25
     });
-    this.load.image('person-palette', '/assets/images/person-palette.png');
   },
 
   create: function() {

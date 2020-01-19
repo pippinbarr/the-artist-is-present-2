@@ -72,9 +72,6 @@ class Bedroom extends TAIPScene {
     let bedroomFG = this.add.sprite(this.game.canvas.width / 2, this.game.canvas.height / 2, 'atlas', 'bedroom/bedroom-fg.png').setScale(4);
     bedroomFG.depth = bedroomFG.y + bedroomFG.height + 4 * 4;
 
-    console.log(this);
-
-    Dialog
     this.dialog = new Dialog(this);
     this.dialog.showMessage("Juniper berries.");
 
@@ -89,7 +86,7 @@ class Bedroom extends TAIPScene {
     person2.x = 400;
     person2.y = 200;
     person2.setScale(4);
-
+    person2.anims.play('walking-u-' + person2.id);
   }
 
   update(time, delta) {

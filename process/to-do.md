@@ -6,7 +6,6 @@
 - ~~Contemplate using a sprite atlas instead of the current madness?~~
 - ~~Build a "simple" walking around scene~~
 - ~~Add an object collision with hitboxes etc.~~
-
-- Contemplate sprite recolouring issue
-- Contemplate how to do room-shape collisions
-- Build a dialog box object/function (guess it could just extend sprite)
+- ~~Contemplate sprite recolouring issue~~
+- ~~Contemplate how to do room-shape collisions~~
+- ~~Build a dialog box object/function (guess it could just extend sprite)~~

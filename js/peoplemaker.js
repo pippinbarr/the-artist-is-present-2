@@ -33,6 +33,8 @@ const BELT_COLORS = [0xFF000000, 0xff4a210b];
 const PANT_COLORS = [0xff444342, 0xff401c09, 0xff385473, 0xff628790, 0xff434a3b];
 const SHOE_COLORS = [0xFF000000, 0xff4b370c, 0xff474237];
 
+// This code is heavily, heavily drawing from the work by Colbydude, bless them:
+// https://github.com/Colbydude/phaser-3-palette-swapping-example
 function createPersonSprite(game) {
   personIndex++;
 

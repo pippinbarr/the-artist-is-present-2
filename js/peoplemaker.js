@@ -79,17 +79,16 @@ function createPersonSprite(game) {
       continue;
     }
 
-    // console.log("Checking actual pixel...")
-
     // Iterate through the colors in the palette.
     for (let c = 0; c < PALETTE.length; c++) {
-      let oldColor = Phaser.Display.Color.IntegerToRGB(PALETTE[c]);
+      let oldColor = Phaser.Display.Color.IntegerToColor(PALETTE[c]);
       let newColor = REPLACEMENTS[c];
 
       // console.log(r, g, b);
 
       // If the color matches, replace the color.
       if (r === oldColor.r && g === oldColor.g && b === oldColor.b && alpha === 255) {
+        pixelArray[index] = newColor.a;
         pixelArray[--index] = newColor.b;
         pixelArray[--index] = newColor.g;
         pixelArray[--index] = newColor.r;
@@ -141,28 +140,75 @@ function getReplacementPalette() {
   const NEW_MOUTH_COLOR = Phaser.Display.Color.IntegerToColor(getRandom(MOUTH_COLORS));
   const NEW_SKIN_COLOR = Phaser.Display.Color.IntegerToColor(getRandom(SKIN_COLORS));
 
+  // THE SHIRT
+
   let shirtColor = Phaser.Display.Color.IntegerToColor(getRandom(SHIRT_COLORS));
-  console.log(shirtColor.r, shirtColor.g, shirtColor.b);
   let sleeveColor = shirtColor.clone().brighten(10);
-  console.log(sleeveColor.r, sleeveColor.g, sleeveColor.b);
 
-  const NEW_BODY_COLOR = shirtColor;
-  const NEW_T_COLOR = sleeveColor;
-  const NEW_SLEEVE_COLOR = sleeveColor;
+  let shirtRandom = Math.random();
 
-  const NEW_BELT_COLOR = Phaser.Display.Color.IntegerToColor(getRandom(BELT_COLORS));
+  let NEW_BODY_COLOR = shirtColor;
+  let NEW_T_COLOR = sleeveColor;
+  let NEW_SLEEVE_COLOR = sleeveColor;
 
-  const NEW_SHORTS_COLOR = Phaser.Display.Color.IntegerToColor(getRandom(PANT_COLORS));
-  const NEW_PANT_COLOR = NEW_SHORTS_COLOR;
-  const NEW_BOOT_COLOR = NEW_SHORTS_COLOR;
-  const NEW_SHOE_COLOR = Phaser.Display.Color.IntegerToColor(getRandom(SHOE_COLORS));
+  if (shirtRandom < 0.4) {
+    NEW_SLEEVE_COLOR = NEW_SKIN_COLOR;
+  }
+  else if (shirtRandom < 0.6) {
+    NEW_T_COLOR = NEW_SKIN_COLOR;
+    NEW_SLEEVE_COLOR = NEW_SKIN_COLOR;
+  }
 
-  const NEW_SHORT_HAIR_COLOR = Phaser.Display.Color.IntegerToColor(getRandom(HAIR_COLORS));
-  const NEW_MID_HAIR_COLOR = NEW_SHORT_HAIR_COLOR;
-  const NEW_LONG_HAIR_COLOR = NEW_SHORT_HAIR_COLOR;
-  const NEW_SHIRT_HAIR_COLOR = NEW_SHORT_HAIR_COLOR;
-  const NEW_NECK_COLOR = NEW_SHORT_HAIR_COLOR;
+  // The hair
+  let hairRandom = Math.random();
 
+  const TRANSPARENT = Phaser.Display.Color.IntegerToColor(0x00000000).transparent();
+
+  // Default: short hair
+  const MAIN_HAIR_COLOR = Phaser.Display.Color.IntegerToColor(getRandom(HAIR_COLORS));
+  const NEW_SHORT_HAIR_COLOR = MAIN_HAIR_COLOR;
+  let NEW_MID_HAIR_COLOR = TRANSPARENT;
+  let NEW_LONG_HAIR_COLOR = TRANSPARENT;
+  console.log(TRANSPARENT);
+  let NEW_SHIRT_HAIR_COLOR = NEW_BODY_COLOR;
+  let NEW_NECK_COLOR = NEW_SKIN_COLOR;
+
+  if (hairRandom < 0.3) {
+    // Medium hair
+    NEW_MID_HAIR_COLOR = MAIN_HAIR_COLOR;
+  }
+  else if (hairRandom < 0.6) {
+    // Long hair
+    NEW_MID_HAIR_COLOR = MAIN_HAIR_COLOR;
+    NEW_LONG_HAIR_COLOR = MAIN_HAIR_COLOR;
+    NEW_NECK_COLOR = MAIN_HAIR_COLOR;
+    NEW_SHIRT_HAIR_COLOR = MAIN_HAIR_COLOR;
+  }
+
+  // Belt
+  let beltRandom = Math.random();
+
+  let NEW_BELT_COLOR = Phaser.Display.Color.IntegerToColor(getRandom(BELT_COLORS));
+
+  // 70% change of no belt
+  if (beltRandom < 0.7) {
+    NEW_BELT_COLOR = shirtColor;
+  }
+
+  // Everyone wears pants in this world
+  const NEW_PANT_COLOR = Phaser.Display.Color.IntegerToColor(getRandom(PANT_COLORS));;
+  const NEW_SHORTS_COLOR = NEW_PANT_COLOR;
+
+  // Shoes/boots
+
+  let shoeRandom = Math.random();
+
+  let NEW_SHOE_COLOR = Phaser.Display.Color.IntegerToColor(getRandom(SHOE_COLORS));
+  let NEW_BOOT_COLOR = NEW_SHOE_COLOR;
+
+  if (shoeRandom < 0.3) {
+    NEW_BOOT_COLOR = NEW_PANT_COLOR;
+  }
 
   return [
     NEW_EYE_COLOR,

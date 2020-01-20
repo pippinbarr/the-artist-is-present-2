@@ -121,9 +121,12 @@ function newPersonSprite(game, x, y) {
   //       However, it does destroy source image data.
   // game.textures.get('person-spritesheet').destroy();
 
-  let sprite = new Phaser.GameObjects.Sprite(game, 0, 0, 'person-spritesheet-' + personIndex);
+  let sprite = new Phaser.Physics.Arcade.Sprite(game, 0, 0, 'person-spritesheet-' + personIndex);
+  game.physics.world.enableBody(sprite);
   sprite.id = personIndex;
   sprite.setScale(4);
+  sprite.body.setOffset(1, sprite.height - 4);
+  sprite.body.setSize(sprite.width - 2, 4, false);
   sprite.x = x;
   sprite.y = y;
   return sprite;

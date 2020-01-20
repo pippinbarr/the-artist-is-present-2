@@ -38,6 +38,14 @@ class Atrium extends TAIPScene {
     // Right wall
     createColliderRect(this, 799, 0, 2, 400, this.colliders);
 
+    // Add queue
+    for (let i = 0; i < QUEUE.length; i++) {
+      QUEUE[i].x = QUEUE_X - i * QUEUE_SPACING;
+      QUEUE[i].y = QUEUE_Y;
+      QUEUE[i].scene = this;
+      this.add.existing(QUEUE[i]);
+      this.physics.add.existing(QUEUE[i]);
+    }
 
     const transitionData = [{
       key: "hallway3",

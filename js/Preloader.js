@@ -52,6 +52,14 @@ let Preloader = new Phaser.Class({
 
     this.add.sprite(this.game.canvas.width / 2, this.game.canvas.height / 2, 'clown_logo');
 
+    // Create the queue of people!
+    for (let i = 0; i < QUEUE_LENGTH; i++) {
+      let person = newPersonSprite(this, QUEUE_X - i * QUEUE_SPACING, QUEUE_Y);
+      person.anims.play(`idle-h-${person.id}`);
+      person.ignoreDestroy = true;
+      QUEUE.push(person);
+    }
+
     setTimeout(() => {
       this.scene.start(START_SCENE);
     }, 10);

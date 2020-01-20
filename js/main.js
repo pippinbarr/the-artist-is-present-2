@@ -1,8 +1,13 @@
-const START_SCENE = 'hallway3';
+const START_SCENE = 'atrium';
+let QUEUE = [];
+const QUEUE_LENGTH = 15;
+const QUEUE_X = 366;
+const QUEUE_Y = 170;
+const QUEUE_SPACING = 50;
 
 let lastScene = undefined;
 let last = {
-  scene: 'hallway2',
+  scene: 'hallway3',
   x: undefined,
   y: undefined
 }

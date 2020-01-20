@@ -41,6 +41,14 @@ class Hallway3 extends TAIPScene {
     this.dancersSensor = this.physics.add.sprite(59 * 4, 52 * 4, 'atlas', 'red-pixel.png').setScale(4 * 4, 4 * 4).setVisible(false);
     this.dancersSensor.text = DANCERS;
 
+    // Add queue
+    for (let i = 0; i < QUEUE.length; i++) {
+      QUEUE[i].x = QUEUE_X - i * QUEUE_SPACING + this.game.canvas.width;
+      QUEUE[i].y = QUEUE_Y;
+      this.add.existing(QUEUE[i]);
+      this.physics.add.existing(QUEUE[i]);
+    }
+
     this.handleEntrances();
   }
 

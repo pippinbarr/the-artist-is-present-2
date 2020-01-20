@@ -9,3 +9,12 @@ const CAR_WAITING_MESSAGE_TWO = `Your driver is still waiting. You should probab
 const MOMA_MESSAGE = `Here you finally are at the Museum of Modern Art in New York, ready to present your performance work "The Artist Is Present".`;
 let seenMOMAMessage = false;
 const MOMA_MESSAGE_TWO = `Now is not the time for wandering around. Get in there and start the performance!`;
+
+// Artworks
+const STARRY_NIGHT = "Starry Night\nVincent Van Gogh\n1889\nOil on canvas";
+
+const OLIVE_TREES = "The Olive Trees with the Alpilles in the Background\nVincent Van Gogh\n1889\nOil on canvas";
+
+const SOUP_CANS = "Campbell's Soup Cans\nAndy Warhol\n1962\nSynthetic polymer paint on canvas";
+
+const DANCERS = "The Dance I\nHenry Matisse\n1909\nOil on canvas";

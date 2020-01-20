@@ -25,3 +25,16 @@ function createColliderLine(self, fromX, fromY, distX, distY, dX, dY, group) {
   // group.add(lineGroup);
   return lineGroup;
 }
+
+function handleSensor(scene, sensor) {
+  if (scene.physics.overlap(scene.marina, sensor)) {
+    if (!sensor.overlap) {
+      scene.marina.up();
+      scene.dialog.showMessage(sensor.text, () => {});
+      sensor.overlap = true;
+    }
+  }
+  else {
+    sensor.overlap = false;
+  }
+}

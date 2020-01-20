@@ -38,6 +38,9 @@ class Hallway2 extends TAIPScene {
     ];
     this.addTransitions(transitionData);
 
+    this.soupCansSensor = this.physics.add.sprite(57 * 4, 52 * 4, 'atlas', 'red-pixel.png').setScale(4 * 4, 4 * 4);
+    this.soupCansSensor.text = SOUP_CANS;
+
     this.handleEntrances();
   }
 
@@ -48,6 +51,8 @@ class Hallway2 extends TAIPScene {
     this.physics.collide(this.marina, this.colliders, () => {
       this.marina.stop();
     });
+
+    handleSensor(this, this.soupCansSensor);
     this.marina.depth = this.marina.body.y;
   }
 }

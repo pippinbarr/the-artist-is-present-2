@@ -42,6 +42,11 @@ class Hallway1 extends TAIPScene {
       .setScale(4)
       .setDepth(100000);
 
+    this.starryNightSensor = this.physics.add.sprite(77 * 4, 52 * 4, 'atlas', 'red-pixel.png').setScale(4 * 4, 4 * 4);
+    this.starryNightSensor.text = STARRY_NIGHT;
+    this.oliveTreesSensor = this.physics.add.sprite(137 * 4, 52 * 4, 'atlas', 'red-pixel.png').setScale(4 * 4, 4 * 4);
+    this.oliveTreesSensor.text = OLIVE_TREES;
+
     const transitionData = [{
         key: "tickets",
         type: "left",
@@ -67,6 +72,9 @@ class Hallway1 extends TAIPScene {
     this.physics.collide(this.marina, this.colliders, () => {
       this.marina.stop();
     });
+    handleSensor(this, this.starryNightSensor);
+    handleSensor(this, this.oliveTreesSensor);
     this.marina.depth = this.marina.body.y;
   }
+
 }

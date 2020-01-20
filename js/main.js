@@ -1,9 +1,9 @@
 const START_SCENE = 'atrium';
 let QUEUE = [];
 const QUEUE_LENGTH = 15;
-const QUEUE_X = 366;
-const QUEUE_Y = 170;
-const QUEUE_SPACING = 50;
+const QUEUE_X = 440;
+const QUEUE_Y = 180.5;
+const QUEUE_SPACING = 56;
 
 let lastScene = undefined;
 let last = {

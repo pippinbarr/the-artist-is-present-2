@@ -42,9 +42,9 @@ class Hallway1 extends TAIPScene {
       .setScale(4)
       .setDepth(100000);
 
-    this.starryNightSensor = this.physics.add.sprite(77 * 4, 52 * 4, 'atlas', 'red-pixel.png').setScale(4 * 4, 4 * 4);
+    this.starryNightSensor = this.physics.add.sprite(77 * 4, 52 * 4, 'atlas', 'red-pixel.png').setScale(4 * 4, 4 * 4).setVisible(false);
     this.starryNightSensor.text = STARRY_NIGHT;
-    this.oliveTreesSensor = this.physics.add.sprite(137 * 4, 52 * 4, 'atlas', 'red-pixel.png').setScale(4 * 4, 4 * 4);
+    this.oliveTreesSensor = this.physics.add.sprite(137 * 4, 52 * 4, 'atlas', 'red-pixel.png').setScale(4 * 4, 4 * 4).setVisible(false);
     this.oliveTreesSensor.text = OLIVE_TREES;
 
     const transitionData = [{

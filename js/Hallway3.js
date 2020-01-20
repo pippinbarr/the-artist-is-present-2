@@ -38,7 +38,7 @@ class Hallway3 extends TAIPScene {
     ];
     this.addTransitions(transitionData);
 
-    this.dancersSensor = this.physics.add.sprite(59 * 4, 52 * 4, 'atlas', 'red-pixel.png').setScale(4 * 4, 4 * 4);
+    this.dancersSensor = this.physics.add.sprite(59 * 4, 52 * 4, 'atlas', 'red-pixel.png').setScale(4 * 4, 4 * 4).setVisible(false);
     this.dancersSensor.text = DANCERS;
 
     this.handleEntrances();

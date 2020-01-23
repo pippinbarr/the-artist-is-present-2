@@ -2,7 +2,7 @@ const START_SCENE = 'atrium';
 let QUEUE = [];
 const QUEUE_LENGTH = 15;
 const QUEUE_X = 440;
-const QUEUE_Y = 180.5;
+const QUEUE_Y = 182;
 const QUEUE_SPACING = 56;
 
 let lastScene = undefined;

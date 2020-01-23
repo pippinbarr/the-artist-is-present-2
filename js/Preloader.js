@@ -28,16 +28,16 @@ let Preloader = new Phaser.Class({
   },
 
   create: function() {
-    this.createSpritesheetAnimation('marina', 'idle-h', 23, 23, 10, 0);
-    this.createSpritesheetAnimation('marina', 'walking-h', 1, 8, 10, -1);
-    this.createSpritesheetAnimation('marina', 'idle-u', 22, 22, 10, 0);
-    this.createSpritesheetAnimation('marina', 'walking-u', 16, 21, 10, -1);
-    this.createSpritesheetAnimation('marina', 'idle-d', 15, 15, 10, 0);
-    this.createSpritesheetAnimation('marina', 'walking-d', 9, 14, 10, -1);
+    this.createSpritesheetAnimation('marina', 'idle-h-marina', 23, 23, 10, 0);
+    this.createSpritesheetAnimation('marina', 'walking-h-marina', 1, 8, 10, -1);
+    this.createSpritesheetAnimation('marina', 'idle-u-marina', 22, 22, 10, 0);
+    this.createSpritesheetAnimation('marina', 'walking-u-marina', 16, 21, 10, -1);
+    this.createSpritesheetAnimation('marina', 'idle-d-marina', 15, 15, 10, 0);
+    this.createSpritesheetAnimation('marina', 'walking-d-marina', 9, 14, 10, -1);
 
-    this.createSpritesheetAnimation('marina-sitting', 'sitting', 1, 1, 3, -1);
-    this.createSpritesheetAnimation('marina-sitting', 'look-down', 1, 4, 3, 0);
-    this.createSpritesheetAnimation('marina-sitting', 'look-up', 4, 1, 3, 0);
+    this.createSpritesheetAnimation('marina-sitting', 'sitting-marina', 1, 1, 3, -1);
+    this.createSpritesheetAnimation('marina-sitting', 'look-down-marina', 1, 4, 3, 0);
+    this.createSpritesheetAnimation('marina-sitting', 'look-up-marina', 4, 1, 3, 0);
 
     // Absolutely hideous hack to avoid this font-loading problem: display invisible text in preloader for
     // a tiny amount of time before going to the menu, which seems to fix it.
@@ -54,8 +54,7 @@ let Preloader = new Phaser.Class({
 
     // Create the queue of people!
     for (let i = 0; i < QUEUE_LENGTH; i++) {
-      let person = newPersonSprite(this, QUEUE_X - i * QUEUE_SPACING, QUEUE_Y);
-      person.anims.play(`idle-h-${person.id}`);
+      let person = new Visitor(this, QUEUE_X - i * QUEUE_SPACING, QUEUE_Y);
       person.ignoreDestroy = true;
       QUEUE.push(person);
     }

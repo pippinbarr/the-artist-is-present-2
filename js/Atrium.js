@@ -47,6 +47,11 @@ class Atrium extends TAIPScene {
       this.physics.add.existing(QUEUE[i]);
     }
 
+    // Add guards
+    let guard1 = new Guard(this, 115 * 4, 39 * 4 + 2);
+    let guard2 = new Guard(this, 118 * 4, 50 * 4 + 2);
+
+
     const transitionData = [{
       key: "hallway3",
       type: "left",

@@ -15,7 +15,7 @@ class TAIPScene extends Phaser.Scene {
 
     // Marina Abramovic
     this.marina = new Marina(this, 0, 0, 'marina');
-    this.marina.anims.play('idle-d');
+    this.marina.anims.play('idle-d-marina');
 
     this.dialog = new Dialog(this, this.marina);
   }

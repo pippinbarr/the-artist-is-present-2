@@ -78,6 +78,12 @@ class Atrium extends TAIPScene {
     this.physics.collide(this.marina, this.colliders, () => {
       this.marina.stop();
     });
+    this.physics.collide(this.marina, this.queue, () => {
+      this.marina.stop();
+    });
+    this.physics.collide(this.marina, this.guards, () => {
+      this.marina.stop();
+    });
     if (!this.marina.sitting) {
       this.physics.overlap(this.marina, this.marinaChairSensor, () => {
         this.marina.sit();

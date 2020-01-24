@@ -31,6 +31,9 @@ class GeneratedPerson extends Person {
     generateAnimations(scene, texture, id);
 
     super(scene, x, y, texture, `-${id}`);
+
+    this.body.immovable = true;
+
   }
 
   create() {

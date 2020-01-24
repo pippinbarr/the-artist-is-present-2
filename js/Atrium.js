@@ -39,18 +39,22 @@ class Atrium extends TAIPScene {
     createColliderRect(this, 799, 0, 2, 400, this.colliders);
 
     // Add queue
+    this.queue = this.add.group();
     for (let i = 0; i < QUEUE.length; i++) {
       QUEUE[i].x = QUEUE_X - i * QUEUE_SPACING;
       QUEUE[i].y = QUEUE_Y;
       QUEUE[i].scene = this;
-      this.add.existing(QUEUE[i]);
+      // this.add.existing(QUEUE[i]);
       this.physics.add.existing(QUEUE[i]);
+      this.queue.add(QUEUE[i], true);
     }
 
     // Add guards
-    let guard1 = new Guard(this, 115 * 4, 39 * 4 + 2);
-    let guard2 = new Guard(this, 118 * 4, 50 * 4 + 2);
-
+    this.guards = this.add.group();
+    this.guard1 = new Guard(this, 115 * 4, 39 * 4 + 2);
+    this.guard2 = new Guard(this, 118 * 4, 50 * 4 + 2);
+    this.guards.add(this.guard1, true);
+    this.guards.add(this.guard2, true);
 
     const transitionData = [{
       key: "hallway3",
@@ -82,6 +86,12 @@ class Atrium extends TAIPScene {
       });
     }
     this.marina.depth = this.marina.body.y;
+    this.queue.getChildren().forEach((visitor) => {
+      visitor.depth = visitor.body.y;
+    });
+    this.guards.getChildren().forEach((guard) => {
+      guard.depth = guard.body.y;
+    });
   }
 
   handleGazeInput(e) {

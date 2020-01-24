@@ -13,8 +13,6 @@ class Guard extends GeneratedPerson {
     }
     super(scene, x, y, palette);
 
-    scene.add.existing(this);
-    scene.physics.add.existing(this);
     this.left();
     this.stop();
   }

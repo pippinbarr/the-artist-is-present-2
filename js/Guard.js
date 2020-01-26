@@ -1,6 +1,6 @@
 class Guard extends GeneratedPerson {
 
-  constructor(scene, x, y) {
+  constructor(scene, x, y, dialog) {
     const palette = {
       eyes: [0xff637c62, 0xff4e8b9a, 0xff403226, 0xff0e779e],
       mouth: [0xffc96c69, 0xffc96c69],
@@ -12,7 +12,7 @@ class Guard extends GeneratedPerson {
       shoes: [0xFF000000, 0xff4b370c, 0xff474237]
     }
     super(scene, x, y, palette);
-
+    this.dialog = dialog;
     this.left();
     this.stop();
   }

@@ -38,23 +38,9 @@ class Atrium extends TAIPScene {
     // Right wall
     createColliderRect(this, 799, 0, 2, 400, this.colliders);
 
-    // Add queue
-    this.queue = this.add.group();
-    for (let i = 0; i < QUEUE.length; i++) {
-      QUEUE[i].x = QUEUE_X - i * QUEUE_SPACING;
-      QUEUE[i].y = QUEUE_Y;
-      QUEUE[i].scene = this;
-      // this.add.existing(QUEUE[i]);
-      this.physics.add.existing(QUEUE[i]);
-      this.queue.add(QUEUE[i], true);
-    }
+    this.addQueue();
 
-    // Add guards
-    this.guards = this.add.group();
-    this.guard1 = new Guard(this, 115 * 4, 39 * 4 + 2);
-    this.guard2 = new Guard(this, 118 * 4, 50 * 4 + 2);
-    this.guards.add(this.guard1, true);
-    this.guards.add(this.guard2, true);
+    this.addGuards();
 
     const transitionData = [{
       key: "hallway3",
@@ -71,6 +57,29 @@ class Atrium extends TAIPScene {
     });
   }
 
+  addQueue() {
+    // Add queue
+    this.queue = this.add.group();
+    for (let i = 0; i < QUEUE.length; i++) {
+      QUEUE[i].x = QUEUE_X - i * QUEUE_SPACING;
+      QUEUE[i].y = QUEUE_Y;
+      QUEUE[i].scene = this;
+      QUEUE[i].dialog = this.dialog;
+      // this.add.existing(QUEUE[i]);
+      this.physics.add.existing(QUEUE[i]);
+      this.queue.add(QUEUE[i], true);
+    }
+  }
+
+  addGuards() {
+    // Add guards
+    this.guards = this.add.group();
+    this.guard1 = new Guard(this, 115 * 4, 39 * 4 + 2, this.dialog);
+    this.guard2 = new Guard(this, 118 * 4, 50 * 4 + 2, this.dialog);
+    this.guards.add(this.guard1, true);
+    this.guards.add(this.guard2, true);
+  }
+
   update(time, delta) {
     super.update();
 
@@ -80,6 +89,7 @@ class Atrium extends TAIPScene {
     });
     this.physics.collide(this.marina, this.queue, () => {
       this.marina.stop();
+      this.dialog.showMessage('Oh, hello!');
     });
     this.physics.collide(this.marina, this.guards, () => {
       this.marina.stop();

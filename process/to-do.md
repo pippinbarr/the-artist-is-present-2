@@ -1,3 +1,26 @@
+# Okay now we need actual to dos
+
+## Title
+- Guess it needs a title screen?
+
+## Dialogs
+- ~~Add painting information dialogs~~
+- Ticket person
+- Entry guard
+- Queue members
+- Queue guards
+- Double check all required places have dialog
+
+## Queue behavior
+- Create a function to send the front person in the queue to go sit in the chair and the rest of the queue to move up. Add a new person to the (invisible) end of the queue so it doesn't end (is this cheating?)
+
+## First person view
+- Trigger an overlay when looking at someone so you can stay in the same scene
+- Consider random weeping
+
+
+
+
 # Generalllllll
 
 - ~~Collect images from the documentary of relevant spaces~~

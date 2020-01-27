@@ -23,11 +23,14 @@ class Atrium extends TAIPScene {
     this.tableAndChairs.body.setOffset(2, this.tableAndChairs.body.height - 10);
     this.tableAndChairs.body.setSize(this.tableAndChairs.width - 4, 6, false);
     this.tableAndChairs.body.immovable = true;
-    this.tableAndChairs.setDepth(240);
+    this.tableAndChairs.setDepth(this.tableAndChairs.body.y);
     this.colliders.add(this.tableAndChairs);
 
     this.marinaChairSensor = this.physics.add.sprite(730, 250, 'atlas', 'red-pixel.png').setScale(50, 60);
     this.marinaChairSensor.visible = false;
+
+    this.visitorChairSensor = this.physics.add.sprite(580, 250, 'atlas', 'red-pixel.png').setScale(50, 60);
+    this.visitorChairSensor.visible = false;
 
     // Back wall left
     createColliderRect(this, 0, 0, 312, 202, this.colliders);
@@ -52,9 +55,14 @@ class Atrium extends TAIPScene {
 
     this.handleEntrances();
 
+    // Testing
     this.input.keyboard.on('keyup', (e) => {
-      this.handleGazeInput(e)
+      if (e.keyCode === 32) {
+        this.nextSitter();
+      }
     });
+
+
   }
 
   addQueue() {
@@ -94,6 +102,11 @@ class Atrium extends TAIPScene {
     this.physics.collide(this.marina, this.guards, () => {
       this.marina.stop();
     });
+    this.physics.collide(this.queue, this.queue, (person1, person2) => {
+      person1.stop();
+      person2.stop();
+    });
+
     if (!this.marina.sitting) {
       this.physics.overlap(this.marina, this.marinaChairSensor, () => {
         this.marina.sit();
@@ -101,6 +114,30 @@ class Atrium extends TAIPScene {
         this.marina.y = 212;
       });
     }
+
+    if (this.sitter && !this.sitter.sitting) {
+      this.physics.overlap(this.sitter, this.visitorChairSensor, () => {
+        this.sitter.stop();
+        this.sitter.sit();
+        this.sitter.x = 560;
+        this.sitter.y = 190;
+
+        this.movingUp = QUEUE[0];
+        this.movingUp.right(); // Make the front person walk
+      });
+    }
+
+    if (this.movingUp && this.movingUp.x >= QUEUE_X) {
+      this.movingUp.stop();
+      this.movingUp = undefined;
+      for (let i = 1; i < QUEUE.length; i++) {
+        setTimeout(() => {
+          QUEUE[i].right();
+        }, i * 250 + Math.random() * 250);
+      }
+    }
+
+
     this.marina.depth = this.marina.body.y;
     this.queue.getChildren().forEach((visitor) => {
       visitor.depth = visitor.body.y;
@@ -119,5 +156,28 @@ class Atrium extends TAIPScene {
     else if (!this.marina.lookingUp) {
       this.marina.lookUp();
     }
+  }
+
+  nextSitter() {
+    if (this.sitter) {
+      this.sitter.right();
+    }
+
+    // Make the next person in the queue the sitter and make them walk to the chair
+    this.sitter = QUEUE.shift();
+    this.queue.remove(this.sitter);
+    this.sitter.right();
+
+    // Add a new person to the back of the queue
+    let last = new Visitor(this, QUEUE[QUEUE.length - 1].x - QUEUE_SPACING, QUEUE[QUEUE.length - 1].y);
+    last.ignoreDestroy = true;
+    last.scene = this;
+    this.physics.add.existing(last);
+    this.queue.add(last, true);
+    QUEUE.push(last);
+  }
+
+  advanceQueue() {
+
   }
 }

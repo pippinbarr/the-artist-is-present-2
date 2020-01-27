@@ -144,16 +144,6 @@ function generateTexture(game, swapPalette, newPalette, id, sheetData) {
   // NOTE: This doesn't remove the textures from TextureManager.list.
   //       However, it does destroy source image data.
   // game.textures.get('person-spritesheet').destroy();
-
-  let sprite = new Phaser.Physics.Arcade.Sprite(game, 0, 0, 'person-spritesheet-' + id);
-  game.physics.world.enableBody(sprite);
-  sprite.id = personIndex;
-  sprite.setScale(4);
-  sprite.body.setOffset(1, sprite.height - 4);
-  sprite.body.setSize(sprite.width - 2, 4, false);
-  sprite.x = x;
-  sprite.y = y;
-  return sprite;
 }
 
 function generateAnimations(scene, texture, id) {
@@ -164,6 +154,7 @@ function generateAnimations(scene, texture, id) {
   generateAnimation(scene, texture, 'walking-u', id, 16, 21, 10, -1);
   generateAnimation(scene, texture, 'idle-d', id, 15, 15, 10, 0);
   generateAnimation(scene, texture, 'walking-d', id, 9, 14, 10, -1);
+  generateAnimation(scene, texture, 'sitting', id, 24, 24, 10, 0);
 }
 
 function generateAnimation(scene, sheet, name, id, start, end, framerate, repeat) {

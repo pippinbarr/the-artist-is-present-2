@@ -20,10 +20,10 @@ class Atrium extends TAIPScene {
 
     // Table and chairs
     this.tableAndChairs = this.physics.add.sprite(130 * 4 + 30 * 4, 40 * 4 + 15 * 4, 'atlas', 'atrium/atrium-table-and-chairs.png').setScale(4);
-    this.tableAndChairs.body.setOffset(2, this.tableAndChairs.body.height - 10);
-    this.tableAndChairs.body.setSize(this.tableAndChairs.width - 4, 6, false);
+    this.tableAndChairs.body.setOffset(2, this.tableAndChairs.body.height - 8);
+    this.tableAndChairs.body.setSize(this.tableAndChairs.width - 4, 4, false);
     this.tableAndChairs.body.immovable = true;
-    this.tableAndChairs.setDepth(this.tableAndChairs.body.y);
+    this.tableAndChairs.setDepth(250);
     this.colliders.add(this.tableAndChairs);
 
     this.marinaChairSensor = this.physics.add.sprite(730, 250, 'atlas', 'red-pixel.png').setScale(50, 60);
@@ -92,20 +92,8 @@ class Atrium extends TAIPScene {
     super.update();
 
     this.marina.update(time, delta);
-    this.physics.collide(this.marina, this.colliders, () => {
-      this.marina.stop();
-    });
-    this.physics.collide(this.marina, this.queue, () => {
-      this.marina.stop();
-      this.dialog.showMessage('Oh, hello!');
-    });
-    this.physics.collide(this.marina, this.guards, () => {
-      this.marina.stop();
-    });
-    this.physics.collide(this.queue, this.queue, (person1, person2) => {
-      person1.stop();
-      person2.stop();
-    });
+
+    this.handleCollisions();
 
     if (!this.marina.sitting) {
       this.physics.overlap(this.marina, this.marinaChairSensor, () => {
@@ -133,11 +121,31 @@ class Atrium extends TAIPScene {
       for (let i = 1; i < QUEUE.length; i++) {
         setTimeout(() => {
           QUEUE[i].right();
-        }, i * 250 + Math.random() * 250);
+        }, i * 300 + Math.random() * 250);
       }
     }
 
+    this.setDepths();
+  }
 
+  handleCollisions() {
+    this.physics.collide(this.marina, this.colliders, () => {
+      this.marina.stop();
+    });
+    this.physics.collide(this.marina, this.queue, () => {
+      this.marina.stop();
+      this.dialog.showMessage('Oh, hello!');
+    });
+    this.physics.collide(this.marina, this.guards, () => {
+      this.marina.stop();
+    });
+    this.physics.collide(this.queue, this.queue, (person1, person2) => {
+      person1.stop();
+      person2.stop();
+    });
+  }
+
+  setDepths() {
     this.marina.depth = this.marina.body.y;
     this.queue.getChildren().forEach((visitor) => {
       visitor.depth = visitor.body.y;
@@ -145,6 +153,9 @@ class Atrium extends TAIPScene {
     this.guards.getChildren().forEach((guard) => {
       guard.depth = guard.body.y;
     });
+    if (this.sitter) {
+      this.sitter.depth = this.sitter.sitting ? this.sitter.body.y + 100 : this.sitter.body.y;
+    }
   }
 
   handleGazeInput(e) {
@@ -160,6 +171,8 @@ class Atrium extends TAIPScene {
 
   nextSitter() {
     if (this.sitter) {
+      this.sitter.sitting = false;
+      this.sitter.depth = this.sitter.body.y;
       this.sitter.right();
     }
 

@@ -63,4 +63,5 @@ class Person extends Phaser.Physics.Arcade.Sprite {
     this.sitting = true;
     this.flipX = false;
   }
+
 }

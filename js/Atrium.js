@@ -58,6 +58,14 @@ class Atrium extends TAIPScene {
     // To get into the chair easily for testing
     this.marina.x = 700;
     this.marina.y = 300;
+
+    this.faceBG = this.add.sprite(0, 0, 'atlas', 'white-pixel.png');
+    this.faceBG.tint = 0xFFEEEEEE;
+    this.faceBG.x = this.game.canvas.width / 2;
+    this.faceBG.y = this.game.canvas.height / 2;
+    this.faceBG.setScale(this.game.canvas.width, this.game.canvas.height);
+    this.faceBG.setDepth(1000);
+    this.faceBG.setVisible(false);
   }
 
   addQueue() {
@@ -143,10 +151,12 @@ class Atrium extends TAIPScene {
   }
 
   showSitter() {
-    console.log("Huh?")
-    // this.sitterBG.visible = true;
-
-
+    this.faceBG.setVisible(true);
+    this.face = this.add.sprite(0, 0, `person-spritesheet${this.sitter.suffix}`, 14);
+    this.face.x = this.game.canvas.width / 2;
+    this.face.y = this.game.canvas.height / 2 + 280;
+    this.face.setScale(32, 32);
+    this.face.setDepth(10000);
   }
 
   handleCollisions() {

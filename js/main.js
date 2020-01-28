@@ -7,7 +7,7 @@ const QUEUE_SPACING = 56;
 
 let lastScene = undefined;
 let last = {
-  scene: 'hallway3',
+  scene: '',
   x: undefined,
   y: undefined
 }

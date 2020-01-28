@@ -18,3 +18,7 @@ const OLIVE_TREES = "The Olive Trees with the Alpilles in the Background\nVincen
 const SOUP_CANS = "Campbell's Soup Cans\nAndy Warhol\n1962\nSynthetic polymer paint on canvas";
 
 const DANCERS = "The Dance I\nHenry Matisse\n1909\nOil on canvas";
+
+const HEAD_DOWN_INSTRUCTIONS = `Press any key to lower your gaze, inviting the next visitor to join you at the table.`;
+
+const HEAD_UP_INSTRUCTIONS = `Press any key to raise your gaze.`;

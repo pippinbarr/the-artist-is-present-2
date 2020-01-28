@@ -21,7 +21,7 @@ class Marina extends Person {
   }
 
   handleInput(e) {
-    if (!this.inputEnabled) return;
+    if (!this.inputEnabled || this.sitting) return;
 
     if (Phaser.Input.Keyboard.JustDown(this.cursors.left)) {
       if (this.body.velocity.x < 0) {
@@ -57,15 +57,17 @@ class Marina extends Person {
     }
   }
 
-  lookDown() {
+  lookDown(callback, context) {
     if (!this.lookingUp) return;
     this.lookingUp = false;
     this.anims.play('look-down-marina');
+    this.once('animationcomplete', callback, context);
   }
 
-  lookUp() {
+  lookUp(callback, context) {
     if (this.lookingUp) return;
     this.lookingUp = true;
     this.anims.play('look-up-marina');
+    this.once('animationcomplete', callback, context);
   }
 }

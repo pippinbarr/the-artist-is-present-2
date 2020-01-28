@@ -49,6 +49,8 @@ class Person extends Phaser.Physics.Arcade.Sprite {
   }
 
   stop() {
+    if (this.sitting) return;
+
     let key = this.anims.currentAnim.key;
     key = key.replace('walking', 'idle');
     this.anims.play(key);

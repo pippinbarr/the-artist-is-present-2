@@ -9,10 +9,13 @@
 - Entry guard
 - Queue members
 - Queue guards
+- Instructions for looking down and up
 - Double check all required places have dialog
 
 ## Queue behavior
-- Create a function to send the front person in the queue to go sit in the chair and the rest of the queue to move up. Add a new person to the (invisible) end of the queue so it doesn't end (is this cheating?)
+- ~~Create a function to send the front person in the queue to go sit in the chair and the rest of the queue to move up. Add a new person to the (invisible) end of the queue so it doesn't end (is this cheating?)~~
+- ~~Fix depth issues around the chair~~
+- Trigger first sitter when marina looks up
 
 ## First person view
 - Trigger an overlay when looking at someone so you can stay in the same scene

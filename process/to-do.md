@@ -27,6 +27,7 @@
 
 ## Timing
 - Infinite timing issues
+- End of day timer, so that there's a moment where the museum closes and "kicks you out", but just an ending screen that asks you to come back (maybe, likewise, a dialog that comes up to tell you when it's 15 minutes to go or something)
 
 
 # Generalllllll

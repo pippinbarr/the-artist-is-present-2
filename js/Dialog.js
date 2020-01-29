@@ -93,7 +93,7 @@ class Dialog extends Phaser.GameObjects.Container {
     this.scene.input.keyboard.once('keydown', () => {
       this.marina.inputEnabled = true;
       this.setVisible(false);
-      callback();
+      if (callback) callback();
     });
 
     this.setVisible(true);

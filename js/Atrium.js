@@ -118,36 +118,57 @@ class Atrium extends TAIPScene {
         this.marina.x = 695.5;
         this.marina.y = 210;
         setTimeout(() => {
-          this.dialog.showMessage(HEAD_DOWN_INSTRUCTIONS, () => {
-            this.marina.lookDown(this.nextSitter, this);
-          });
+          this.startHeadDownSequence();
         }, 1000);
       });
     }
+  }
+
+  startHeadDownSequence() {
+    this.dialog.showMessage(HEAD_DOWN_INSTRUCTIONS, () => {
+      setTimeout(() => {
+        this.marina.lookDown(() => {
+          setTimeout(() => {
+            this.nextSitter();
+          }, 1000);
+        }, this);
+      }, 1000);
+    });
   }
 
   checkVisitorSitting() {
     if (this.sitter && !this.sitter.sitting) {
       this.physics.overlap(this.sitter, this.visitorChairSensor, () => {
         this.sitter.stop();
+        console.log(this.sitter.x, this.sitter.y);
         this.sitter.sit();
         this.sitter.x = 560;
         this.sitter.y = 190;
 
         setTimeout(() => {
-          this.dialog.showMessage(HEAD_UP_INSTRUCTIONS, () => {
-            this.marina.lookUp(() => {
-              setTimeout(() => {
-                this.showSitter();
-              }, 1000);
-            }, this);
-          });
+          this.startHeadUpSequence();
         }, 1000);
 
         this.movingUp = QUEUE[0];
         this.movingUp.right(); // Make the front person walk
       });
     }
+  }
+
+  startHeadUpSequence() {
+    this.dialog.showMessage(HEAD_UP_INSTRUCTIONS, () => {
+      setTimeout(() => {
+        this.marina.lookUp(() => {
+          setTimeout(() => {
+            const SIT_TIME = SIT_TIMES[Math.floor(Math.random() * SIT_TIMES.length)];
+            setTimeout(() => {
+              this.sitterFinished()
+            }, SIT_TIME * 60 * 1000);
+            this.showSitter();
+          }, 1000);
+        }, this);
+      }, 1000);
+    });
   }
 
   showSitter() {
@@ -157,6 +178,18 @@ class Atrium extends TAIPScene {
     this.face.y = this.game.canvas.height / 2 + 280;
     this.face.setScale(32, 32);
     this.face.setDepth(10000);
+  }
+
+  sitterFinished() {
+    this.faceBG.setVisible(false);
+    this.face.setVisible(false);
+    this.face.destroy();
+    this.sitter.body.y = 180;
+    // this.sitter.setDepth(1);
+    this.sitter.right();
+    setTimeout(() => {
+      this.startHeadDownSequence();
+    }, 2000);
   }
 
   handleCollisions() {

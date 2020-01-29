@@ -5,23 +5,28 @@
 
 ## Dialogs
 - ~~Add painting information dialogs~~
+- ~~Instructions for looking down and up~~
 - Ticket person
 - Entry guard
 - Queue members
 - Queue guards
-- Instructions for looking down and up
 - Double check all required places have dialog
 
 ## Queue behavior
 - ~~Create a function to send the front person in the queue to go sit in the chair and the rest of the queue to move up. Add a new person to the (invisible) end of the queue so it doesn't end (is this cheating?)~~
 - ~~Fix depth issues around the chair~~
-- Trigger first sitter when marina looks up
+- ~~Trigger first sitter when marina looks up~~
+- ~~Calculate timer for duration of sitting (use the original game)~~
+- ~~On timer end have them stand and walk away (just stage right is fine)~~
+- ~~Show message telling marina any key to look down again~~
 
 ## First person view
-- Trigger an overlay when looking at someone so you can stay in the same scene
-- Consider random weeping
+- ~~Trigger an overlay when looking at someone so you can stay in the same scene~~
+- Consider random weeping (prototype it)
+- Consider blinking (replace eye area with their skin color, which I suppose we have access to somewhere in there? Or can.)
 
-
+## Timing
+- Infinite timing issues
 
 
 # Generalllllll

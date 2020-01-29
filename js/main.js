@@ -1,3 +1,5 @@
+const DEBUG = false;
+
 const START_SCENE = 'atrium';
 let QUEUE = [];
 const QUEUE_LENGTH = 4;
@@ -22,7 +24,7 @@ let config = {
   physics: {
     default: 'arcade',
     arcade: {
-      debug: true
+      debug: DEBUG
     }
   },
 };

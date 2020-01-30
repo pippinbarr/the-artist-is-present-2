@@ -1,4 +1,4 @@
-const SIT_TIMES = [0.001];
+const SIT_TIMES = [10];
 
 // Sit times in minutes
 // const SIT_TIMES = [2, 2, 4, 4, 4, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6, 7, 7, 7, 7, 7, 8, 8, 8, 8, 8, 8,

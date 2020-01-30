@@ -1,3 +1,11 @@
+const LEFT_TEAR_X = 320;
+const LEFT_TEAR_Y = 192;
+const RIGHT_TEAR_X = 480;
+const RIGHT_TEAR_Y = LEFT_TEAR_Y;
+const TEAR_COLOR = 0x666666FF;
+const TEAR_INTERVAL = 100;
+const FIRST_PERSON_SCALE = 32;
+
 class Atrium extends TAIPScene {
   constructor(config) {
     super({
@@ -59,6 +67,7 @@ class Atrium extends TAIPScene {
     this.marina.x = 700;
     this.marina.y = 300;
 
+    // Background for first person view
     this.faceBG = this.add.sprite(0, 0, 'atlas', 'white-pixel.png');
     this.faceBG.tint = 0xFFEEEEEE;
     this.faceBG.x = this.game.canvas.width / 2;
@@ -66,6 +75,20 @@ class Atrium extends TAIPScene {
     this.faceBG.setScale(this.game.canvas.width, this.game.canvas.height);
     this.faceBG.setDepth(1000);
     this.faceBG.setVisible(false);
+
+    // Tears for first person view
+    this.leftTear = this.add.sprite(LEFT_TEAR_X, LEFT_TEAR_Y, 'atlas', 'white-pixel.png');
+    this.leftTear.tint = TEAR_COLOR; // A tear color? Is transparency cheating?
+    this.leftTear.setScale(FIRST_PERSON_SCALE);
+    this.leftTear.setDepth(100000);
+
+    this.rightTear = this.add.sprite(RIGHT_TEAR_X, RIGHT_TEAR_Y, 'atlas', 'white-pixel.png');
+    this.rightTear.tint = TEAR_COLOR; // A tear color? Is transparency cheating?
+    this.rightTear.setScale(FIRST_PERSON_SCALE);
+    this.rightTear.setDepth(100000);
+
+    this.sitter = QUEUE[0];
+    this.showSitter();
   }
 
   addQueue() {
@@ -176,8 +199,33 @@ class Atrium extends TAIPScene {
     this.face = this.add.sprite(0, 0, `person-spritesheet${this.sitter.suffix}`, 14);
     this.face.x = this.game.canvas.width / 2;
     this.face.y = this.game.canvas.height / 2 + 280;
-    this.face.setScale(32, 32);
+    this.face.setScale(FIRST_PERSON_SCALE);
     this.face.setDepth(10000);
+
+    this.cry();
+  }
+
+  cry() {
+    this.leftTear.y = LEFT_TEAR_Y;
+    this.rightTear.y = RIGHT_TEAR_Y;
+    this.leftTear.setVisible(true);
+    this.rightTear.setVisible(true);
+    setTimeout(() => {
+      this.leftCryingInterval = setInterval(() => {
+        this.leftTear.y += FIRST_PERSON_SCALE;
+        if (this.leftTear.y >= this.game.canvas.height) {
+          this.leftTear.y = LEFT_TEAR_Y
+        }
+      }, TEAR_INTERVAL);
+    }, Math.random() * 500);
+    setTimeout(() => {
+      this.rightCryingInterval = setInterval(() => {
+        this.rightTear.y += FIRST_PERSON_SCALE;
+        if (this.rightTear.y >= this.game.canvas.height) {
+          this.rightTear.y = RIGHT_TEAR_Y
+        }
+      }, TEAR_INTERVAL);
+    }, Math.random() * 500);
   }
 
   sitterFinished() {

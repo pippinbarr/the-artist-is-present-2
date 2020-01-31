@@ -11,32 +11,9 @@ class Dialog extends Phaser.GameObjects.Container {
     this.scene = scene;
     this.marina = marina;
 
-    this.whiteBorder = new Phaser.GameObjects.Sprite(
-      this.scene,
-      this.scene.game.canvas.width / 2,
-      this.scene.game.canvas.height / 2,
-      'atlas',
-      'white-pixel.png');
-    this.whiteBorder.setScale(100, 100);
-    this.whiteBorder.tint = 0xffffff;
-
-    this.redBorder = new Phaser.GameObjects.Sprite(
-      this.scene,
-      this.scene.game.canvas.width / 2,
-      this.scene.game.canvas.height / 2,
-      'atlas',
-      'white-pixel.png');
-    this.redBorder.setScale(96, 96);
-    this.redBorder.tint = 0xcc0000;
-
-    this.whiteBackground = new Phaser.GameObjects.Sprite(
-      this.scene,
-      this.scene.game.canvas.width / 2,
-      this.scene.game.canvas.height / 2,
-      'atlas',
-      'white-pixel.png');
-    this.whiteBackground.setScale(92, 92);
-    this.whiteBackground.tint = 0xffffff;
+    this.whiteBorder = this.makeBox(100, 100, 0xffffff);
+    this.redBorder = this.makeBox(96, 96, 0xcc0000);
+    this.whiteBackground = this.makeBox(92, 92, 0xffffff);
 
     this.text = new Phaser.GameObjects.Text(
       this.scene,
@@ -60,6 +37,18 @@ class Dialog extends Phaser.GameObjects.Container {
 
     this.setDepth(100000000);
     this.setVisible(false);
+  }
+
+  makeBox(w, h, color) {
+    let box = new Phaser.GameObjects.Sprite(
+      this.scene,
+      this.scene.game.canvas.width / 2,
+      this.scene.game.canvas.height / 2,
+      'atlas',
+      'white-pixel.png');
+    box.setScale(w, h);
+    box.tint = color;
+    return box;
   }
 
   update() {
@@ -98,11 +87,4 @@ class Dialog extends Phaser.GameObjects.Container {
 
     this.setVisible(true);
   }
-
-  // handleInput() {
-  //   if (this.visible) {
-  //     this.setVisible(false);
-  //   }
-  // }
-
 }

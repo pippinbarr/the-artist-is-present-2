@@ -1,6 +1,6 @@
 const DEBUG = false;
 
-const START_SCENE = 'atrium';
+const START_SCENE = 'tickets';
 let QUEUE = [];
 const QUEUE_LENGTH = 4;
 const QUEUE_X = 440;
@@ -9,7 +9,7 @@ const QUEUE_SPACING = 56;
 
 let lastScene = undefined;
 let last = {
-  scene: '',
+  scene: 'moma-exterior',
   x: undefined,
   y: undefined
 }

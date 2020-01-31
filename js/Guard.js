@@ -12,6 +12,8 @@ class Guard extends GeneratedPerson {
       shoes: [0xFF000000, 0xff4b370c, 0xff474237]
     }
     super(scene, x, y, palette);
+    scene.add.existing(this);
+    scene.physics.add.existing(this);
     this.dialog = dialog;
     this.left();
     this.stop();

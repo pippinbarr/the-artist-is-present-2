@@ -70,11 +70,11 @@ class Exterior extends TAIPScene {
 
     setTimeout(() => {
       if (!seenCarWaiting) {
-        this.dialog.showMessage(CAR_WAITING_MESSAGE, () => {});
+        this.dialog.showMessage(CAR_WAITING_MESSAGE);
         seenCarWaiting = true;
       }
       else {
-        this.dialog.showMessage(CAR_WAITING_MESSAGE_TWO, () => {});
+        this.dialog.showMessage(CAR_STILL_WAITING_MESSAGE);
       }
     }, 1000);
   }

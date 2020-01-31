@@ -194,7 +194,7 @@ class MOMAExterior extends TAIPScene {
       this.rightDoor.x += this.DOOR_OPEN_AMOUNT;
       this.doorsOpen = true;
       setTimeout(() => {
-        this.dialog.showMessage(MOMA_MESSAGE_TWO, () => {});
+        this.dialog.showMessage(OUTSIDE_MOMA_MESSAGE, () => {});
       }, 1000);
     }
     else if (last.scene === 'car') {
@@ -211,7 +211,7 @@ class MOMAExterior extends TAIPScene {
             this.marina.y = 77 * 4;
             this.marina.visible = true;
             this.marina.inputEnabled = true;
-            this.dialog.showMessage(MOMA_MESSAGE, () => {});
+            this.dialog.showMessage(MOMA_ARRIVAL_MESSAGE, () => {});
           }, 3000);
         }
       });

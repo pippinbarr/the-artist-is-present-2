@@ -36,6 +36,10 @@ class Tickets extends TAIPScene {
     createColliderLine(this, 600, 200, 75, 80, 5, 5, this.colliders);
     createColliderLine(this, 730, 330, 75, 80, 5, 5, this.colliders);
 
+    this.guard = new Guard(this, 708, 276);
+    // this.add.existing(this.guard);
+    // this.physics.add.existing(this.guard);
+
     let ticketFG = this.add
       .sprite(
         this.game.canvas.width / 2,
@@ -45,6 +49,8 @@ class Tickets extends TAIPScene {
       )
       .setScale(4);
     ticketFG.depth = 100000;
+
+    this.ticketSensor = this.physics.add.sprite(450, 160, 'atlas', 'red-pixel.png').setScale(10, 100).setVisible(false);
 
     const transitionData = [{
         key: "moma-exterior",
@@ -71,6 +77,18 @@ class Tickets extends TAIPScene {
     this.physics.collide(this.marina, this.colliders, () => {
       this.marina.stop();
     });
+    this.physics.overlap(this.marina, this.ticketSensor, () => {
+      this.dialog.showMessage(TICKETS_DESK_MESSAGE, () => {});
+      this.ticketSensor.body.checkCollision.none = true;
+    });
+    this.physics.collide(this.marina, this.guard, () => {
+      this.marina.stop();
+      if (!this.seenGuard) {
+        this.dialog.showMessage(TICKETS_GUARD_MESSAGE, () => {});
+        this.seenGuard = true;
+      }
+    });
     this.marina.depth = this.marina.body.y;
+    this.guard.depth = this.guard.body.y;
   }
 }

@@ -6,9 +6,10 @@
 ## Dialogs
 - ~~Add painting information dialogs~~
 - ~~Instructions for looking down and up~~
-- Ticket person
-- Entry guard
-- Queue members
+- ~~Ticket person~~
+- ~~Entry guard~~
+- Queue members on collide (e.g. excited direct comment)
+- Queue members as you move pass them in the space (e.g. excited whispering) (Needs to acknowledge the the dialog could already be in use and not trigger)
 - Queue guards
 - Double check all required places have dialog
 

@@ -32,6 +32,7 @@ class GeneratedPerson extends Person {
 
     super(scene, x, y, texture, `-${id}`);
 
+    this.palette = newPalette;
     this.body.immovable = true;
   }
 

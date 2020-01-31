@@ -1,9 +1,10 @@
 const LEFT_TEAR_X = 320;
 const LEFT_TEAR_Y = 192;
-const RIGHT_TEAR_X = 480;
+const RIGHT_TEAR_X = 448;
 const RIGHT_TEAR_Y = LEFT_TEAR_Y;
 const TEAR_COLOR = 0x666666FF;
-const TEAR_INTERVAL = 100;
+const CHEEK_TEAR_INTERVAL = 400;
+const FALL_TEAR_INTERVAL = 100;
 const FIRST_PERSON_SCALE = 32;
 
 class Atrium extends TAIPScene {
@@ -67,6 +68,8 @@ class Atrium extends TAIPScene {
     this.marina.x = 700;
     this.marina.y = 300;
 
+    this.sitter = QUEUE[0];
+
     // Background for first person view
     this.faceBG = this.add.sprite(0, 0, 'atlas', 'white-pixel.png');
     this.faceBG.tint = 0xFFEEEEEE;
@@ -78,16 +81,25 @@ class Atrium extends TAIPScene {
 
     // Tears for first person view
     this.leftTear = this.add.sprite(LEFT_TEAR_X, LEFT_TEAR_Y, 'atlas', 'white-pixel.png');
+    this.leftTear.startX = LEFT_TEAR_X;
     this.leftTear.tint = TEAR_COLOR; // A tear color? Is transparency cheating?
     this.leftTear.setScale(FIRST_PERSON_SCALE);
     this.leftTear.setDepth(100000);
+    this.leftTear.setVisible(false);
 
     this.rightTear = this.add.sprite(RIGHT_TEAR_X, RIGHT_TEAR_Y, 'atlas', 'white-pixel.png');
+    this.rightTear.startX = RIGHT_TEAR_X;
     this.rightTear.tint = TEAR_COLOR; // A tear color? Is transparency cheating?
     this.rightTear.setScale(FIRST_PERSON_SCALE);
     this.rightTear.setDepth(100000);
+    this.rightTear.setVisible(false);
 
-    this.sitter = QUEUE[0];
+    this.eyelids = this.add.group();
+    this.leftEyelid = this.add.sprite(LEFT_TEAR_X + FIRST_PERSON_SCALE * 0.5, LEFT_TEAR_Y - FIRST_PERSON_SCALE, 'atlas', 'white-pixel.png').setScale(2 * FIRST_PERSON_SCALE, FIRST_PERSON_SCALE).setDepth(10000000);
+    this.rightEyelid = this.add.sprite(RIGHT_TEAR_X + FIRST_PERSON_SCALE * 0.5, RIGHT_TEAR_Y - FIRST_PERSON_SCALE, 'atlas', 'white-pixel.png').setScale(2 * FIRST_PERSON_SCALE, FIRST_PERSON_SCALE).setDepth(10000000);
+    this.leftEyelid.setVisible(false);
+    this.rightEyelid.setVisible(false);
+
     this.showSitter();
   }
 
@@ -202,30 +214,61 @@ class Atrium extends TAIPScene {
     this.face.setScale(FIRST_PERSON_SCALE);
     this.face.setDepth(10000);
 
-    this.cry();
+    const skin = this.sitter.palette.skin.darken(5);
+    this.leftEyelid.tint = Phaser.Display.Color.GetColor32(skin.r, skin.g, skin.b, 255);
+    this.rightEyelid.tint = Phaser.Display.Color.GetColor32(skin.r, skin.g, skin.b, 255);
+    this.leftEyelid.setVisible(false);
+    this.rightEyelid.setVisible(false);
+
+    this.startCrying();
+    this.startBlinking();
   }
 
-  cry() {
-    this.leftTear.y = LEFT_TEAR_Y;
-    this.rightTear.y = RIGHT_TEAR_Y;
-    this.leftTear.setVisible(true);
-    this.rightTear.setVisible(true);
+  startCrying() {
+    this.startTear(this.leftTear);
     setTimeout(() => {
-      this.leftCryingInterval = setInterval(() => {
-        this.leftTear.y += FIRST_PERSON_SCALE;
-        if (this.leftTear.y >= this.game.canvas.height) {
-          this.leftTear.y = LEFT_TEAR_Y
-        }
-      }, TEAR_INTERVAL);
-    }, Math.random() * 500);
+      this.startTear(this.rightTear);
+    }, 1234);
+  }
+
+  startTear(tear) {
+    tear.x = Math.random() < 0.5 ? tear.startX : tear.startX + FIRST_PERSON_SCALE;
+    tear.y = LEFT_TEAR_Y;
+    tear.setVisible(true);
+    let interval = setInterval(() => {
+      tear.y += FIRST_PERSON_SCALE;
+      if (tear.y >= LEFT_TEAR_Y + 3 * FIRST_PERSON_SCALE) {
+        clearInterval(interval);
+        interval = setInterval(() => {
+          tear.y += FIRST_PERSON_SCALE;
+          if (tear.y >= this.game.canvas.height) {
+            clearInterval(interval);
+            setTimeout(() => {
+              this.startTear(tear);
+            }, 500 + Math.random() * 5000);
+          }
+        }, FALL_TEAR_INTERVAL);
+      }
+    }, CHEEK_TEAR_INTERVAL);
+
+  }
+
+  startBlinking() {
     setTimeout(() => {
-      this.rightCryingInterval = setInterval(() => {
-        this.rightTear.y += FIRST_PERSON_SCALE;
-        if (this.rightTear.y >= this.game.canvas.height) {
-          this.rightTear.y = RIGHT_TEAR_Y
-        }
-      }, TEAR_INTERVAL);
-    }, Math.random() * 500);
+      this.blink();
+    }, 3000 + Math.random() * 10000);
+  }
+
+  blink() {
+    this.leftEyelid.setVisible(true);
+    this.rightEyelid.setVisible(true);
+    setTimeout(() => {
+      this.leftEyelid.setVisible(false);
+      this.rightEyelid.setVisible(false);
+      setTimeout(() => {
+        this.blink();
+      }, 3000 + Math.random() * 10000);
+    }, 150 + Math.random() * 150);
   }
 
   sitterFinished() {

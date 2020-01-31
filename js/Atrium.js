@@ -214,17 +214,14 @@ class Atrium extends TAIPScene {
     this.face.setScale(FIRST_PERSON_SCALE);
     this.face.setDepth(10000);
 
-    const skin = this.sitter.palette.skin.darken(5);
-    this.leftEyelid.tint = Phaser.Display.Color.GetColor32(skin.r, skin.g, skin.b, 255);
-    this.rightEyelid.tint = Phaser.Display.Color.GetColor32(skin.r, skin.g, skin.b, 255);
-    this.leftEyelid.setVisible(false);
-    this.rightEyelid.setVisible(false);
 
     this.startCrying();
     this.startBlinking();
   }
 
   startCrying() {
+    this.leftTear.setVisible(false);
+    this.rightTear.setVisible(false);
     this.startTear(this.leftTear);
     setTimeout(() => {
       this.startTear(this.rightTear);
@@ -254,6 +251,11 @@ class Atrium extends TAIPScene {
   }
 
   startBlinking() {
+    const skin = this.sitter.palette.skin.darken(5);
+    this.leftEyelid.tint = Phaser.Display.Color.GetColor32(skin.r, skin.g, skin.b, 255);
+    this.rightEyelid.tint = Phaser.Display.Color.GetColor32(skin.r, skin.g, skin.b, 255);
+    this.leftEyelid.setVisible(false);
+    this.rightEyelid.setVisible(false);
     setTimeout(() => {
       this.blink();
     }, 3000 + Math.random() * 10000);

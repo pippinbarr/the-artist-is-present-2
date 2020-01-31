@@ -23,8 +23,8 @@
 ## First person view
 - ~~Trigger an overlay when looking at someone so you can stay in the same scene~~
 - ~~__IT'S GOOD__ Consider random weeping (prototype it)~~
-- Improve weeping
-- Consider blinking (replace eye area with their skin color, which I suppose we have access to somewhere in there? Or can.)
+- ~~Improve weeping~~
+- ~~Consider blinking (replace eye area with their skin color, which I suppose we have access to somewhere in there? Or can.)~~
 
 ## Timing
 - Infinite timing issues

@@ -1,7 +1,7 @@
 # Okay now we need actual to dos
 
 ## Title
-- Guess it needs a title screen?
+- Guess it needs a title screen? What would that look like?
 
 ## Dialogs
 - ~~Add painting information dialogs~~
@@ -9,7 +9,7 @@
 - ~~Ticket person~~
 - ~~Entry guard~~
 - Queue members on collide (e.g. excited direct comment)
-- Queue members as you move pass them in the space (e.g. excited whispering) (Needs to acknowledge the the dialog could already be in use and not trigger)
+- Queue members as you move pass them in the space (e.g. excited whispering) (Needs to acknowledge the the dialog could already be in use and not trigger) (maybe have an actual overlap that deletes itself, just a series of them as you pass along, could even have one per queue member randomly or something so that they could turn and look? Would be quite satisfying) (should have a "faceDown()" option for People so they can turn in different directions and idle, not just just stop)
 - Queue guards
 - Double check all required places have dialog
 

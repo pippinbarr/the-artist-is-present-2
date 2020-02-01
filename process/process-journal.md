@@ -217,3 +217,52 @@ Big remaining things, quite obviously:
 - Museum closing (I guess if anyone sat there for 8 hours we would have to end the game and ask them to come back tomorrow!)
 
 A question: What do I think about a person who gets to the chair and then just leaves it running without looking at the people? Should there be some kind of parallel to the original game's queuing requirement? Or will it make the whole things artificial? I guess it could demand you don't press keys or move the mouse, freezing the game if so to demand you really pay attention and do your job? Or is it just a portal out of your computer and the game rolls along even if you're not there? May require some more thought when I get there.
+
+---
+
+# Crying, Blinking, Excited Whispering, The visitors are present? (Saturday, 1 February 2020, 17:14PM)
+
+Looks like I haven't written anything here for longer than I intended. I think the idea of process journaling has fallen away from me a little just because of the break I took over Christmas, and the general exhaustion that it generates. My documentation of this project has just generally not been as good as it could have been. Will do better etc.
+
+Since that last update I've done a lot of stuff, to the point where the end is "in sight" (but of course might still take weeks for reasons I don't know yet). In particular we have the full sequence through to looking at a queue of people moving through, we have dialogs, we have people who blink and potentially weep. There are a couple more things to add in (the excited whispering element of arriving is the most fiddly).
+
+## Crying
+
+The crying was an obvious addition that turned out a little better than expected. Initially when I implemented it it was way too fast and unsubtle, too symbolic perhaps:
+
+![](images/crying.gif)
+
+But after reworking it to have more subtle timing and to have the rate of fall differ when the tear reaches the chin (e.g. it moves slower down your face, then falls more quickly) and to have tears start on the inside and outside, we get something much more "convincing":
+
+![](images/improved-crying.gif)
+
+Although this isn't something most players will likely see (it won't be every visitor and it won't trigger immediately or indefinitely), it's clearly emblematic of the original work, and that was always something I paid attention to in the original game, making it vital here to include it. It further emphasizes the overall concept of service, too - an explicit way of showing it being meaningful to the person in question.
+
+## Blinking
+
+Less emotionally dramatic, but important, is blinking. It breaks any illusion that the game has crashed or gone to sleep or is totally static. That's the only thing most people will do, but I think it's enough to active that experience.
+
+I'm wondering, now, whether there's some way to more explicitly signal that idea that these people are going to stay as long as they want? It would be some small way to activate the player's "competitive waiting gland"?
+
+## Excited whispering
+
+The biggest remaining thing (beyond the obvious required tweaks and inevitable bugs) is the dialogs around you arriving into the space with the visitors/audience. Naturally they would be very, very excited to see you - the reason they're there after all, and no doubt they would say things! It feels appropriate to make this explicit
+
+1. I feel like that's something Sierra games actually do (I believe in the car crash scene early in the first Police Quest there's something along those lines)
+2. I feel like it's what _must_ have happened at the actual event. Or rather it _would_ have, as I'm going to guess Marina was already sitting there before they let people in.
+
+## The visitors are present?
+
+Given the various decisions I ended up making, when you arrive the people are already waiting. And I made it that way for a reason: most obviously so that you had a sense of the magnitutude of the occasion - though even now I'm questioning this... it doesn't have to be the case as we could also do a version where everyone runs in after you sit down, and then we wait until you lower your head. Shit... which is better?
+
+My argument for them already being there is so you get to _see_ the crowd and hear them talk excitedly about you, and thus are drawn even further into this idea that you're important to them and that they want to be seen by you.
+
+But if the game is about authenticity (still), then that's probably not what happened, so should I be including it? How powerful is the other version? Where you walk in and it tells you to sit so they can let people in? Further, where would all those people have been given that you came in the front door?
+
+Well shit. Stupid design problems. I have to give this some actual thought.
+
+Hmmm... well for one thing, let's be honest about the authenticity argument: it doesn't hold as much water as all that - even in the original game the spaces are a bit notional in the sense they evoke the museum rather than slavishly recreate it, so spatially at least it's not that. It was more procedural I suppose - the ideas of "go to the museum", and "wait in a line" were reproduced with a mind to make them register.
+
+So in that sense, the fact that, for instance, Marina enters through the front of the gallery and the audience is already there, which aren't things that happened, are more about the symbolism of her arrival and are tied particularly into my desire to make this about service. You could say, actually, that without all the backstory and context of knowing about her fans' deep love/obsession, you can't really know the stakes of the work, and that walking past them and hearing them talking is a way of instilling that? And in that sense, it _is_ about one form of enhanced symbolism, because it allows you into the true story and cultural context of the work, rather than presenting the "truth" that will actually render it more opaque? Part of making a game about art (or any human experience) has to be a kind of scaffolding to bring in people who don't already understand the experience beforehand? (Which is basically everyone?) I know games don't actually do this (every shooting game ever), but it occurs to me right now that that's an important act.
+
+Okay, so I think that actually makes the decision for now. I plow on with the original plan, but I remain aware of this tension and keep checking in.

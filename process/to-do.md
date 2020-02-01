@@ -20,6 +20,7 @@
 - ~~Calculate timer for duration of sitting (use the original game)~~
 - ~~On timer end have them stand and walk away (just stage right is fine)~~
 - ~~Show message telling marina any key to look down again~~
+- Make it impossible to move above the queue by just having the person at the back keep talking to Marina if you try, an invisible wall kind of situation
 
 ## First person view
 - ~~Trigger an overlay when looking at someone so you can stay in the same scene~~

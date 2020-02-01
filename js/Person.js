@@ -57,6 +57,14 @@ class Person extends Phaser.Physics.Arcade.Sprite {
     this.setVelocity(0, 0);
   }
 
+  faceDown() {
+    this.anims.play(`idle-d${this.suffix}`);
+  }
+
+  faceRight() {
+    this.anims.play(`idle-h${this.suffix}`);
+  }
+
   sit() {
     this.anims.play('sitting' + this.suffix);
     this.setVelocity(0, 0);

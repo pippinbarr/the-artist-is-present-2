@@ -27,13 +27,15 @@ class Hallway2 extends TAIPScene {
         key: "hallway1",
         type: "left",
         x: 1 * 4,
-        y: 60 * 4
+        y: 60 * 4,
+        keepY: true,
       },
       {
         key: "hallway3",
         type: "right",
         x: 199 * 4,
-        y: 60 * 4
+        y: 60 * 4,
+        keepY: true,
       }
     ];
     this.addTransitions(transitionData);

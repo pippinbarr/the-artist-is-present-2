@@ -1,6 +1,6 @@
 const DEBUG = false;
 
-const START_SCENE = 'hallway3';
+const START_SCENE = 'moma-exterior';
 let QUEUE = [];
 const QUEUE_LENGTH = 15;
 const QUEUE_X = 440;

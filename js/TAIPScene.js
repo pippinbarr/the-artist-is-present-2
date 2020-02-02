@@ -1,4 +1,4 @@
-const TRANSITION_OFFSET = 10 * 4;
+const TRANSITION_OFFSET = 5 * 4;
 
 
 class TAIPScene extends Phaser.Scene {
@@ -14,7 +14,7 @@ class TAIPScene extends Phaser.Scene {
     this.marks = this.add.group();
 
     // Marina Abramovic
-    this.marina = new Marina(this, 0, 0, 'marina');
+    this.marina = new Marina(this, this.game.canvas.width / 2, this.game.canvas.height / 2, 'marina');
     this.marina.anims.play('idle-d-marina');
 
     this.dialog = new Dialog(this, this.marina);
@@ -41,17 +41,21 @@ class TAIPScene extends Phaser.Scene {
 
   handleEntrance(transition, xDir, yDir) {
     this.marina.x = transition.x - xDir * TRANSITION_OFFSET;
-    this.marina.y = transition.y - yDir * TRANSITION_OFFSET;
+    this.marina.y = transition.keepY ? last.y : transition.y - yDir * TRANSITION_OFFSET;
     if (xDir > 0) this.marina.right();
     if (xDir < 0) this.marina.left();
     if (yDir > 0) this.marina.down();
     if (yDir < 0) this.marina.up();
     if (transition.stop === true) this.marina.stop();
 
+    let targetX = transition.x + xDir * TRANSITION_OFFSET;
+    let targetY = transition.keepY ? last.y : transition.y + yDir * TRANSITION_OFFSET;
+
+    console.log(`Tweening Marina in from ${this.marina.x},${this.marina.y} to ${targetX},${targetY}`);
     let marinaTweenIn = this.tweens.add({
       targets: this.marina,
-      x: transition.x + xDir * TRANSITION_OFFSET,
-      y: transition.y + yDir * TRANSITION_OFFSET,
+      x: targetX,
+      y: targetY,
       duration: TRANSITION_OFFSET / this.marina.speed * 1000 * 2,
       repeat: 0,
       onComplete: () => {
@@ -138,7 +142,7 @@ class TAIPScene extends Phaser.Scene {
     });
 
 
-    this.marks.toggleVisible();
+    // this.marks.toggleVisible();
 
   }
 

@@ -62,11 +62,12 @@ class Dining extends TAIPScene {
         type: 'left',
         x: 10 * 4,
         y: 75 * 4,
+        keepY: true
       },
       {
         key: 'exterior',
         type: 'right',
-        x: 180 * 4,
+        x: 190 * 4,
         y: 62 * 4,
       }
     ];

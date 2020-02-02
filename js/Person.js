@@ -6,7 +6,7 @@ class Person extends Phaser.Physics.Arcade.Sprite {
     scene.physics.world.enableBody(this);
     this.body.setOffset(1, this.height - 4);
     this.body.setSize(this.width - 2, 4, false);
-    this.speed = 100;
+    this.speed = 500;
     this.sitting = false;
     this.suffix = suffix;
     this.x = x;
@@ -61,7 +61,17 @@ class Person extends Phaser.Physics.Arcade.Sprite {
     this.anims.play(`idle-d${this.suffix}`);
   }
 
+  faceUp() {
+    this.anims.play(`idle-u${this.suffix}`);
+  }
+
   faceRight() {
+    this.flipX = false;
+    this.anims.play(`idle-h${this.suffix}`);
+  }
+
+  faceLeft() {
+    this.flipX = true;
     this.anims.play(`idle-h${this.suffix}`);
   }
 

@@ -3,6 +3,9 @@
 ## Title
 - Guess it needs a title screen? What would that look like?
 
+## Space
+- ~~Consider going through and remembering departure x,y from a scene and reusing on entry IF it's relevant for that kind of transition? Wouldn't be all that hard to do tbh. And would be more naturalistic etc. Would then need the queue to be able to look up or down, chiefly, but that ain't hard at all.~~
+
 ## Dialogs
 - ~~Add painting information dialogs~~
 - ~~Instructions for looking down and up~~
@@ -20,7 +23,8 @@
 - ~~Calculate timer for duration of sitting (use the original game)~~
 - ~~On timer end have them stand and walk away (just stage right is fine)~~
 - ~~Show message telling marina any key to look down again~~
-- Make it impossible to move above the queue by just having the person at the back keep talking to Marina if you try, an invisible wall kind of situation
+- ~~Make it impossible to move above the queue by just having the person at the back keep talking to Marina if you try, an invisible wall kind of situation OR just make them face up~~
+- ~~Fix the facing if marina's "above" the queue~~
 
 ## First person view
 - ~~Trigger an overlay when looking at someone so you can stay in the same scene~~

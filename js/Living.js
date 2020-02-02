@@ -50,13 +50,15 @@ class Living extends TAIPScene {
         key: 'kitchen',
         type: 'left',
         x: 10 * 4,
-        y: 72 * 4,
+        y: 76 * 4,
+        keepY: false,
       },
       {
         key: 'dining',
         type: 'right',
         x: 190 * 4,
         y: 72 * 4,
+        keepY: true
       }
     ];
     this.addTransitions(transitionData);

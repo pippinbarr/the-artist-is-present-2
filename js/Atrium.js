@@ -58,15 +58,16 @@ class Atrium extends TAIPScene {
       key: "hallway3",
       type: "left",
       x: 10 * 4,
-      y: 60 * 4
+      y: 60 * 4,
+      keepY: true
     }, ];
     this.addTransitions(transitionData);
 
     this.handleEntrances();
 
     // To get into the chair easily for testing
-    this.marina.x = 700;
-    this.marina.y = 300;
+    // this.marina.x = 700;
+    // this.marina.y = 300;
 
     this.sitter = QUEUE[0];
 
@@ -100,7 +101,7 @@ class Atrium extends TAIPScene {
     this.leftEyelid.setVisible(false);
     this.rightEyelid.setVisible(false);
 
-    this.showSitter();
+    // this.showSitter();
   }
 
   addQueue() {

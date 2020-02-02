@@ -27,13 +27,15 @@ class Hallway3 extends TAIPScene {
         key: "hallway2",
         type: "left",
         x: 1 * 4,
-        y: 60 * 4
+        y: 60 * 4,
+        keepY: true
       },
       {
         key: "atrium",
         type: "right",
         x: 199 * 4,
-        y: 60 * 4
+        y: 60 * 4,
+        keepY: true
       }
     ];
     this.addTransitions(transitionData);
@@ -53,7 +55,7 @@ class Hallway3 extends TAIPScene {
       if (i === QUEUE.length - 1 || i % 3 === 0 || Math.random() < EXTRA_WHISPER_CHANCE) {
         let trigger = this.physics.add.sprite(QUEUE[i].x, this.game.canvas.height / 2, 'atlas', 'red-pixel.png').setScale(4, this.game.canvas.height);
         trigger.visitor = QUEUE[i];
-        this.whispers.add(trigger);
+        // this.whispers.add(trigger);
       }
     }
 
@@ -72,7 +74,12 @@ class Hallway3 extends TAIPScene {
     // Handle whisperers
     this.physics.overlap(this.marina, this.whispers, (marina, whisper) => {
       this.whispers.remove(whisper);
-      whisper.visitor.faceDown();
+      if (this.marina.y > whisper.visitor.y) {
+        whisper.visitor.faceDown();
+      }
+      else {
+        whisper.visitor.faceUp();
+      }
       setTimeout(() => {
         this.dialog.showMessage("Fee fi fo fum", () => {
           setTimeout(() => {

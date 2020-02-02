@@ -37,3 +37,7 @@ function handleSensor(scene, sensor) {
     sensor.overlap = false;
   }
 }
+
+function randomElement(array) {
+  return array[Math.floor(Math.random() * array.length)];
+}

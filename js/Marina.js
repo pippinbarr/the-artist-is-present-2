@@ -57,6 +57,22 @@ class Marina extends Person {
     }
   }
 
+  pause() {
+    this.inputEnabled = false;
+    this.pVelocity = {
+      x: this.body.velocity.x,
+      y: this.body.velocity.y
+    };
+    this.setVelocity(0, 0);
+    this.active = false;
+  }
+
+  unpause() {
+    this.inputEnabled = true;
+    this.setVelocity(this.pVelocity.x, this.pVelocity.y);
+    this.active = true;
+  }
+
   lookDown(callback, context) {
     if (!this.lookingUp) return;
     this.lookingUp = false;

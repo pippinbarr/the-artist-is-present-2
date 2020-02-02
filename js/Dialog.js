@@ -56,8 +56,7 @@ class Dialog extends Phaser.GameObjects.Container {
   }
 
   showMessage(text, callback) {
-    this.marina.stop();
-    this.marina.inputEnabled = false;
+    this.marina.pause();
 
     this.text.text = text;
 
@@ -80,8 +79,8 @@ class Dialog extends Phaser.GameObjects.Container {
     this.text.setOrigin(0, 0.5);
 
     this.scene.input.keyboard.once('keydown', () => {
-      this.marina.inputEnabled = true;
       this.setVisible(false);
+      this.marina.unpause();
       if (callback) callback();
     });
 

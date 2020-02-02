@@ -42,6 +42,7 @@ class TAIPScene extends Phaser.Scene {
   handleEntrance(transition, xDir, yDir) {
     this.marina.x = transition.x - xDir * TRANSITION_OFFSET;
     this.marina.y = transition.keepY ? last.y : transition.y - yDir * TRANSITION_OFFSET;
+
     if (xDir > 0) this.marina.right();
     if (xDir < 0) this.marina.left();
     if (yDir > 0) this.marina.down();
@@ -51,7 +52,8 @@ class TAIPScene extends Phaser.Scene {
     let targetX = transition.x + xDir * TRANSITION_OFFSET;
     let targetY = transition.keepY ? last.y : transition.y + yDir * TRANSITION_OFFSET;
 
-    console.log(`Tweening Marina in from ${this.marina.x},${this.marina.y} to ${targetX},${targetY}`);
+    console.log(this.tweens, this.marina, targetX, targetY)
+
     let marinaTweenIn = this.tweens.add({
       targets: this.marina,
       x: targetX,
@@ -141,9 +143,49 @@ class TAIPScene extends Phaser.Scene {
 
     });
 
+    this.marks.toggleVisible();
+  }
 
-    // this.marks.toggleVisible();
+  addQueue(xOffset) {
+    // To store all the whisper triggers
+    this.whispers = this.add.group();
+    this.queue = this.add.group();
 
+    // Add queue
+    for (let i = 0; i < QUEUE.length; i++) {
+      QUEUE[i].x = QUEUE_X - i * QUEUE_SPACING + xOffset
+      QUEUE[i].y = QUEUE_Y;
+      this.add.existing(QUEUE[i]);
+      this.physics.add.existing(QUEUE[i]);
+      this.queue.add(QUEUE[i]);
+      if (i === QUEUE.length - 1 || i % 3 === 0 || Math.random() < EXTRA_WHISPER_CHANCE) {
+        let trigger = this.physics.add.sprite(QUEUE[i].x, this.game.canvas.height / 2, 'atlas', 'red-pixel.png').setScale(4, this.game.canvas.height);
+        trigger.visitor = QUEUE[i];
+        trigger.setVisible(false);
+        this.whispers.add(trigger);
+      }
+    }
+  }
+
+  handleWhispers() {
+
+    // Handle whisperers
+    this.physics.overlap(this.marina, this.whispers, (marina, whisper) => {
+      this.whispers.remove(whisper);
+      if (this.marina.y > whisper.visitor.y) {
+        whisper.visitor.faceDown();
+      }
+      else {
+        whisper.visitor.faceUp();
+      }
+      setTimeout(() => {
+        this.dialog.showMessage(randomElement(WHISPERS), () => {
+          setTimeout(() => {
+            whisper.visitor.faceRight();
+          }, 1000);
+        });
+      }, 250 + Math.random() * 250);
+    });
   }
 
 }

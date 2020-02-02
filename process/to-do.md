@@ -48,3 +48,7 @@
 - ~~Contemplate sprite recolouring issue~~
 - ~~Contemplate how to do room-shape collisions~~
 - ~~Build a dialog box object/function (guess it could just extend sprite)~~
+
+# Bugs
+
+- Can get caught against car on arrival at MoMA, probably because it's going over the input disabled line. Do I even need that stupid line?

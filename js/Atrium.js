@@ -50,7 +50,7 @@ class Atrium extends TAIPScene {
     // Right wall
     createColliderRect(this, 799, 0, 2, 400, this.colliders);
 
-    this.addQueue();
+    this.addQueue(0);
 
     this.addGuards();
 
@@ -104,19 +104,19 @@ class Atrium extends TAIPScene {
     // this.showSitter();
   }
 
-  addQueue() {
-    // Add queue
-    this.queue = this.add.group();
-    for (let i = 0; i < QUEUE.length; i++) {
-      QUEUE[i].x = QUEUE_X - i * QUEUE_SPACING;
-      QUEUE[i].y = QUEUE_Y;
-      QUEUE[i].scene = this;
-      QUEUE[i].dialog = this.dialog;
-      // this.add.existing(QUEUE[i]);
-      this.physics.add.existing(QUEUE[i]);
-      this.queue.add(QUEUE[i], true);
-    }
-  }
+  // addQueue() {
+  //   // Add queue
+  //   this.queue = this.add.group();
+  //   for (let i = 0; i < QUEUE.length; i++) {
+  //     QUEUE[i].x = QUEUE_X - i * QUEUE_SPACING;
+  //     QUEUE[i].y = QUEUE_Y;
+  //     QUEUE[i].scene = this;
+  //     QUEUE[i].dialog = this.dialog;
+  //     // this.add.existing(QUEUE[i]);
+  //     this.physics.add.existing(QUEUE[i]);
+  //     this.queue.add(QUEUE[i], true);
+  //   }
+  // }
 
   addGuards() {
     // Add guards
@@ -143,6 +143,8 @@ class Atrium extends TAIPScene {
         }, i * 300 + Math.random() * 250);
       }
     }
+
+    this.handleWhispers();
 
     this.setDepths();
   }

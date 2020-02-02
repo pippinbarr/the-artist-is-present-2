@@ -30,6 +30,19 @@ const SOUP_CANS = "Campbell's Soup Cans\nAndy Warhol\n1962\nSynthetic polymer pa
 
 const DANCERS = "The Dance I\nHenry Matisse\n1909\nOil on canvas";
 
+// THE QUEUE
+
+const WHISPERS = [
+  "It's her!",
+  "She's here!",
+  "It's Marina!",
+  "Oh my god...",
+  "I can't believe she's here...",
+  "There she is!",
+  "This is the best day of my life!",
+  "Look! It's Marina!",
+  "She's coming!"
+];
 
 // THE PERFORMANCE SEQUENCE
 

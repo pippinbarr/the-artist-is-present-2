@@ -102,6 +102,8 @@ class Atrium extends TAIPScene {
     this.rightEyelid.setVisible(false);
 
     // this.showSitter();
+
+    Atrium.seen = true;
   }
 
   // addQueue() {
@@ -292,12 +294,9 @@ class Atrium extends TAIPScene {
     this.physics.collide(this.marina, this.colliders, () => {
       this.marina.stop();
     });
-    this.physics.collide(this.marina, this.queue, () => {
+    this.physics.collide(this.marina, this.guards, (marina, guard) => {
       this.marina.stop();
-      this.dialog.showMessage('Oh, hello!');
-    });
-    this.physics.collide(this.marina, this.guards, () => {
-      this.marina.stop();
+      this.personSay(guard, randomElement(GUARD_TALK));
     });
     this.physics.collide(this.queue, this.queue, (person1, person2) => {
       person1.stop();
@@ -354,3 +353,5 @@ class Atrium extends TAIPScene {
 
   }
 }
+
+Atrium.seen = false;

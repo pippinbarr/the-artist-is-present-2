@@ -32,6 +32,7 @@ const DANCERS = "The Dance I\nHenry Matisse\n1909\nOil on canvas";
 
 // THE QUEUE
 
+// What they say as you walk past
 const WHISPERS = [
   "It's her!",
   "She's here!",
@@ -43,6 +44,31 @@ const WHISPERS = [
   "Look! It's Marina!",
   "She's coming!"
 ];
+
+// What they say if you directly approach them
+const QUEUE_TALK = [
+  "It's you!",
+  "...",
+  "I can't wait to sit with you!",
+  "I can't believe I'm meeting you right now!",
+  "Is this really happening?",
+  "I feel like I'm dreaming!",
+  "I've waited so long for a chance to meet you...",
+  "I'm so excited!",
+  "Is it really you?!",
+  "Marina!",
+  "Oh my god!",
+];
+
+// This is what the atrium guards say
+const GUARD_TALK = [
+  "Good luck today.",
+  "Hello.",
+  "Please take your seat when you're ready.",
+  "Quite a crowd today.",
+  "Long queue.",
+  "We're ready when you are, Ms. Abramovic.",
+]
 
 // THE PERFORMANCE SEQUENCE
 

@@ -22,6 +22,12 @@ class TAIPScene extends Phaser.Scene {
 
   update(time, delta) {
     this.checkExits();
+    if (this.queue) {
+      this.physics.collide(this.marina, this.queue, (marina, visitor) => {
+        this.marina.stop();
+        this.personSay(visitor, randomElement(QUEUE_TALK));
+      });
+    }
   }
 
   handleEntrances() {
@@ -158,6 +164,9 @@ class TAIPScene extends Phaser.Scene {
       this.add.existing(QUEUE[i]);
       this.physics.add.existing(QUEUE[i]);
       this.queue.add(QUEUE[i]);
+
+      if (Atrium.seen) continue;
+
       if (i === QUEUE.length - 1 || i % 3 === 0 || Math.random() < EXTRA_WHISPER_CHANCE) {
         let trigger = this.physics.add.sprite(QUEUE[i].x, this.game.canvas.height / 2, 'atlas', 'red-pixel.png').setScale(4, this.game.canvas.height);
         trigger.visitor = QUEUE[i];
@@ -168,24 +177,45 @@ class TAIPScene extends Phaser.Scene {
   }
 
   handleWhispers() {
-
     // Handle whisperers
     this.physics.overlap(this.marina, this.whispers, (marina, whisper) => {
+      this.personSay(whisper.visitor, getRandom(WHISPERS));
       this.whispers.remove(whisper);
-      if (this.marina.y > whisper.visitor.y) {
-        whisper.visitor.faceDown();
-      }
-      else {
-        whisper.visitor.faceUp();
-      }
-      setTimeout(() => {
-        this.dialog.showMessage(randomElement(WHISPERS), () => {
-          setTimeout(() => {
-            whisper.visitor.faceRight();
-          }, 1000);
-        });
-      }, 250 + Math.random() * 250);
     });
+  }
+
+  personSay(person, message) {
+    if (this.dialog.visible) return;
+    if (person.revertTimer) {
+      clearTimeout(person.revertTimer);
+    }
+
+    console.log(person.x - this.marina.x)
+    if (person.x - this.marina.x > 10 * 4) {
+      person.faceLeft();
+    }
+    else if (person.x - this.marina.x < -10 * 4) {
+      person.faceRight();
+    }
+    else if (this.marina.y > person.y) {
+      person.faceDown();
+    }
+    else {
+      person.faceUp();
+    }
+
+    setTimeout(() => {
+      this.dialog.showMessage(message, () => {
+        person.revertTimer = setTimeout(() => {
+          if (person instanceof Guard) {
+            person.faceLeft();
+          }
+          else {
+            person.faceRight();
+          }
+        }, 1000);
+      });
+    }, 250 + Math.random() * 250);
   }
 
 }

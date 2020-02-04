@@ -1,5 +1,8 @@
 # Okay now we need actual to dos
 
+## Final things
+- Double check all required places have dialog
+
 ## Title
 - Guess it needs a title screen? What would that look like?
 
@@ -11,10 +14,10 @@
 - ~~Instructions for looking down and up~~
 - ~~Ticket person~~
 - ~~Entry guard~~
-- Queue members on collide (e.g. excited direct comment)
-- Queue members as you move pass them in the space (e.g. excited whispering) (Needs to acknowledge the the dialog could already be in use and not trigger) (maybe have an actual overlap that deletes itself, just a series of them as you pass along, could even have one per queue member randomly or something so that they could turn and look? Would be quite satisfying) (should have a "faceDown()" option for People so they can turn in different directions and idle, not just just stop)
-- Queue guards
-- Double check all required places have dialog
+- ~~Queue members as you move pass them in the space (e.g. excited whispering) (Needs to acknowledge the the dialog could already be in use and not trigger) (maybe have an actual overlap that deletes itself, just a series of them as you pass along, could even have one per queue member randomly or something so that they could turn and look? Would be quite satisfying) (should have a "faceDown()" option for People so they can turn in different directions and idle, not just just stop)~~
+- ~~Don't whisper once marina has been into the Atrium~~
+- ~~Queue members on collide (e.g. excited direct comment)~~
+- ~~Queue guards~~
 
 ## Queue behavior
 - ~~Create a function to send the front person in the queue to go sit in the chair and the rest of the queue to move up. Add a new person to the (invisible) end of the queue so it doesn't end (is this cheating?)~~
@@ -31,6 +34,8 @@
 - ~~__IT'S GOOD__ Consider random weeping (prototype it)~~
 - ~~Improve weeping~~
 - ~~Consider blinking (replace eye area with their skin color, which I suppose we have access to somewhere in there? Or can.)~~
+
+- Trigger crying on some probability (not always right away either)
 
 ## Timing
 - Infinite timing issues

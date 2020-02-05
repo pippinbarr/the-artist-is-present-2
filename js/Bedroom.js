@@ -71,9 +71,11 @@ class Bedroom extends TAIPScene {
 
     if (last.scene !== 'kitchen') {
       setTimeout(() => {
+        this.dialog.y = UPPER_DIALOG_Y;
         this.dialog.showMessage(WAKEUP_MESSAGE, () => {
           this.marina.inputEnabled = false;
           setTimeout(() => {
+            this.dialog.y = UPPER_DIALOG_Y;
             this.dialog.showMessage(CONTROLS_MESSAGE, () => {
               this.marina.inputEnabled = false;
               this.input.keyboard.once('keydown', () => {

@@ -2,6 +2,7 @@ const DIALOG_TEXT_WIDTH = 640;
 const DIALOG_PADDING = 16;
 const DIALOG_BORDER_WIDTH = 8;
 const DIALOG_FONT_SIZE = 20;
+const UPPER_DIALOG_Y = -150;
 
 class Dialog extends Phaser.GameObjects.Container {
 

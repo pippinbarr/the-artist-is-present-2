@@ -29,6 +29,7 @@ function handleSensor(scene, sensor) {
   if (scene.physics.overlap(scene.marina, sensor)) {
     if (!sensor.overlap) {
       scene.marina.up();
+      scene.dialog.y = 100;
       scene.dialog.showMessage(sensor.text, () => {});
       sensor.overlap = true;
     }

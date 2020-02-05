@@ -78,12 +78,14 @@ class Tickets extends TAIPScene {
       this.marina.stop();
     });
     this.physics.overlap(this.marina, this.ticketSensor, () => {
+      this.dialog.y = UPPER_DIALOG_Y;
       this.dialog.showMessage(TICKETS_DESK_MESSAGE, () => {});
       this.ticketSensor.body.checkCollision.none = true;
     });
     this.physics.collide(this.marina, this.guard, () => {
       this.marina.stop();
       if (!this.seenGuard) {
+        this.dialog.y = UPPER_DIALOG_Y;
         this.dialog.showMessage(TICKETS_GUARD_MESSAGE, () => {});
         this.seenGuard = true;
       }

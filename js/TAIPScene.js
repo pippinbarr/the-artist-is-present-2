@@ -190,7 +190,6 @@ class TAIPScene extends Phaser.Scene {
       clearTimeout(person.revertTimer);
     }
 
-    console.log(person.x - this.marina.x)
     if (person.x - this.marina.x > 10 * 4) {
       person.faceLeft();
     }
@@ -205,6 +204,7 @@ class TAIPScene extends Phaser.Scene {
     }
 
     setTimeout(() => {
+      this.dialog.y = -150;
       this.dialog.showMessage(message, () => {
         person.revertTimer = setTimeout(() => {
           if (person instanceof Guard) {

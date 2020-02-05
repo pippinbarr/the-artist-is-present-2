@@ -5,10 +5,6 @@ const RIGHT_TEAR_Y = LEFT_TEAR_Y;
 const TEAR_COLOR = 0x666666FF;
 const CHEEK_TEAR_INTERVAL = 400;
 const FALL_TEAR_INTERVAL = 100;
-const CRY_DELAY_MIN = 5 * 1000;
-const CRY_DELAY_RANGE = 5 * 60 * 1000;
-const CRY_TIME_MIN = 30 * 1000;
-const CRY_TIME_RANGE = 10 * 60 * 1000;
 
 const FIRST_PERSON_SCALE = 32;
 
@@ -172,6 +168,7 @@ class Atrium extends TAIPScene {
   }
 
   startHeadDownSequence() {
+    this.dialog.y = UPPER_DIALOG_Y;
     this.dialog.showMessage(HEAD_DOWN_INSTRUCTIONS, () => {
       setTimeout(() => {
         this.marina.lookDown(() => {
@@ -203,6 +200,7 @@ class Atrium extends TAIPScene {
   }
 
   startHeadUpSequence() {
+    this.dialog.y = UPPER_DIALOG_Y;
     this.dialog.showMessage(HEAD_UP_INSTRUCTIONS, () => {
       setTimeout(() => {
         this.marina.lookUp(() => {

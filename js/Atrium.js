@@ -5,6 +5,11 @@ const RIGHT_TEAR_Y = LEFT_TEAR_Y;
 const TEAR_COLOR = 0x666666FF;
 const CHEEK_TEAR_INTERVAL = 400;
 const FALL_TEAR_INTERVAL = 100;
+const CRY_DELAY_MIN = 5 * 1000;
+const CRY_DELAY_RANGE = 5 * 60 * 1000;
+const CRY_TIME_MIN = 30 * 1000;
+const CRY_TIME_RANGE = 10 * 60 * 1000;
+
 const FIRST_PERSON_SCALE = 32;
 
 class Atrium extends TAIPScene {
@@ -94,6 +99,8 @@ class Atrium extends TAIPScene {
     this.rightTear.setScale(FIRST_PERSON_SCALE);
     this.rightTear.setDepth(100000);
     this.rightTear.setVisible(false);
+
+    this.crying = false;
 
     this.eyelids = this.add.group();
     this.leftEyelid = this.add.sprite(LEFT_TEAR_X + FIRST_PERSON_SCALE * 0.5, LEFT_TEAR_Y - FIRST_PERSON_SCALE, 'atlas', 'white-pixel.png').setScale(2 * FIRST_PERSON_SCALE, FIRST_PERSON_SCALE).setDepth(10000000);
@@ -220,20 +227,50 @@ class Atrium extends TAIPScene {
     this.face.setDepth(10000);
 
 
-    this.startCrying();
+    this.tryCrying();
     this.startBlinking();
+  }
+
+  tryCrying() {
+    if (Math.random() < this.sitter.cryProbability) {
+      this.cryTimeout = setTimeout(() => {
+        this.startCrying();
+        this.cryTimeout = setTimeout(() => {
+          this.stopCrying();
+          this.tryCrying();
+        }, CRY_LENGTH_MIN + Math.random() * CRY_LENGTH_RANGE);
+      }, CRY_DELAY_MIN + Math.random() * CRY_DELAY_RANGE);
+    }
+  }
+
+  hideFace() {
+    this.faceBG.setVisible(false);
+    this.face.setVisible(false);
+    this.face.destroy();
+
+    this.stopCrying();
+    this.stopBlinking();
   }
 
   startCrying() {
     this.leftTear.setVisible(false);
     this.rightTear.setVisible(false);
+    this.crying = true;
     this.startTear(this.leftTear);
     setTimeout(() => {
       this.startTear(this.rightTear);
     }, 1234);
   }
 
+  stopCrying() {
+    this.leftTear.setVisible(false);
+    this.rightTear.setVisible(false);
+    this.crying = false;
+  }
+
   startTear(tear) {
+    if (!this.crying) return;
+
     tear.x = Math.random() < 0.5 ? tear.startX : tear.startX + FIRST_PERSON_SCALE;
     tear.y = LEFT_TEAR_Y;
     tear.setVisible(true);
@@ -261,9 +298,15 @@ class Atrium extends TAIPScene {
     this.rightEyelid.tint = Phaser.Display.Color.GetColor32(skin.r, skin.g, skin.b, 255);
     this.leftEyelid.setVisible(false);
     this.rightEyelid.setVisible(false);
-    setTimeout(() => {
+    this.blinkTimer = setTimeout(() => {
       this.blink();
     }, 3000 + Math.random() * 10000);
+  }
+
+  stopBlinking() {
+    if (this.blinkTimer) clearTimeout(this.blinkTimer);
+    this.leftEyelid.setVisible(false);
+    this.rightEyelid.setVisible(false);
   }
 
   blink() {
@@ -279,9 +322,8 @@ class Atrium extends TAIPScene {
   }
 
   sitterFinished() {
-    this.faceBG.setVisible(false);
-    this.face.setVisible(false);
-    this.face.destroy();
+    this.hideFace();
+
     this.sitter.body.y = 180;
     // this.sitter.setDepth(1);
     this.sitter.right();

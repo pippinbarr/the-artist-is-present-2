@@ -1,6 +1,6 @@
 const DEBUG = false;
 
-const START_SCENE = 'gameover';
+const START_SCENE = 'title';
 let QUEUE = [];
 const QUEUE_LENGTH = 16;
 const QUEUE_X = 440;
@@ -20,7 +20,7 @@ let config = {
   width: 800,
   height: 400,
   scene: [
-    Boot, Preloader, TAIPScene, Bedroom, Kitchen, Living,
+    Boot, Preloader, TAIPScene, Title, Bedroom, Kitchen, Living,
     Dining, Exterior, Car, MOMAExterior, Tickets, Hallway1,
     Hallway2, Hallway3, Atrium, GameOver
   ],

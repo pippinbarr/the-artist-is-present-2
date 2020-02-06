@@ -75,3 +75,8 @@ const GUARD_TALK = [
 const HEAD_DOWN_INSTRUCTIONS = `Press any key to lower your head and invite the next visitor to join you.`;
 
 const HEAD_UP_INSTRUCTIONS = `Press any key to look up.`;
+
+const CLOSING_MESSAGE = `"Attention all patrons, The Museum of Modern Art will be closing in fifteen minutes."`;
+
+const GAMEOVER_TEXT =
+  `Thank you for playing The Artist is Present 2!\n\n\nCome back again soon to perform the work again!`;

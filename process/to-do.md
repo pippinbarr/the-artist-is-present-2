@@ -18,8 +18,9 @@
 - ~~Don't whisper once marina has been into the Atrium~~
 - ~~Queue members on collide (e.g. excited direct comment)~~
 - ~~Queue guards~~
-
-- Position dialogs in different locations as appropriate (e.g. head up/down instructions, whispers...)
+- ~~Position dialogs in different locations as appropriate (e.g. head up/down instructions, whispers...)~~
+- ~~Museum closing (10:30-17:30)~~
+- ~~__NEVER CLOSED BECAUSE THE GAME IS ABOUT YOU BEING PRESENT TO PERFORM, NOT TO OBEY THE TIMEFRAME OF A VIRTUAL GALLERY__ The big question: is the museum closed on specific days? Does the game start or not? (Tempted not to close it in this instance since it's not really about that?)~~
 
 ## Queue behavior
 - ~~Create a function to send the front person in the queue to go sit in the chair and the rest of the queue to move up. Add a new person to the (invisible) end of the queue so it doesn't end (is this cheating?)~~
@@ -39,8 +40,8 @@
 - ~~Trigger crying on some probability (not always right away either)~~
 
 ## Timing
-- Infinite timing issues
-- End of day timer, so that there's a moment where the museum closes and "kicks you out", but just an ending screen that asks you to come back (maybe, likewise, a dialog that comes up to tell you when it's 15 minutes to go or something)
+- Infinite timing issues? What "feels good" in other words?
+- ~~End of day timer, so that there's a moment where the museum closes and "kicks you out", but just an ending screen that asks you to come back (maybe, likewise, a dialog that comes up to tell you when it's 15 minutes to go or something). Maybe a "Thanks for Playing!" ala Sierra classics~~
 
 
 # Generalllllll
@@ -57,4 +58,4 @@
 
 # Bugs
 
-- Can get caught against car on arrival at MoMA, probably because it's going over the input disabled line. Do I even need that stupid line?
+- Can get caught against car on arrival at MoMA, probably because it's going over the input disabled line. Do I even need that stupid line? Can similarly get wedged in the corner of the bedroom, for the same reasons.

@@ -6,11 +6,10 @@ const UPPER_DIALOG_Y = -150;
 
 class Dialog extends Phaser.GameObjects.Container {
 
-  constructor(scene, marina) {
+  constructor(scene) {
     super(scene);
 
     this.scene = scene;
-    this.marina = marina;
 
     this.whiteBorder = this.makeBox(100, 100, 0xffffff);
     this.redBorder = this.makeBox(96, 96, 0xcc0000);
@@ -57,7 +56,7 @@ class Dialog extends Phaser.GameObjects.Container {
   }
 
   showMessage(text, callback) {
-    this.marina.pause();
+    this.scene.scene.pause(this.scene.key);
 
     this.text.text = text;
 
@@ -79,12 +78,14 @@ class Dialog extends Phaser.GameObjects.Container {
 
     this.text.setOrigin(0, 0.5);
 
-    this.scene.input.keyboard.once('keydown', () => {
-      this.setVisible(false);
-      this.marina.unpause();
-      if (callback) callback();
-    });
-
     this.setVisible(true);
+
+    document.addEventListener('keydown', () => {
+      this.setVisible(false);
+      this.scene.scene.resume(this.scene.key);
+      if (callback) callback();
+    }, {
+      once: true
+    });
   }
 }

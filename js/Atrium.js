@@ -107,6 +107,14 @@ class Atrium extends TAIPScene {
     // this.showSitter();
 
     Atrium.seen = true;
+
+    setTimeout(() => {
+      this.showMuseumClosingMessage();
+    }, TIME_TO_MUSEUM_CLOSING_WARNING);
+
+    setTimeout(() => {
+      this.closeMuseum();
+    }, TIME_TO_MUSEUM_CLOSED)
   }
 
   // addQueue() {
@@ -160,11 +168,32 @@ class Atrium extends TAIPScene {
         this.marina.sit();
         this.marina.x = 695.5;
         this.marina.y = 210;
+
+        // Start timers to handle the museum closing
+        setTimeout(() => {
+          this.showMuseumClosingMessage();
+        }, TIME_TO_MUSEUM_CLOSING_WARNING);
+        setTimeout(() => {}, TIME_TO_MUSEUM_CLOSED);
         setTimeout(() => {
           this.startHeadDownSequence();
         }, 1000);
       });
     }
+  }
+
+  showMuseumClosingMessage() {
+    if (this.dialog.visible) {
+      setTimeout(() => {
+        this.showMuseumClosingMessage();
+      }, 1000);
+    }
+    else {
+      this.dialog.showMessage(CLOSING_MESSAGE);
+    }
+  }
+
+  closeMuseum() {
+    this.scene.switch('gameover');
   }
 
   startHeadDownSequence() {
@@ -356,17 +385,6 @@ class Atrium extends TAIPScene {
       this.sitter.depth = this.sitter.sitting ? this.sitter.body.y + 100 : this.sitter.body.y;
     }
   }
-
-  // handleGazeInput(e) {
-  //   if (!this.marina.sitting) return;
-  //
-  //   if (this.marina.lookingUp) {
-  //     this.marina.lookDown();
-  //   }
-  //   else if (!this.marina.lookingUp) {
-  //     this.marina.lookUp();
-  //   }
-  // }
 
   nextSitter() {
     if (this.sitter) {

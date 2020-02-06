@@ -34,7 +34,7 @@ class Title extends Phaser.Scene {
         delay: 1500,
       },
       {
-        text: '2',
+        text: '- 2 -',
         size: 64,
         yOffset: 200,
         delay: 1500,

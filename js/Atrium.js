@@ -36,7 +36,7 @@ class Atrium extends TAIPScene {
     this.tableAndChairs.setDepth(250);
     this.colliders.add(this.tableAndChairs);
 
-    this.marinaChairSensor = this.physics.add.sprite(730, 250, 'atlas', 'red-pixel.png').setScale(50, 60);
+    this.marinaChairSensor = this.physics.add.sprite(730, 250, 'atlas', 'red-pixel.png').setScale(10, 50);
     this.marinaChairSensor.visible = false;
 
     this.visitorChairSensor = this.physics.add.sprite(580, 250, 'atlas', 'red-pixel.png').setScale(50, 60);

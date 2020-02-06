@@ -2,7 +2,7 @@ const DIALOG_TEXT_WIDTH = 640;
 const DIALOG_PADDING = 16;
 const DIALOG_BORDER_WIDTH = 8;
 const DIALOG_FONT_SIZE = 20;
-const UPPER_DIALOG_Y = -150;
+const UPPER_DIALOG_Y = -120;
 
 class Dialog extends Phaser.GameObjects.Container {
 
@@ -79,6 +79,8 @@ class Dialog extends Phaser.GameObjects.Container {
     this.text.setOrigin(0, 0.5);
 
     this.setVisible(true);
+
+    // this.y = this.whiteBorder.y - this.whiteBorder.height / 2;
 
     document.addEventListener('keydown', () => {
       this.setVisible(false);

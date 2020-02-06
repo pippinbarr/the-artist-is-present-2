@@ -1,6 +1,6 @@
 const DEBUG = false;
 
-const START_SCENE = 'title';
+const START_SCENE = 'atrium';
 let QUEUE = [];
 const QUEUE_LENGTH = 16;
 const QUEUE_X = 440;

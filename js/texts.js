@@ -1,8 +1,6 @@
 // STARTUP
 
-const WAKEUP_MESSAGE = `It's time to get up and go to the museum.`;
-
-const CONTROLS_MESSAGE = `Press any key to get up, then use the arrow keys to move.`;
+const WAKEUP_MESSAGE = `Good morning, Marina. It's time to get up and go to the museum for your performance. Press ANY KEY to dismiss this dialog, then use the ARROW KEYS to move.`;
 
 // DEPARTURE
 

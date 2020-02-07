@@ -106,7 +106,7 @@ class MOMAExterior extends TAIPScene {
         key: "tickets",
         type: "up",
         x: 100 * 4,
-        y: 40 * 4
+        y: 32 * 4
       },
       {
         key: "car",

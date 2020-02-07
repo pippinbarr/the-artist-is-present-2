@@ -26,14 +26,14 @@ class Hallway2 extends TAIPScene {
     const transitionData = [{
         key: "hallway1",
         type: "left",
-        x: 1 * 4,
+        x: 4 * 4,
         y: 60 * 4,
         keepY: true,
       },
       {
         key: "hallway3",
         type: "right",
-        x: 199 * 4,
+        x: 196 * 4,
         y: 60 * 4,
         keepY: true,
       }

@@ -60,14 +60,14 @@ class Dining extends TAIPScene {
     let transitionData = [{
         key: 'living',
         type: 'left',
-        x: 10 * 4,
+        x: 4 * 4,
         y: 75 * 4,
         keepY: true
       },
       {
         key: 'exterior',
         type: 'right',
-        x: 190 * 4,
+        x: 186 * 4,
         y: 62 * 4,
       }
     ];

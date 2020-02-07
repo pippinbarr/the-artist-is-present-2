@@ -39,15 +39,13 @@ class Bedroom extends TAIPScene {
     createColliderRect(this, 122 * 4, 56 * 4, 23 * 4, 5 * 4, this.colliders);
     this.dresser.depth = 31 * 4;
 
-    this.marina.inputEnabled = false;
-
     // Marina Abramovic horizontal
     this.marinaBed = this.add.sprite(this.game.canvas.width / 2, this.game.canvas.height / 2, 'atlas', 'bedroom/bedroom-marina.png').setScale(4);
 
     let transitionData = [{
       key: 'kitchen',
       type: 'right',
-      x: 160 * 4,
+      x: 165 * 4,
       y: 56 * 4,
     }];
     this.addTransitions(transitionData);
@@ -60,6 +58,7 @@ class Bedroom extends TAIPScene {
       this.marina.y = 284;
       this.marina.setVisible(false);
       this.marinaBed.setVisible(true);
+      this.marina.inputEnabled = false;
     }
     else {
       this.marina.setVisible(true);

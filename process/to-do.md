@@ -4,7 +4,7 @@
 - Double check all required places have dialog
 
 ## Title
-- Guess it needs a title screen? What would that look like?
+- ~~__IT WOULD LOOK JUST LIKE THE ORIGINAL__ Guess it needs a title screen? What would that look like?~~
 
 ## Space
 - ~~Consider going through and remembering departure x,y from a scene and reusing on entry IF it's relevant for that kind of transition? Wouldn't be all that hard to do tbh. And would be more naturalistic etc. Would then need the queue to be able to look up or down, chiefly, but that ain't hard at all.~~

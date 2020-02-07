@@ -56,7 +56,7 @@ class Hallway1 extends TAIPScene {
       {
         key: "hallway2",
         type: "right",
-        x: 199 * 4,
+        x: 196 * 4,
         y: 60 * 4,
         keepY: true
       }

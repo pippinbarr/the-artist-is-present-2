@@ -39,7 +39,7 @@ class Kitchen extends TAIPScene {
       {
         key: 'living',
         type: 'right',
-        x: 140 * 4,
+        x: 150 * 4,
         y: 56 * 4,
       }
     ];

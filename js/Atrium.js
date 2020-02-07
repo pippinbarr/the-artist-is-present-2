@@ -58,7 +58,7 @@ class Atrium extends TAIPScene {
     const transitionData = [{
       key: "hallway3",
       type: "left",
-      x: 10 * 4,
+      x: 4 * 4,
       y: 60 * 4,
       keepY: true
     }, ];

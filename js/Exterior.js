@@ -62,7 +62,7 @@ class Exterior extends TAIPScene {
       key: 'dining',
       type: 'up',
       x: 46 * 4,
-      y: 20 * 4,
+      y: 6 * 4,
     }];
     this.addTransitions(transitionData);
 

@@ -1,4 +1,4 @@
-const TRANSITION_OFFSET = 5 * 4;
+const TRANSITION_OFFSET = 7 * 4;
 
 
 class TAIPScene extends Phaser.Scene {
@@ -60,32 +60,32 @@ class TAIPScene extends Phaser.Scene {
 
     console.log(this.tweens, this.marina, targetX, targetY)
 
-    let marinaTweenIn = this.tweens.add({
-      targets: this.marina,
-      x: targetX,
-      y: targetY,
-      duration: TRANSITION_OFFSET / this.marina.speed * 1000 * 2,
-      repeat: 0,
-      onComplete: () => {
-        this.marina.inputEnabled = true;
-        // this.marina.stop();
-      },
-    });
+    // let marinaTweenIn = this.tweens.add({
+    //   targets: this.marina,
+    //   x: targetX,
+    //   y: targetY,
+    //   duration: TRANSITION_OFFSET / this.marina.speed * 1000 * 2,
+    //   repeat: 0,
+    //   onComplete: () => {
+    //     // this.marina.inputEnabled = true;
+    //     // this.marina.stop();
+    //   },
+    // });
   }
 
 
   checkExits() {
     if (this.leftTransition && this.marina.x < this.leftTransition.x) {
-      this.marina.inputEnabled = false;
+      // this.marina.inputEnabled = false;
     }
     else if (this.rightTransition && this.marina.x > this.rightTransition.x) {
-      this.marina.inputEnabled = false;
+      // this.marina.inputEnabled = false;
     }
     else if (this.upTransition && this.marina.y < this.upTransition.y) {
-      this.marina.inputEnabled = false;
+      // this.marina.inputEnabled = false;
     }
     else if (this.downTransition && this.marina.y > this.downTransition.y) {
-      this.marina.inputEnabled = false;
+      // this.marina.inputEnabled = false;
     }
 
     if (this.leftTransition && this.marina.x < this.leftTransition.x - TRANSITION_OFFSET) {
@@ -149,7 +149,7 @@ class TAIPScene extends Phaser.Scene {
 
     });
 
-    this.marks.toggleVisible();
+    // this.marks.toggleVisible();
   }
 
   addQueue(xOffset) {

@@ -49,14 +49,14 @@ class Living extends TAIPScene {
     let transitionData = [{
         key: 'kitchen',
         type: 'left',
-        x: 10 * 4,
+        x: 4 * 4,
         y: 76 * 4,
         keepY: false,
       },
       {
         key: 'dining',
         type: 'right',
-        x: 190 * 4,
+        x: 196 * 4,
         y: 72 * 4,
         keepY: true
       }

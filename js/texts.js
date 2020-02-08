@@ -102,7 +102,8 @@ const HEAD_DOWN_INSTRUCTIONS = `Press any key to lower your head and invite the 
 
 const HEAD_UP_INSTRUCTIONS = `Press any key to look up.`;
 
-const CLOSING_MESSAGE = `"Attention all patrons, The Museum of Modern Art will be closing in fifteen minutes."`;
+const CLOSING_WARNING_MESSAGE = `"Attention all patrons, The Museum of Modern Art will be closing in fifteen minutes."`;
+const CLOSED_MESSAGE = `"Attention all patrons, The Museum of Modern Art is now closed."`;
 
 const GAMEOVER_TEXT =
-  `Thank you for playing The Artist is Present 2!\n\n\nCome back again soon to perform the work again!`;
+  `Thank you for playing The Artist is Present 2!\n\n\nCome back again tomorrow and continue your work!`;

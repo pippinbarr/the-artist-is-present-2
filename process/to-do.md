@@ -4,8 +4,7 @@
 - ~~Increase the queue size to be more impressive~~
 - ~~Consider animation and smaller sensors for car in and out~~
 - ~~Invert a moma door and fix their relative position~~
-
-- Test closing 15 minutes and full close (ideally in the middle of some other dialog, can maybe trigger with a painting/person)
+- ~~Test closing 15 minutes and full close (ideally in the middle of some other dialog, can maybe trigger with a painting/person)~~
 
 ## Title
 - ~~__IT WOULD LOOK JUST LIKE THE ORIGINAL__ Guess it needs a title screen? What would that look like?~~
@@ -69,3 +68,4 @@
 # Bugs
 - ~~Can get caught against car on arrival at MoMA, probably because it's going over the input disabled line. Do I even need that stupid line? Can similarly get wedged in the corner of the bedroom, for the same reasons.~~
 - ~~Moma doors broken on enter!~~
+- ~~Entire queue does a little jiggle with pause-based dialog for looking up~~

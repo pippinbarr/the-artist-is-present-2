@@ -55,11 +55,11 @@ class Dialog extends Phaser.GameObjects.Container {
     super.update();
   }
 
-  showMessage(text, callback) {
+  showMessage(text, callback, noPause) {
     // this.scene will be undefined if this Dialog has gone out of scope
     if (!this.scene) return;
 
-    this.scene.scene.pause(this.scene.key);
+    if (!noPause) this.scene.scene.pause(this.scene.key);
 
     this.text.text = text;
 
@@ -87,7 +87,7 @@ class Dialog extends Phaser.GameObjects.Container {
 
     document.addEventListener('keydown', () => {
       this.setVisible(false);
-      this.scene.scene.resume(this.scene.key);
+      if (!noPause) this.scene.scene.resume(this.scene.key);
       if (callback) callback();
     }, {
       once: true

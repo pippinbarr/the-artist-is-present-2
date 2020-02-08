@@ -106,15 +106,17 @@ class Atrium extends TAIPScene {
 
     // this.showSitter();
 
+    // // Testing closing with other dialogs...
+    // setTimeout(() => {
+    //   this.showMuseumClosingWarningMessage();
+    // }, TIME_TO_MUSEUM_CLOSING_WARNING);
+    //
+    // setTimeout(() => {
+    //   this.closeMuseum();
+    // }, TIME_TO_MUSEUM_CLOSED);
+
+
     Atrium.seen = true;
-
-    setTimeout(() => {
-      this.showMuseumClosingMessage();
-    }, TIME_TO_MUSEUM_CLOSING_WARNING);
-
-    setTimeout(() => {
-      this.closeMuseum();
-    }, TIME_TO_MUSEUM_CLOSED)
   }
 
   // addQueue() {
@@ -171,9 +173,13 @@ class Atrium extends TAIPScene {
 
         // Start timers to handle the museum closing
         setTimeout(() => {
-          this.showMuseumClosingMessage();
+          this.showMuseumClosingWarningMessage();
         }, TIME_TO_MUSEUM_CLOSING_WARNING);
-        setTimeout(() => {}, TIME_TO_MUSEUM_CLOSED);
+
+        setTimeout(() => {
+          this.closeMuseum();
+        }, TIME_TO_MUSEUM_CLOSED);
+
         setTimeout(() => {
           this.startHeadDownSequence();
         }, 1000);
@@ -181,19 +187,29 @@ class Atrium extends TAIPScene {
     }
   }
 
-  showMuseumClosingMessage() {
+  showMuseumClosingWarningMessage() {
     if (this.dialog.visible) {
       setTimeout(() => {
-        this.showMuseumClosingMessage();
+        this.showMuseumClosingWarningMessage();
       }, 1000);
     }
     else {
-      this.dialog.showMessage(CLOSING_MESSAGE);
+      this.dialog.showMessage(CLOSING_WARNING_MESSAGE);
     }
   }
 
   closeMuseum() {
-    this.scene.switch('gameover');
+
+    if (this.dialog.visible) {
+      setTimeout(() => {
+        this.closeMuseum();
+      }, 2000);
+    }
+    else {
+      this.dialog.showMessage(CLOSED_MESSAGE, () => {
+        this.scene.switch('gameover');
+      })
+    }
   }
 
   startHeadDownSequence() {
@@ -242,7 +258,7 @@ class Atrium extends TAIPScene {
           }, 1000);
         }, this);
       }, 1000);
-    });
+    }, true);
   }
 
   showSitter() {
@@ -265,7 +281,7 @@ class Atrium extends TAIPScene {
         this.cryTimeout = setTimeout(() => {
           this.stopCrying();
           this.tryCrying();
-        }, CRY_LENGTH_MIN + Math.random() * CRY_LENGTH_RANGE);
+        }, CRY_TIME_MIN + Math.random() * CRY_TIME_RANGE);
       }, CRY_DELAY_MIN + Math.random() * CRY_DELAY_RANGE);
     }
   }
@@ -365,7 +381,8 @@ class Atrium extends TAIPScene {
     });
     this.physics.collide(this.marina, this.guards, (marina, guard) => {
       this.marina.stop();
-      this.personSay(guard, randomElement(GUARD_TALK));
+      let message = GUARD_TALK.pop();
+      if (message) this.personSay(guard, message);
     });
     this.physics.collide(this.queue, this.queue, (person1, person2) => {
       person1.stop();

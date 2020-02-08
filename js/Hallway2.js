@@ -43,6 +43,8 @@ class Hallway2 extends TAIPScene {
     this.soupCansSensor = this.physics.add.sprite(57 * 4, 52 * 4, 'atlas', 'red-pixel.png').setScale(4 * 4, 4 * 4).setVisible(false);
     this.soupCansSensor.text = SOUP_CANS;
 
+    this.addQueue(this.game.canvas.width * 2);
+
     this.handleEntrances();
   }
 
@@ -55,6 +57,9 @@ class Hallway2 extends TAIPScene {
     });
 
     handleSensor(this, this.soupCansSensor);
+
+    this.handleWhispers();
+
     this.marina.depth = this.marina.body.y;
   }
 }

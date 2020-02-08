@@ -83,7 +83,5 @@ class Dining extends TAIPScene {
       this.marina.stop();
     });
     this.marina.depth = this.marina.body.y;
-
-    this.checkExits();
   }
 }

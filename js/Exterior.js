@@ -6,6 +6,8 @@ class Exterior extends TAIPScene {
   }
 
   create() {
+    console.log("Exterior.create()");
+
     super.create();
 
     // BG
@@ -69,6 +71,7 @@ class Exterior extends TAIPScene {
     this.handleEntrances();
 
     setTimeout(() => {
+      console.log("Car message timout")
       if (!seenCarWaiting) {
         this.dialog.showMessage(CAR_WAITING_MESSAGE);
         seenCarWaiting = true;
@@ -81,6 +84,8 @@ class Exterior extends TAIPScene {
 
   update(time, delta) {
     super.update(time, delta);
+
+    this.handleWrap();
 
     this.marina.update(time, delta);
     this.physics.collide(this.marina, this.colliders, () => {
@@ -103,5 +108,14 @@ class Exterior extends TAIPScene {
         });
       }, 2000);
     });
+  }
+
+  handleWrap() {
+    if (this.marina.x < 0 - this.marina.width) {
+      this.marina.x = this.game.canvas.width + this.marina.width;
+    }
+    else if (this.marina.x > this.game.canvas.width + this.marina.width) {
+      this.marina.x = 0 - this.marina.width;
+    }
   }
 }

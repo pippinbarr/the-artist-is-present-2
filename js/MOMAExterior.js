@@ -67,8 +67,8 @@ class MOMAExterior extends TAIPScene {
     this.colliders.add(this.leftDoor);
     this.colliders.add(this.rightDoor);
     this.sensor = this.physics.add
-      .sprite(this.game.canvas.width / 2, 65 * 4, "atlas", "red-pixel.png")
-      .setScale(40 * 4, 30 * 4);
+      .sprite(this.game.canvas.width / 2, 50 * 4, "atlas", "red-pixel.png")
+      .setScale(40 * 4, 60 * 4);
     this.sensor.visible = false;
     this.sensor.activated = false;
     // Building colliders

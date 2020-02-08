@@ -57,65 +57,34 @@ class TAIPScene extends Phaser.Scene {
 
     let targetX = transition.x + xDir * TRANSITION_OFFSET;
     let targetY = transition.keepY ? last.y : transition.y + yDir * TRANSITION_OFFSET;
-
-    console.log(this.tweens, this.marina, targetX, targetY)
-
-    // let marinaTweenIn = this.tweens.add({
-    //   targets: this.marina,
-    //   x: targetX,
-    //   y: targetY,
-    //   duration: TRANSITION_OFFSET / this.marina.speed * 1000 * 2,
-    //   repeat: 0,
-    //   onComplete: () => {
-    //     // this.marina.inputEnabled = true;
-    //     // this.marina.stop();
-    //   },
-    // });
   }
 
 
   checkExits() {
-    if (this.leftTransition && this.marina.x < this.leftTransition.x) {
-      // this.marina.inputEnabled = false;
-    }
-    else if (this.rightTransition && this.marina.x > this.rightTransition.x) {
-      // this.marina.inputEnabled = false;
-    }
-    else if (this.upTransition && this.marina.y < this.upTransition.y) {
-      // this.marina.inputEnabled = false;
-    }
-    else if (this.downTransition && this.marina.y > this.downTransition.y) {
-      // this.marina.inputEnabled = false;
-    }
-
+    let transition = '';
     if (this.leftTransition && this.marina.x < this.leftTransition.x - TRANSITION_OFFSET) {
-      last.scene = this.scene.key;
-      last.x = this.marina.x;
-      last.y = this.marina.y;
-      this.scene.start(this.leftTransition.key);
+      transition = this.leftTransition.key;
     }
     else if (this.rightTransition && this.marina.x > this.rightTransition.x + TRANSITION_OFFSET) {
-      last.scene = this.scene.key;
-      last.x = this.marina.x;
-      last.y = this.marina.y;
-      this.scene.start(this.rightTransition.key);
+      transition = this.rightTransition.key;
     }
     else if (this.upTransition && this.marina.y < this.upTransition.y - TRANSITION_OFFSET) {
-      last.scene = this.scene.key;
-      last.x = this.marina.x;
-      last.y = this.marina.y;
-      this.scene.start(this.upTransition.key);
+      transition = this.upTransition.key;
     }
     else if (this.downTransition && this.marina.y > this.downTransition.y + TRANSITION_OFFSET) {
+      transition = this.downTransition.key;
+    }
+
+    if (transition !== '') {
       last.scene = this.scene.key;
       last.x = this.marina.x;
       last.y = this.marina.y;
-      this.scene.start(this.downTransition.key);
+      console.log(`Starting scene ${transition}`);
+      this.scene.start(transition);
     }
   }
 
   addTransitions(data) {
-
     data.forEach((transition) => {
       switch (transition.type) {
         case 'left':
@@ -149,7 +118,7 @@ class TAIPScene extends Phaser.Scene {
 
     });
 
-    // this.marks.toggleVisible();
+    this.marks.toggleVisible();
   }
 
   addQueue(xOffset) {

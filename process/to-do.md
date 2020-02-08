@@ -1,13 +1,18 @@
 # Okay now we need actual to dos
 
 ## Final things
-- Double check all required places have dialog
+- ~~Increase the queue size to be more impressive~~
+
+- Consider animation and smaller sensors for car in and out
+- Invert a momadoor and fix their relative position
+
 
 ## Title
 - ~~__IT WOULD LOOK JUST LIKE THE ORIGINAL__ Guess it needs a title screen? What would that look like?~~
 
 ## Space
 - ~~Consider going through and remembering departure x,y from a scene and reusing on entry IF it's relevant for that kind of transition? Wouldn't be all that hard to do tbh. And would be more naturalistic etc. Would then need the queue to be able to look up or down, chiefly, but that ain't hard at all.~~
+- ~~Wrap Marina in Exterior~~
 
 ## Dialogs
 - ~~Add painting information dialogs~~
@@ -21,6 +26,13 @@
 - ~~Position dialogs in different locations as appropriate (e.g. head up/down instructions, whispers...)~~
 - ~~Museum closing (10:30-17:30)~~
 - ~~__NEVER CLOSED BECAUSE THE GAME IS ABOUT YOU BEING PRESENT TO PERFORM, NOT TO OBEY THE TIMEFRAME OF A VIRTUAL GALLERY__ The big question: is the museum closed on specific days? Does the game start or not? (Tempted not to close it in this instance since it's not really about that?)~~
+
+- Add message to wrap for Exterior
+- Add message to wrap for MOMA
+- Double check all required places have dialog
+- Expand existing random dialogs
+- Create enough whispers such that you can random sort and then pop to avoid repetition
+- Have people revert to '...' or nothing once you've spoken to them already (again figure on having enough distinct phrases so that you can random sort and pop)
 
 ## Queue behavior
 - ~~Create a function to send the front person in the queue to go sit in the chair and the rest of the queue to move up. Add a new person to the (invisible) end of the queue so it doesn't end (is this cheating?)~~
@@ -58,4 +70,5 @@
 
 # Bugs
 
-- Can get caught against car on arrival at MoMA, probably because it's going over the input disabled line. Do I even need that stupid line? Can similarly get wedged in the corner of the bedroom, for the same reasons.
+- ~~Can get caught against car on arrival at MoMA, probably because it's going over the input disabled line. Do I even need that stupid line? Can similarly get wedged in the corner of the bedroom, for the same reasons.~~
+- ~~Moma doors broken on enter!~~

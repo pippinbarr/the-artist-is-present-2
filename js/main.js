@@ -1,8 +1,8 @@
 const DEBUG = false;
 
-const START_SCENE = 'hallway1';
+const START_SCENE = 'hallway2';
 let QUEUE = [];
-const QUEUE_LENGTH = 16;
+const QUEUE_LENGTH = 30;
 const QUEUE_X = 440;
 const QUEUE_Y = 182;
 const QUEUE_SPACING = 56;

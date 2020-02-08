@@ -25,7 +25,13 @@ class TAIPScene extends Phaser.Scene {
     if (this.queue) {
       this.physics.collide(this.marina, this.queue, (marina, visitor) => {
         this.marina.stop();
-        this.personSay(visitor, randomElement(QUEUE_TALK));
+        if (!visitor.spoken) {
+          this.personSay(visitor, QUEUE_TALK.pop());
+          visitor.spoken = true;
+        }
+        else {
+          // this.personSay(visitor, "...");
+        }
       });
     }
   }
@@ -148,7 +154,7 @@ class TAIPScene extends Phaser.Scene {
   handleWhispers() {
     // Handle whisperers
     this.physics.overlap(this.marina, this.whispers, (marina, whisper) => {
-      this.personSay(whisper.visitor, getRandom(WHISPERS));
+      this.personSay(whisper.visitor, WHISPERS.pop());
       this.whispers.remove(whisper);
     });
   }

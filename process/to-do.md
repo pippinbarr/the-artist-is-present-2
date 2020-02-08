@@ -3,8 +3,8 @@
 ## Final things
 - ~~Increase the queue size to be more impressive~~
 - ~~Consider animation and smaller sensors for car in and out~~
+- ~~Invert a moma door and fix their relative position~~
 
-- Invert a moma door and fix their relative position
 - Test closing 15 minutes and full close (ideally in the middle of some other dialog, can maybe trigger with a painting/person)
 
 ## Title
@@ -27,12 +27,12 @@
 - ~~Museum closing (10:30-17:30)~~
 - ~~__NEVER CLOSED BECAUSE THE GAME IS ABOUT YOU BEING PRESENT TO PERFORM, NOT TO OBEY THE TIMEFRAME OF A VIRTUAL GALLERY__ The big question: is the museum closed on specific days? Does the game start or not? (Tempted not to close it in this instance since it's not really about that?)~~
 - ~~Double check all required places have dialog~~
+- ~~Create enough whispers such that you can random sort and then pop to avoid repetition~~
+- ~~Have people revert to '...' or nothing once you've spoken to them already (again figure on having enough distinct phrases so that you can random sort and pop)~~
 
 - Add message to wrap for Exterior
 - Add message to wrap for MOMA
 - Add message to return to bedroom
-- Create enough whispers such that you can random sort and then pop to avoid repetition
-- Have people revert to '...' or nothing once you've spoken to them already (again figure on having enough distinct phrases so that you can random sort and pop)
 
 ## Queue behavior
 - ~~Create a function to send the front person in the queue to go sit in the chair and the rest of the queue to move up. Add a new person to the (invisible) end of the queue so it doesn't end (is this cheating?)~~

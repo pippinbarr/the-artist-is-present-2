@@ -59,6 +59,11 @@ let Preloader = new Phaser.Class({
       QUEUE.push(person);
     }
 
+    // Randomize the whispers
+    WHISPERS.sort((a, b) => 0.5 - Math.random());
+    // Randomize the queue talk
+    QUEUE_TALK.sort((a, b) => 0.5 - Math.random());
+
     setTimeout(() => {
       this.scene.start(START_SCENE);
     }, 10);

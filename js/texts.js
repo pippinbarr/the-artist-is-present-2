@@ -10,7 +10,7 @@ const CAR_STILL_WAITING_MESSAGE = `Your driver is still waiting. You should prob
 
 // MUSEUM MESSAGES
 
-const MOMA_ARRIVAL_MESSAGE = `Here you finally are at the Museum of Modern Art in New York, ready to present your performance work "The Artist Is Present".`;
+const MOMA_ARRIVAL_MESSAGE = `Here you finally are at the Museum of Modern Art in New York, ready to perform your work "The Artist Is Present".`;
 
 let seenMOMAMessage = false;
 const OUTSIDE_MOMA_MESSAGE = `Now is not the time for wandering outside. Get in there and start the performance!`;
@@ -31,6 +31,7 @@ const DANCERS = "The Dance I\nHenry Matisse\n1909\nOil on canvas";
 // THE QUEUE
 
 // What they say as you walk past
+// Need a minimum of, let's say 12-15 to avoid repetition
 const WHISPERS = [
   "It's her!",
   "She's here!",
@@ -40,13 +41,20 @@ const WHISPERS = [
   "There she is!",
   "This is the best day of my life!",
   "Look! It's Marina!",
-  "She's coming!"
+  "She's coming!",
+  "The artist is present!",
+  "Here comes Marina!",
+  "It's about to start!",
+  "This is amazing!",
+  "It feels like a dream!",
+  "Marina!",
 ];
 
-// What they say if you directly approach them
+// What they say if you directly approach them, need a minimum of 30
+// to have one fresh one per queue member...
 const QUEUE_TALK = [
   "It's you!",
-  "...",
+  "Oh wow...",
   "I can't wait to sit with you!",
   "I can't believe I'm meeting you right now!",
   "Is this really happening?",
@@ -56,17 +64,32 @@ const QUEUE_TALK = [
   "Is it really you?!",
   "Marina!",
   "Oh my god!",
+  "It's such an honor!",
+  "You're my hero!",
+  "You're a genius, Marina!",
+  "...",
+  "This is unbelievable!",
+  "I'm your biggest fan!",
+  "I love what you do!",
+  "I love you!",
+  "This is so special!",
+  "I'm so looking forward to this, Marina!",
+  "This work is such a wonderful idea!",
+  "I wish you were my mother!",
+  "You're incredible!",
+  "You inspire me so much!",
+  "I can't believe you're really here!",
+  "This is like a dream come true!",
+  "Hello!",
+  "I feel like I know you!",
+  "I can't believe Marina Abramovic is standing in front of me!"
 ];
 
 // This is what the atrium guards say
 const GUARD_TALK = [
-  "Good luck today.",
-  "Hello.",
+  "Good luck today. We're ready when you are.",
   "Please take your seat when you're ready.",
-  "Quite a crowd today.",
-  "Long queue.",
-  "We're ready when you are, Ms. Abramovic.",
-]
+];
 
 // THE PERFORMANCE SEQUENCE
 

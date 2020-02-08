@@ -5,7 +5,7 @@
 			"format": "RGBA8888",
 			"size": {
 				"w": 512,
-				"h": 706
+				"h": 714
 			},
 			"scale": 1,
 			"frames": [
@@ -619,7 +619,7 @@
 					}
 				},
 				{
-					"filename": "moma-exterior/moma-door.png",
+					"filename": "moma-exterior/moma-door-left.png",
 					"rotated": false,
 					"trimmed": false,
 					"sourceSize": {
@@ -661,6 +661,27 @@
 					}
 				},
 				{
+					"filename": "moma-exterior/moma-door-right.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 20,
+						"h": 33
+					},
+					"spriteSourceSize": {
+						"x": 0,
+						"y": 0,
+						"w": 20,
+						"h": 33
+					},
+					"frame": {
+						"x": 203,
+						"y": 279,
+						"w": 20,
+						"h": 33
+					}
+				},
+				{
 					"filename": "car/car-marina.png",
 					"rotated": false,
 					"trimmed": true,
@@ -675,8 +696,8 @@
 						"h": 16
 					},
 					"frame": {
-						"x": 203,
-						"y": 279,
+						"x": 439,
+						"y": 290,
 						"w": 11,
 						"h": 16
 					}
@@ -696,10 +717,52 @@
 						"h": 100
 					},
 					"frame": {
-						"x": 203,
+						"x": 225,
 						"y": 307,
 						"w": 200,
 						"h": 100
+					}
+				},
+				{
+					"filename": "dining/dining-table.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 200,
+						"h": 100
+					},
+					"spriteSourceSize": {
+						"x": 40,
+						"y": 58,
+						"w": 74,
+						"h": 26
+					},
+					"frame": {
+						"x": 427,
+						"y": 308,
+						"w": 74,
+						"h": 26
+					}
+				},
+				{
+					"filename": "living/living-coffee-table.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 200,
+						"h": 100
+					},
+					"spriteSourceSize": {
+						"x": 106,
+						"y": 70,
+						"w": 74,
+						"h": 15
+					},
+					"frame": {
+						"x": 427,
+						"y": 336,
+						"w": 74,
+						"h": 15
 					}
 				},
 				{
@@ -720,48 +783,6 @@
 						"x": 1,
 						"y": 329,
 						"w": 200,
-						"h": 100
-					}
-				},
-				{
-					"filename": "kitchen/kitchen-unit-bg.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 200,
-						"h": 100
-					},
-					"spriteSourceSize": {
-						"x": 46,
-						"y": 1,
-						"w": 104,
-						"h": 66
-					},
-					"frame": {
-						"x": 405,
-						"y": 307,
-						"w": 104,
-						"h": 66
-					}
-				},
-				{
-					"filename": "title/title.png",
-					"rotated": false,
-					"trimmed": false,
-					"sourceSize": {
-						"w": 100,
-						"h": 100
-					},
-					"spriteSourceSize": {
-						"x": 0,
-						"y": 0,
-						"w": 100,
-						"h": 100
-					},
-					"frame": {
-						"x": 405,
-						"y": 375,
-						"w": 100,
 						"h": 100
 					}
 				},
@@ -808,7 +829,7 @@
 					}
 				},
 				{
-					"filename": "moma-exterior/moma-exterior-fg.png",
+					"filename": "kitchen/kitchen-unit-bg.png",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -816,16 +837,37 @@
 						"h": 100
 					},
 					"spriteSourceSize": {
-						"x": 54,
+						"x": 46,
+						"y": 1,
+						"w": 104,
+						"h": 66
+					},
+					"frame": {
+						"x": 405,
+						"y": 409,
+						"w": 104,
+						"h": 66
+					}
+				},
+				{
+					"filename": "title/title.png",
+					"rotated": false,
+					"trimmed": false,
+					"sourceSize": {
+						"w": 100,
+						"h": 100
+					},
+					"spriteSourceSize": {
+						"x": 0,
 						"y": 0,
-						"w": 92,
-						"h": 32
+						"w": 100,
+						"h": 100
 					},
 					"frame": {
 						"x": 405,
 						"y": 477,
-						"w": 92,
-						"h": 32
+						"w": 100,
+						"h": 100
 					}
 				},
 				{
@@ -843,115 +885,10 @@
 						"h": 100
 					},
 					"frame": {
-						"x": 1,
-						"y": 533,
+						"x": 203,
+						"y": 511,
 						"w": 200,
 						"h": 100
-					}
-				},
-				{
-					"filename": "exterior/car.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 200,
-						"h": 100
-					},
-					"spriteSourceSize": {
-						"x": 25,
-						"y": 58,
-						"w": 110,
-						"h": 42
-					},
-					"frame": {
-						"x": 1,
-						"y": 635,
-						"w": 110,
-						"h": 42
-					}
-				},
-				{
-					"filename": "dining/dining-table.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 200,
-						"h": 100
-					},
-					"spriteSourceSize": {
-						"x": 40,
-						"y": 58,
-						"w": 74,
-						"h": 26
-					},
-					"frame": {
-						"x": 1,
-						"y": 679,
-						"w": 74,
-						"h": 26
-					}
-				},
-				{
-					"filename": "dining/dining-side-chairs.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 200,
-						"h": 100
-					},
-					"spriteSourceSize": {
-						"x": 32,
-						"y": 56,
-						"w": 91,
-						"h": 25
-					},
-					"frame": {
-						"x": 77,
-						"y": 679,
-						"w": 91,
-						"h": 25
-					}
-				},
-				{
-					"filename": "tickets/tickets-barrier.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 100,
-						"h": 50
-					},
-					"spriteSourceSize": {
-						"x": 5,
-						"y": 16,
-						"w": 92,
-						"h": 22
-					},
-					"frame": {
-						"x": 113,
-						"y": 635,
-						"w": 92,
-						"h": 22
-					}
-				},
-				{
-					"filename": "living/living-coffee-table.png",
-					"rotated": false,
-					"trimmed": true,
-					"sourceSize": {
-						"w": 200,
-						"h": 100
-					},
-					"spriteSourceSize": {
-						"x": 106,
-						"y": 70,
-						"w": 74,
-						"h": 15
-					},
-					"frame": {
-						"x": 113,
-						"y": 659,
-						"w": 74,
-						"h": 15
 					}
 				},
 				{
@@ -969,8 +906,29 @@
 						"h": 100
 					},
 					"frame": {
-						"x": 203,
-						"y": 511,
+						"x": 1,
+						"y": 613,
+						"w": 108,
+						"h": 100
+					}
+				},
+				{
+					"filename": "kitchen/kitchen-unit-fg.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 200,
+						"h": 100
+					},
+					"spriteSourceSize": {
+						"x": 44,
+						"y": 0,
+						"w": 108,
+						"h": 100
+					},
+					"frame": {
+						"x": 111,
+						"y": 613,
 						"w": 108,
 						"h": 100
 					}
@@ -990,14 +948,14 @@
 						"h": 92
 					},
 					"frame": {
-						"x": 207,
+						"x": 221,
 						"y": 613,
 						"w": 108,
 						"h": 92
 					}
 				},
 				{
-					"filename": "kitchen/kitchen-unit-fg.png",
+					"filename": "moma-exterior/moma-exterior-fg.png",
 					"rotated": false,
 					"trimmed": true,
 					"sourceSize": {
@@ -1005,16 +963,16 @@
 						"h": 100
 					},
 					"spriteSourceSize": {
-						"x": 44,
+						"x": 54,
 						"y": 0,
-						"w": 108,
-						"h": 100
+						"w": 92,
+						"h": 32
 					},
 					"frame": {
-						"x": 313,
-						"y": 511,
-						"w": 108,
-						"h": 100
+						"x": 405,
+						"y": 579,
+						"w": 92,
+						"h": 32
 					}
 				},
 				{
@@ -1032,10 +990,73 @@
 						"h": 90
 					},
 					"frame": {
-						"x": 317,
+						"x": 331,
 						"y": 613,
 						"w": 157,
 						"h": 90
+					}
+				},
+				{
+					"filename": "exterior/car.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 200,
+						"h": 100
+					},
+					"spriteSourceSize": {
+						"x": 25,
+						"y": 58,
+						"w": 110,
+						"h": 42
+					},
+					"frame": {
+						"x": 1,
+						"y": 533,
+						"w": 110,
+						"h": 42
+					}
+				},
+				{
+					"filename": "dining/dining-side-chairs.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 200,
+						"h": 100
+					},
+					"spriteSourceSize": {
+						"x": 32,
+						"y": 56,
+						"w": 91,
+						"h": 25
+					},
+					"frame": {
+						"x": 1,
+						"y": 577,
+						"w": 91,
+						"h": 25
+					}
+				},
+				{
+					"filename": "tickets/tickets-barrier.png",
+					"rotated": false,
+					"trimmed": true,
+					"sourceSize": {
+						"w": 100,
+						"h": 50
+					},
+					"spriteSourceSize": {
+						"x": 5,
+						"y": 16,
+						"w": 92,
+						"h": 22
+					},
+					"frame": {
+						"x": 94,
+						"y": 577,
+						"w": 92,
+						"h": 22
 					}
 				}
 			]
@@ -1044,6 +1065,6 @@
 	"meta": {
 		"app": "https://www.codeandweb.com/texturepacker",
 		"version": "3.0",
-		"smartupdate": "$TexturePacker:SmartUpdate:f755a933ed419580a42ad6e07ac8feb7:0c21be7bd89726ebb36de16d6b2c8157:cbce6b53f0f49e0bf15173c25c41f876$"
+		"smartupdate": "$TexturePacker:SmartUpdate:8eafe3db0c76bd9d9edfe2ba02f659db:bba19e9d7c40b2f386678d4ecfd576cc:cbce6b53f0f49e0bf15173c25c41f876$"
 	}
 }

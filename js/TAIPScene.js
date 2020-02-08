@@ -71,7 +71,7 @@ class TAIPScene extends Phaser.Scene {
     else if (this.upTransition && this.marina.y < this.upTransition.y - TRANSITION_OFFSET) {
       transition = this.upTransition.key;
     }
-    else if (this.downTransition && this.marina.y > this.downTransition.y + TRANSITION_OFFSET) {
+    else if (this.downTransition && !this.downTransition.inactive && this.marina.y > this.downTransition.y + TRANSITION_OFFSET) {
       transition = this.downTransition.key;
     }
 

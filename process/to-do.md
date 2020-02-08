@@ -2,10 +2,10 @@
 
 ## Final things
 - ~~Increase the queue size to be more impressive~~
+- ~~Consider animation and smaller sensors for car in and out~~
 
-- Consider animation and smaller sensors for car in and out
-- Invert a momadoor and fix their relative position
-
+- Invert a moma door and fix their relative position
+- Test closing 15 minutes and full close (ideally in the middle of some other dialog, can maybe trigger with a painting/person)
 
 ## Title
 - ~~__IT WOULD LOOK JUST LIKE THE ORIGINAL__ Guess it needs a title screen? What would that look like?~~
@@ -26,11 +26,11 @@
 - ~~Position dialogs in different locations as appropriate (e.g. head up/down instructions, whispers...)~~
 - ~~Museum closing (10:30-17:30)~~
 - ~~__NEVER CLOSED BECAUSE THE GAME IS ABOUT YOU BEING PRESENT TO PERFORM, NOT TO OBEY THE TIMEFRAME OF A VIRTUAL GALLERY__ The big question: is the museum closed on specific days? Does the game start or not? (Tempted not to close it in this instance since it's not really about that?)~~
+- ~~Double check all required places have dialog~~
 
 - Add message to wrap for Exterior
 - Add message to wrap for MOMA
-- Double check all required places have dialog
-- Expand existing random dialogs
+- Add message to return to bedroom
 - Create enough whispers such that you can random sort and then pop to avoid repetition
 - Have people revert to '...' or nothing once you've spoken to them already (again figure on having enough distinct phrases so that you can random sort and pop)
 
@@ -52,12 +52,11 @@
 - ~~Trigger crying on some probability (not always right away either)~~
 
 ## Timing
-- Infinite timing issues? What "feels good" in other words?
 - ~~End of day timer, so that there's a moment where the museum closes and "kicks you out", but just an ending screen that asks you to come back (maybe, likewise, a dialog that comes up to tell you when it's 15 minutes to go or something). Maybe a "Thanks for Playing!" ala Sierra classics~~
 
+- What "feels good"?
 
 # Generalllllll
-
 - ~~Collect images from the documentary of relevant spaces~~
 - ~~Start an actual Phaser project (let's not bother with mobile? Or very lightly contemplate click-based interaction I suppose)~~
 - ~~Import a walk cycle~~
@@ -69,6 +68,5 @@
 - ~~Build a dialog box object/function (guess it could just extend sprite)~~
 
 # Bugs
-
 - ~~Can get caught against car on arrival at MoMA, probably because it's going over the input disabled line. Do I even need that stupid line? Can similarly get wedged in the corner of the bedroom, for the same reasons.~~
 - ~~Moma doors broken on enter!~~

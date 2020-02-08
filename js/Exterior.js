@@ -55,10 +55,11 @@ class Exterior extends TAIPScene {
     this.car.body.setSize(102, 20, false);
     this.car.body.immovable = true;
     this.car.depth = 10000 * 4;
+    // this.car.setVisible(false);
     this.colliders.add(this.car);
 
     this.carSensor = this.physics.add.sprite(105 * 4, 85 * 4, 'atlas', 'red-pixel.png')
-      .setScale(20, 20).setVisible(false);
+      .setScale(20, 20).setVisible(false).setDepth(100000);
 
     let transitionData = [{
       key: 'dining',
@@ -94,19 +95,30 @@ class Exterior extends TAIPScene {
     this.marina.depth = this.marina.body.y;
     this.physics.overlap(this.marina, this.carSensor, () => {
       if (!this.marina.visible) return;
-      this.marina.visible = false;
       this.marina.inputEnabled = false;
-      setTimeout(() => {
-        const carTween = this.tweens.add({
-          targets: this.car,
-          x: this.game.canvas.width * 2,
-          duration: 5000,
-          repeat: 0,
-          onComplete: () => {
-            this.scene.start('car');
-          }
-        });
-      }, 2000);
+      this.marina.faceRight();
+      this.marina.x = this.carSensor.x - 4 * 2;
+      const marinaTweener = this.tweens.add({
+        targets: this.marina,
+        y: this.marina.y + 200,
+        duration: 1000,
+        repeat: 0,
+        onComplete: () => {
+          this.marina.visible = false;
+          setTimeout(() => {
+            const carTween = this.tweens.add({
+              targets: this.car,
+              x: this.game.canvas.width * 2,
+              duration: 5000,
+              repeat: 0,
+              onComplete: () => {
+                this.scene.start('car');
+              }
+            });
+          }, 2000);
+        }
+      });
+
     });
   }
 

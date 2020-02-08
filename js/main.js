@@ -1,6 +1,6 @@
 const DEBUG = false;
 
-const START_SCENE = 'hallway2';
+const START_SCENE = 'moma-exterior';
 let QUEUE = [];
 const QUEUE_LENGTH = 30;
 const QUEUE_X = 440;
@@ -10,7 +10,7 @@ const EXTRA_WHISPER_CHANCE = 0.0;
 
 let lastScene = undefined;
 let last = {
-  scene: 'hallway2',
+  scene: 'car',
   x: undefined,
   y: 80 * 4
 }

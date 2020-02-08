@@ -39,8 +39,8 @@ class MOMAExterior extends TAIPScene {
     this.colliders.add(this.car);
 
 
-    this.LEFT_DOOR_X = this.game.canvas.width / 2 - 10.5 * 4;
-    this.RIGHT_DOOR_X = this.game.canvas.width / 2 + 10.5 * 4;
+    this.LEFT_DOOR_X = this.game.canvas.width / 2 - 10 * 4;
+    this.RIGHT_DOOR_X = this.game.canvas.width / 2 + 10 * 4;
     this.DOOR_OPEN_AMOUNT = 15 * 4;
 
     this.doorsOpen = false;
@@ -49,18 +49,18 @@ class MOMAExterior extends TAIPScene {
         this.LEFT_DOOR_X,
         this.game.canvas.height / 2 - 2.5 * 4,
         "atlas",
-        "moma-exterior/moma-door.png"
+        "moma-exterior/moma-door-left.png"
       )
-      .setScale(4)
+      .setScale(4, 4)
       .setDepth(-10);
     this.rightDoor = this.physics.add
       .sprite(
         this.RIGHT_DOOR_X,
         this.game.canvas.height / 2 - 2.5 * 4,
         "atlas",
-        "moma-exterior/moma-door.png"
+        "moma-exterior/moma-door-right.png"
       )
-      .setScale(4)
+      .setScale(4, 4)
       .setDepth(-10);
     this.leftDoor.body.immovable = true;
     this.rightDoor.body.immovable = true;
@@ -113,7 +113,8 @@ class MOMAExterior extends TAIPScene {
         type: "down",
         x: 80 * 4,
         y: 77 * 4,
-        stop: true
+        stop: true,
+        inactive: true
       }
     ];
     this.addTransitions(transitionData);
@@ -203,17 +204,27 @@ class MOMAExterior extends TAIPScene {
       this.inputEnabled = false;
       const carTween = this.tweens.add({
         targets: this.car,
-        x: 120 * 4,
+        x: 140 * 4,
         duration: 5000,
         repeat: 0,
         onComplete: () => {
           setTimeout(() => {
-            this.marina.x = 80 * 4;
-            this.marina.y = 77 * 4;
             this.marina.visible = true;
-            this.marina.inputEnabled = true;
-            this.dialog.y = UPPER_DIALOG_Y;
-            this.dialog.showMessage(MOMA_ARRIVAL_MESSAGE, () => {});
+            this.marina.x = 100 * 4;
+            this.marina.y = 100 * 4;
+            this.marina.faceRight();
+            const marinaTweener = this.tweens.add({
+              targets: this.marina,
+              y: 77 * 4,
+              duration: 750,
+              repeat: 0,
+              onComplete: () => {
+                this.marina.faceUp();
+                this.marina.inputEnabled = true;
+                this.dialog.y = UPPER_DIALOG_Y;
+                this.dialog.showMessage(MOMA_ARRIVAL_MESSAGE, () => {});
+              }
+            });
           }, 3000);
         }
       });

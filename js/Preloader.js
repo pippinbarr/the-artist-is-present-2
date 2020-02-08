@@ -66,7 +66,7 @@ let Preloader = new Phaser.Class({
 
     setTimeout(() => {
       this.scene.start(START_SCENE);
-    }, 10);
+    }, 2000);
   },
 
   createSpritesheetAnimation: function(parent, name, start, end, framerate, repeat) {

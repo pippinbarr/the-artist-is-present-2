@@ -85,7 +85,7 @@ class TAIPScene extends Phaser.Scene {
       last.scene = this.scene.key;
       last.x = this.marina.x;
       last.y = this.marina.y;
-      console.log(`Starting scene ${transition}`);
+      // console.log(`Starting scene ${transition}`);
       this.scene.start(transition);
     }
   }

@@ -63,6 +63,9 @@ class Bedroom extends TAIPScene {
     else {
       this.marina.setVisible(true);
       this.marinaBed.setVisible(false);
+      setTimeout(() => {
+        this.dialog.showMessage(BACK_TO_BED_MESSAGE, () => {});
+      }, 1000);
     }
 
     let bedroomFG = this.add.sprite(this.game.canvas.width / 2, this.game.canvas.height / 2, 'atlas', 'bedroom/bedroom-fg.png').setScale(4);

@@ -1,6 +1,7 @@
 // STARTUP
 
 const WAKEUP_MESSAGE = `Good morning, Marina. It's time to get up and go to the museum for your performance. Press ANY KEY to dismiss this dialog, then use the ARROW KEYS to move.`;
+const BACK_TO_BED_MESSAGE = `It's not bed time, it's time to go to work.`;
 
 // DEPARTURE
 
@@ -8,12 +9,16 @@ const CAR_WAITING_MESSAGE = `Your driver is waiting to drive you to the museum. 
 let seenCarWaiting = false;
 const CAR_STILL_WAITING_MESSAGE = `Your driver is still waiting. You should probably get moving.`;
 
+const LEAVING_APARTMENT_ON_FOOT_MESSAGE = `The car is there to pick you up for a reason, no need to walk.`;
+
 // MUSEUM MESSAGES
 
 const MOMA_ARRIVAL_MESSAGE = `Here you finally are at the Museum of Modern Art in New York, ready to perform your work "The Artist Is Present".`;
 
 let seenMOMAMessage = false;
 const OUTSIDE_MOMA_MESSAGE = `Now is not the time for wandering outside. Get in there and start the performance!`;
+
+const LEAVING_MOMA_ON_FOOT_MESSAGE = `There's nowhere you need to be except the museum right now.`;
 
 const TICKETS_DESK_MESSAGE = "Hi Ms. Abramovic! I hope the performance goes well today.";
 const TICKETS_GUARD_MESSAGE = "Good luck, Ms. Abramovic.";

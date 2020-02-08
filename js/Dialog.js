@@ -56,6 +56,9 @@ class Dialog extends Phaser.GameObjects.Container {
   }
 
   showMessage(text, callback) {
+    // this.scene will be undefined if this Dialog has gone out of scope
+    if (!this.scene) return;
+
     this.scene.scene.pause(this.scene.key);
 
     this.text.text = text;

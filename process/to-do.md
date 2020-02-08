@@ -29,10 +29,9 @@
 - ~~Double check all required places have dialog~~
 - ~~Create enough whispers such that you can random sort and then pop to avoid repetition~~
 - ~~Have people revert to '...' or nothing once you've spoken to them already (again figure on having enough distinct phrases so that you can random sort and pop)~~
-
-- Add message to wrap for Exterior
-- Add message to wrap for MOMA
-- Add message to return to bedroom
+- ~~Add message to wrap for Exterior~~
+- ~~Add message to wrap for MOMA~~
+- ~~Add message on return to bedroom~~
 
 ## Queue behavior
 - ~~Create a function to send the front person in the queue to go sit in the chair and the rest of the queue to move up. Add a new person to the (invisible) end of the queue so it doesn't end (is this cheating?)~~

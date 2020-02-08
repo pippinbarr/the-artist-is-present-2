@@ -136,11 +136,15 @@ class MOMAExterior extends TAIPScene {
   }
 
   handleWrap() {
-    if (this.marina.x < 0 - this.marina.width) {
-      this.marina.x = this.game.canvas.width + this.marina.width;
+    if (this.marina.x < 0 - this.marina.body.width) {
+      this.dialog.showMessage(LEAVING_MOMA_ON_FOOT_MESSAGE, () => {
+        this.marina.x = this.game.canvas.width + this.marina.body.width;
+      });
     }
-    else if (this.marina.x > this.game.canvas.width + this.marina.width) {
-      this.marina.x = 0 - this.marina.width;
+    else if (this.marina.x > this.game.canvas.width + this.marina.body.width) {
+      this.dialog.showMessage(LEAVING_MOMA_ON_FOOT_MESSAGE, () => {
+        this.marina.x = 0 - this.marina.body.width;
+      });
     }
   }
 

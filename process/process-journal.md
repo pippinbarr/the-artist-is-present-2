@@ -266,3 +266,17 @@ Hmmm... well for one thing, let's be honest about the authenticity argument: it 
 So in that sense, the fact that, for instance, Marina enters through the front of the gallery and the audience is already there, which aren't things that happened, are more about the symbolism of her arrival and are tied particularly into my desire to make this about service. You could say, actually, that without all the backstory and context of knowing about her fans' deep love/obsession, you can't really know the stakes of the work, and that walking past them and hearing them talking is a way of instilling that? And in that sense, it _is_ about one form of enhanced symbolism, because it allows you into the true story and cultural context of the work, rather than presenting the "truth" that will actually render it more opaque? Part of making a game about art (or any human experience) has to be a kind of scaffolding to bring in people who don't already understand the experience beforehand? (Which is basically everyone?) I know games don't actually do this (every shooting game ever), but it occurs to me right now that that's an important act.
 
 Okay, so I think that actually makes the decision for now. I plow on with the original plan, but I remain aware of this tension and keep checking in.
+
+---
+
+# Almost done (Sunday, 9 February 2020, 10:08AM)
+
+Reporting in to say the game is almost done. Have sent it over to Jim and Mary and Jim has looked at it a couple of times, finding an "interesting" bug in Firefox where the sprite recoloring didn't work because of sRGB for reasons I don't totally understand. Turns out that just saving the spritesheet with sRGB disabled was enough to solve the problem - it's some kind of color correction thing that Firefox takes into account and Chrome doesn't (or vice versa?). Anyway, disabling it meant the browsers all behaved the same (correct) way again.
+
+Beyond that I've made pretty well all the decisions that needed making and implemented it all. The game runs from title to museum closing at the end of the day. The visitors queue up and come and sit and stare and blink and sometimes cry. I think it might be done?
+
+Need one or two more quick tests probably just to see if someone can break it, but otherwise I imagine releasing it week after next so I've got time to whip up a press kit and write to some press types and so on. Unclear whether anyone will give any shits about the game, but it's been an effort and I feel it's substantial enough to want to notify people of its existence more extensively. It's a funny story to have made a sequel 9 years after the first game (probably even better if I'd left it another year for the full decade, but oh well I didn't).
+
+I think I'm pretty happy with it at this point. I should play it straight through and see how it feels in total, but I think the underlying concept of service/role reversal is a nice one and its in there. If nothing else, the experience of a) being the focal point and then b) being confronted with staring low-resolution faces is pretty interesting.
+
+So, almost there. Almost done.

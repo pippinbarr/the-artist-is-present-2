@@ -1,4 +1,4 @@
-const CAR_JOURNEY_DURATION = 10; //20000;
+const CAR_JOURNEY_DURATION = 20000;
 
 let Car = new Phaser.Class({
 

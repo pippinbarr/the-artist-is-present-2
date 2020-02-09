@@ -119,6 +119,16 @@ function generateTexture(game, swapPalette, newPalette, id, sheetData) {
 
       // console.log(r, g, b);
 
+      // pixelArray[index] = 255; //newColor.a;
+      // pixelArray[--index] = 0; //newColor.b;
+      // pixelArray[--index] = 0; //newColor.g;
+      // if (r === 255 && g === 255 && b === 255) {
+      //   pixelArray[--index] = 0; //newColor.r;
+      // }
+      // else {
+      //   pixelArray[--index] = 255; //newColor.r;
+      // }
+
       // If the color matches, replace the color.
       if (r === oldColor.r && g === oldColor.g && b === oldColor.b && alpha === 255) {
         pixelArray[index] = newColor.a;

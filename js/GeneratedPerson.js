@@ -10,7 +10,7 @@ class GeneratedPerson extends Person {
       shirtHair: 0xFFF5F264,
       eyes: 0xFF000000,
       mouth: 0xFFFA2500,
-      skin: 0xFFFA604E,
+      skin: 0xFF0000,
       shirt: 0xFF1E92EA,
       upperSleeve: 0xFF8AEF5F,
       lowerSleeve: 0xFF25A344,

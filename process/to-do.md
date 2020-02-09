@@ -69,3 +69,4 @@
 - ~~Can get caught against car on arrival at MoMA, probably because it's going over the input disabled line. Do I even need that stupid line? Can similarly get wedged in the corner of the bedroom, for the same reasons.~~
 - ~~Moma doors broken on enter!~~
 - ~~Entire queue does a little jiggle with pause-based dialog for looking up~~
+- ~~Terrible color bug in Firefox~~

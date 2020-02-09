@@ -280,3 +280,21 @@ Need one or two more quick tests probably just to see if someone can break it, b
 I think I'm pretty happy with it at this point. I should play it straight through and see how it feels in total, but I think the underlying concept of service/role reversal is a nice one and its in there. If nothing else, the experience of a) being the focal point and then b) being confronted with staring low-resolution faces is pretty interesting.
 
 So, almost there. Almost done.
+
+---
+
+# Queue Magic (Sunday, 9 February 2020, 12:55PM)
+
+Just remembered I took a bunch of screenshots of the strange stuff that happened when I was messing with the recoloring code to try to make it work in Firefox. A lot of this is just me using specific values to try to understand what's going on. I never did, but the output is pretty great...
+
+![](images/queue-magic-1.png)
+
+![](images/queue-magic-2.png)
+
+![](images/queue-magic-3.png)
+
+![](images/queue-magic-4.png)
+
+![](images/queue-magic-5.png)
+
+![](images/queue-magic-6.png)

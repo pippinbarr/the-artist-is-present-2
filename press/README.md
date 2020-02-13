@@ -18,7 +18,7 @@ Pippin is an experimental game developer who has made games about everything fro
 
 ## Description
 
-_The Artist Is Present 2_ is the non-awaited sequel to one of my earliest games, [_The Artist Is Present_](http://www.pippinbarr.com/2011/09/14/the-artist-is-present/). The original game put the player in the shoes of a visitor to the Museum of Modern Art, attending the performance _The Artist Is Present_ by Marina Abramovic, with the chance to wait in a very long queue to have the privilege of sitting opposite the artist. In the sequel, the roles are reverse and the player is asked to take on the part of Marina Abramovic herself, giving the performance by making silent eye contact with each audience member who comes to sit with them.
+_The Artist Is Present 2_ is the non-awaited sequel to one of my earliest games, [_The Artist Is Present_](http://www.pippinbarr.com/2011/09/14/the-artist-is-present/). The original game put the player in the shoes of a visitor to the Museum of Modern Art, attending the performance _The Artist Is Present_ by Marina Abramovic. There they could wait in a very long queue to have the privilege of sitting opposite the artist, just like the real thing. In the sequel, the roles are reversed and the player is asked to take on the part of Marina Abramovic herself, giving the performance by making silent eye contact with each audience member who comes to sit with them.
 
 ## History
 

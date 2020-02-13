@@ -1,6 +1,7 @@
 // STARTUP
 
 const WAKEUP_MESSAGE = `Good morning, Marina. It's time to get up and go to the museum for your performance. Press ANY KEY to dismiss this dialog, then use the ARROW KEYS to move.`;
+const WAKEUP_MESSAGE_MOBILE = `Good morning, Marina. It's time to get up and go to the museum for your performance. TAP dialogs to dismiss them, then TAP in the direction you want to walk.`;
 const BACK_TO_BED_MESSAGE = `It's not bed time, it's time to go to work.`;
 
 // DEPARTURE
@@ -99,8 +100,10 @@ const GUARD_TALK = [
 // THE PERFORMANCE SEQUENCE
 
 const HEAD_DOWN_INSTRUCTIONS = `Press any key to lower your head and invite the next visitor to join you.`;
+const HEAD_DOWN_INSTRUCTIONS_MOBILE = `TAP this dialog to lower your head and invite the next visitor to join you.`;
 
 const HEAD_UP_INSTRUCTIONS = `Press any key to look up.`;
+const HEAD_UP_INSTRUCTIONS_MOBILE = `TAP this dialog to look up.`;
 
 const CLOSING_WARNING_MESSAGE = `"Attention all patrons, The Museum of Modern Art will be closing in fifteen minutes."`;
 const CLOSED_MESSAGE = `"Attention all patrons, The Museum of Modern Art is now closed."`;

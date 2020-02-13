@@ -1,4 +1,5 @@
 const DEBUG = false;
+let MOBILE = false;
 
 const START_SCENE = 'title';
 let QUEUE = [];

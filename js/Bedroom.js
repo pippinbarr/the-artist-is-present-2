@@ -74,7 +74,7 @@ class Bedroom extends TAIPScene {
     if (last.scene !== 'kitchen') {
       setTimeout(() => {
         this.dialog.y = UPPER_DIALOG_Y;
-        this.dialog.showMessage(WAKEUP_MESSAGE, () => {
+        this.dialog.showMessage(MOBILE ? WAKEUP_MESSAGE_MOBILE : WAKEUP_MESSAGE, () => {
           this.handleWakeup();
         });
       }, 3000);

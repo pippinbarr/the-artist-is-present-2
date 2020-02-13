@@ -66,10 +66,6 @@ class Atrium extends TAIPScene {
 
     this.handleEntrances();
 
-    // To get into the chair easily for testing
-    // this.marina.x = 700;
-    // this.marina.y = 300;
-
     this.sitter = QUEUE[0];
 
     // Background for first person view
@@ -104,34 +100,8 @@ class Atrium extends TAIPScene {
     this.leftEyelid.setVisible(false);
     this.rightEyelid.setVisible(false);
 
-    // this.showSitter();
-
-    // // Testing closing with other dialogs...
-    // setTimeout(() => {
-    //   this.showMuseumClosingWarningMessage();
-    // }, TIME_TO_MUSEUM_CLOSING_WARNING);
-    //
-    // setTimeout(() => {
-    //   this.closeMuseum();
-    // }, TIME_TO_MUSEUM_CLOSED);
-
-
     Atrium.seen = true;
   }
-
-  // addQueue() {
-  //   // Add queue
-  //   this.queue = this.add.group();
-  //   for (let i = 0; i < QUEUE.length; i++) {
-  //     QUEUE[i].x = QUEUE_X - i * QUEUE_SPACING;
-  //     QUEUE[i].y = QUEUE_Y;
-  //     QUEUE[i].scene = this;
-  //     QUEUE[i].dialog = this.dialog;
-  //     // this.add.existing(QUEUE[i]);
-  //     this.physics.add.existing(QUEUE[i]);
-  //     this.queue.add(QUEUE[i], true);
-  //   }
-  // }
 
   addGuards() {
     // Add guards
@@ -214,7 +184,7 @@ class Atrium extends TAIPScene {
 
   startHeadDownSequence() {
     this.dialog.y = UPPER_DIALOG_Y;
-    this.dialog.showMessage(HEAD_DOWN_INSTRUCTIONS, () => {
+    this.dialog.showMessage(MOBILE ? HEAD_DOWN_INSTRUCTIONS_MOBILE : HEAD_DOWN_INSTRUCTIONS, () => {
       setTimeout(() => {
         this.marina.lookDown(() => {
           setTimeout(() => {
@@ -246,7 +216,7 @@ class Atrium extends TAIPScene {
 
   startHeadUpSequence() {
     this.dialog.y = UPPER_DIALOG_Y;
-    this.dialog.showMessage(HEAD_UP_INSTRUCTIONS, () => {
+    this.dialog.showMessage(MOBILE ? HEAD_UP_INSTRUCTIONS_MOBILE : HEAD_UP_INSTRUCTIONS, () => {
       setTimeout(() => {
         this.marina.lookUp(() => {
           setTimeout(() => {

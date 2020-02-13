@@ -13,19 +13,19 @@ class Title extends Phaser.Scene {
         text: 'THE',
         size: 48,
         yOffset: 0,
-        delay: 1000,
+        delay: 500,
       },
       {
         text: 'ARTIST',
         size: 48,
         yOffset: 50,
-        delay: 1000,
+        delay: 500,
       },
       {
         text: 'IS',
         size: 48,
         yOffset: 100,
-        delay: 1000,
+        delay: 500,
       },
       {
         text: 'PRESENT',
@@ -43,16 +43,16 @@ class Title extends Phaser.Scene {
         text: 'PIPPIN BARR',
         size: 20,
         yOffset: 280,
-        delay: 1000,
+        delay: 500,
       },
       {
         text: '(AND MARINA ABRAMOVIC)',
         size: 20,
-        yOffset: 320,
-        delay: 1500,
+        yOffset: 305,
+        delay: 1000,
       },
       {
-        text: '- CLICK TO PLAY -',
+        text: 'CLICK/TOUCH TO PLAY',
         size: 24,
         yOffset: 360,
         delay: 0,
@@ -96,10 +96,19 @@ class Title extends Phaser.Scene {
       }
       else {
         document.addEventListener('click', () => {
+          console.log("Desktop");
           this.scene.switch('bedroom');
         }, {
           once: true
         });
+        document.addEventListener('touchstart', () => {
+          MOBILE = true;
+          console.log("Mobile");
+          this.scene.switch('bedroom');
+        }, {
+          once: true
+        });
+
       }
     }, this.currentText.delay);
   }

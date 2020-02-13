@@ -6,7 +6,16 @@ class Marina extends Person {
     scene.add.existing(this);
     scene.physics.add.existing(this);
     this.cursors = scene.input.keyboard.createCursorKeys();
-    scene.input.keyboard.on('keydown', () => this.handleInput());
+    if (!MOBILE) {
+      scene.input.keyboard.on('keydown', () => {
+        this.handleInput();
+      });
+    }
+    else {
+      scene.input.on('pointerdown', (pointer) => {
+        this.handleTouchInput(pointer)
+      });
+    }
     this.inputEnabled = true;
     this.lookingUp = true;
     this.suffix = '-marina';
@@ -66,6 +75,61 @@ class Marina extends Person {
     this.setVelocity(0, 0);
     this.active = false;
   }
+
+  handleTouchInput(pointer) {
+    if (!this.inputEnabled || this.sitting) return;
+
+    let dx = pointer.x - this.x;
+    let dy = pointer.y - this.y;
+
+    if (Math.abs(dx) > Math.abs(dy)) {
+      if (dx < 0) {
+        if (this.body.velocity.x < 0) {
+          this.stop();
+        }
+        else {
+          this.left();
+        }
+      }
+      if (dx > 0) {
+        if (this.body.velocity.x > 0) {
+          this.stop();
+        }
+        else {
+          this.right();
+        }
+      }
+    }
+    else {
+      if (dy < 0) {
+        if (this.body.velocity.y < 0) {
+          this.stop();
+        }
+        else {
+          this.up();
+        }
+      }
+      if (dy > 0) {
+        if (this.body.velocity.y > 0) {
+          this.stop();
+        }
+        else {
+          this.down();
+        }
+      }
+    }
+  }
+
+  pause() {
+    this.inputEnabled = false;
+    this.pVelocity = {
+      x: this.body.velocity.x,
+      y: this.body.velocity.y
+    };
+    this.setVelocity(0, 0);
+    this.active = false;
+  }
+
 
   unpause() {
     this.inputEnabled = true;

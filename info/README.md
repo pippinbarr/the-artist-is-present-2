@@ -1,6 +1,6 @@
 # The Artist Is Present 2
 
-![](press/images/soup-cans.png)
+![](../press/images/soup-cans.png)
 
 _It's happening! Again! The Artist Is Present! You are present! The artist is you! Put on your red dress and sit in the famous chair! Lock eyes with your audience! Be there now!_
 

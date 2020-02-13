@@ -8,7 +8,7 @@ _It's happening! Again! The Artist Is Present! You are present! The artist is yo
 
 _The Artist Is Present 2_ is the non-awaited sequel to one of my earliest games, [_The Artist Is Present_](http://www.pippinbarr.com/2011/09/14/the-artist-is-present/). The original game put the player in the shoes of a visitor to the Museum of Modern Art, attending the performance _The Artist Is Present_ by Marina Abramovic. There they could wait in a very long queue to have the privilege of sitting opposite the artist, just like the real thing. In the sequel, the roles are reversed and the player is asked to take on the part of Marina Abramovic herself, giving the performance by making silent eye contact with each audience member who comes to sit with them.
 
-#### [Play Online](https://pippinbarr.github.io/the-artist-is-present-2/) (Desktop only for now)
+#### [Play Online](https://pippinbarr.github.io/the-artist-is-present-2/) (desktop and mobile)
 
 #### Read the [Press kit](https://github.com/pippinbarr/the-artist-is-present-2/blob/master/press/README.md) for press information
 #### Read the [Process documentation](https://github.com/pippinbarr/the-artist-is-present-2/blob/master/process/README.md) for process journal, to do list, and related work

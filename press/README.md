@@ -8,7 +8,7 @@ _It's happening! Again! The Artist Is Present! You are present! The artist is yo
 
 * Developer: [Pippin Barr](http://www.pippinbarr.com/)
 * Release: 19 February 2020
-* Platform: Browser (desktop)
+* Platform: Browser (desktop and mobile)
 * Code repository: https://github.com/pippinbarr/the-artist-is-present-2
 * Price: $0.00
 

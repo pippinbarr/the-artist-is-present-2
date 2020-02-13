@@ -32,6 +32,13 @@ let config = {
       debug: DEBUG
     }
   },
+  scale: {
+    // parent: 'game',
+    mode: Phaser.Scale.FIT,
+    autoCenter: Phaser.Scale.BOTH,
+    width: 800,
+    height: 400
+  }
 };
 
 let game = new Phaser.Game(config);

@@ -60,10 +60,6 @@ _The Artist Is Present 2_ is an open source game licensed under a [Creative Comm
 
 ![](images/face.png)  
 
-## Press
-
-- Coming soon?
-
 ## Additional Links
 
 - [Process documentation of _The Artist Is Present 2_](https://github.com/pippinbarr/the-artist-is-present-2/blob/master/process/README.md)
